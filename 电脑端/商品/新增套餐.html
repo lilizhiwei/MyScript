@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>新增套餐</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">新增套餐</td></tr>
+</thead><tbody>
+<!--验证所有项填写正确可以正确添加套餐-->
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=商品库存</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.page-aside-title.margin-top-0</td>
+	<td>筛选</td>
+</tr>
+<!--新增三个商品-->
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@title=&quot;请选择分组&quot;])</td>
+	<td>请选择分组</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;名称&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@title=&quot;请选择分组&quot;])</td>
+	<td>请选择分组</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/div[2]/div/div/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.upload-wrapper-bgk.drag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.upload-file-input</td>
+	<td>C:\图片\123.jpg</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;sueer yahei&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.imgs &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.col-xs-6.col-sm-7 &gt; input.form-control</td>
+	<td>VE</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.form-control</td>
+	<td>备注</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bh&quot;])</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;buyprice&quot;])</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;sellprice&quot;])</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-pencil.fa-fw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>新增小类</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;add&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;大类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;addsub&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;小类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-gg-action=&quot;close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@class=&quot;btn dropdown-toggle bs-placeholder btn-default&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=${name2}</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockNumChange&quot;]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//table/tbody/tr[1]/td[1]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@title=&quot;请选择分组&quot;])</td>
+	<td>请选择分组</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/div[2]/div/div/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.upload-wrapper-bgk.drag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.upload-file-input</td>
+	<td>C:\图片\123.jpg</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;sueer yahei&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.imgs &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.col-xs-6.col-sm-7 &gt; input.form-control</td>
+	<td>VE</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.form-control</td>
+	<td>备注</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bh&quot;])</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;buyprice&quot;])</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;sellprice&quot;])</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-pencil.fa-fw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>新增小类</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;add&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;大类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;addsub&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;小类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name3}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-gg-action=&quot;close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@class=&quot;btn dropdown-toggle bs-placeholder btn-default&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=${name3}</td>
+	<td>${name3}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${name3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockNumChange&quot;]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//table/tbody/tr[1]/td[1]/span/input@id</td>
+	<td>id1</td>
+</tr>
+<!--将三个商品新增为一个套餐-->
+<tr>
+	<td>click</td>
+	<td>link=新增套餐</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;套餐&quot; +Math.round(Math.random()*1000) </td>
+	<td>name1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/div[2]/div/div/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.upload-wrapper-bgk.drag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.upload-file-input</td>
+	<td>C:\图片\123.jpg</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;sueer yahei&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.imgs &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bh&quot;])</td>
+	<td>${bianhao2}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-role=&quot;rem&quot;]</td>
+	<td>备注</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;addgoods&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//th/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;addgoods&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.input-group-addon.bg-white &gt; i.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.input-group-addon.bg-white &gt; i.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-minus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[6]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[6]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>合计参考进货价50</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span/span/small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//span[@data-role=&quot;sellprice&quot;]</td>
+	<td>64</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>货　号：${bianhao2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>条　码：${bianhao1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>剩　余：16.67 套</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>备　注：备注</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>共2种商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>VE${name3}*零售价：14*数量：2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>VE${name2}*零售价：12*数量：3</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

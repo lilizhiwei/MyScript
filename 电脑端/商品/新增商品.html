@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>新增商品</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">新增商品</td></tr>
+</thead><tbody>
+<!--验证所有项填写正确可以正确添加商品-->
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=商品库存</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.page-aside-title.margin-top-0</td>
+	<td>筛选</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/div[2]/div/div/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.upload-wrapper-bgk.drag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.upload-file-input</td>
+	<td>C:\图片\123.jpg</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;sueer yahei&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.imgs &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.col-xs-6.col-sm-7 &gt; input.form-control</td>
+	<td>VE</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.form-control</td>
+	<td>备注</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bh&quot;])</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;buyprice&quot;])</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;sellprice&quot;])</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-pencil.fa-fw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;add&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;大类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;addsub&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;小类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-gg-action=&quot;close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@class=&quot;btn dropdown-toggle bs-placeholder btn-default&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@data-action=&quot;choosegattr&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-gg-action=&quot;editModle&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;add&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>品牌</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;addsub&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>统金</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;add&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>品牌</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>分组已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>分组已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;addsub&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>统金</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>分组已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>分组已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-gg-action=&quot;editModle&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//li[@data-gg-action=&quot;choose&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;add&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;大类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name3}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//button[@data-gg-action=&quot;addsub&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;小类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name4</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${name4}</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//li[@data-gg-action=&quot;choose&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-gg-action=&quot;sure&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@placeholder=&quot;可选择或直接输入&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.tt-suggestion.tt-selectable</td>
+	<td>个</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.tt-suggestion.tt-selectable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@data-role=&quot;gunit2&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='exampleTabsLineOne']/div/div[2]/div[5]/div/div/span/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-action=&quot;transNum&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockNumChange&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockPriceChange&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;lowAlert&quot;]</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;highAlert&quot;])</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//table/tbody/tr[1]/td[1]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(11)}</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.title</td>
+	<td>统金VE(${name4})${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>零售价：12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>单　位：个</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>零售价：12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>货　号：${bianhao}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>条　码：${bianhao1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>单　位：个</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>辅助单位：箱*(1箱=10个)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>分　组：${name1}-${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>品　牌：统金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name3}：${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>参考进货价：10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>库　存：10个</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>低库存预警：11</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>高库存预警：100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>备　注：备注</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=按商品分析</td>
+	<td>按商品分析</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=按商品分析</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.visible-lg.text-center</td>
+	<td>名 称</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.glist-tip</td>
+	<td>无更多内容</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>期初数量：10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>期初数量：10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>期初单价：10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>期初金额：100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=商品库存</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.page-aside-title.margin-top-0</td>
+	<td>筛选</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;名称&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockNumChange&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;lowAlert&quot;]</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;highAlert&quot;])</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon.fa.fa-bell</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>商品库存预警</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h6:contains(&quot;商品库存预警&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name} 库　存：10*单　位：空*低下限：11*差　值：1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name} 库　存：10*单　位：空*低下限：11*差　值：1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-tips-title=&quot;编辑&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;lowAlert&quot;]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;highAlert&quot;])</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.title</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.icon.fa.fa-bell</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon.fa.fa-bell</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>商品库存预警</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h6:contains(&quot;商品库存预警&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name} 库　存：10*单　位：空*高上限：9*差　值：1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name} 库　存：10*单　位：空*高上限：9*差　值：1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-tips-title=&quot;编辑&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=库存信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;lowAlert&quot;]</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;highAlert&quot;])</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.title</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.icon.fa.fa-bell</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon.fa.fa-bell</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>商品库存预警</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h6:contains(&quot;商品库存预警&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>${name} 库　存：10*单　位：空</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>${name} 库　存：10*单　位：空</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>搜索</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">搜索</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=联系人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//li[@data-power=&quot;400&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;生日&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;工号&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;备注&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>gonghao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;snum&quot;]/div/input</td>
+	<td>${gonghao}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;memo&quot;]/div/input</td>
+	<td>做你想做的错了算我的</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{storedVars.b = new Date();}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.b.getMonth()}</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.b.getDate()}</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.a)+1}</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//div[@data-option=&quot;birthday&quot;]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>xpath=//li[@data-value=&quot;1995&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//li[@data-value=&quot;1995&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>xpath=//li[@data-value=&quot;${a}&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//li[@data-value=&quot;${a}&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>xpath=//li[@data-value=&quot;${c}&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//li[@data-value=&quot;${c}&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-plugin=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<!--生日筛选-->
+<tr>
+	<td>click</td>
+	<td>link=状态</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul[@role=&quot;menu&quot;]/li[2]/a/label/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}*无更多内容</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2500</td>
+	<td></td>
+</tr>
+<!--搜索框搜索-->
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}*无更多内容</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td>${gonghao}</td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}*无更多内容</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td>做你想做的错了算我的</td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索员工&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}*无更多内容</td>
+	<td></td>
+</tr>
+<!--筛选离职-->
+<tr>
+	<td>click</td>
+	<td>css=h4.media-heading</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-default btn-outline radius-0 pause status flex-item width-120 orange-600&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h4.media-heading</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.a == storedVars.name</td>
+	<td>Y</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>N</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Y</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>李志伟啦啦啦啦啦啦啦啦啦啦啦啦啦啦</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>N</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=状态</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul[@role=&quot;menu&quot;]/li[1]/a/label/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<!--删除此员工-->
+<tr>
+	<td>click</td>
+	<td>css=h4.media-heading</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-default btn-outline radius-0 del flex-item width-120 red-600&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=h4.media-heading</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.a == storedVars.name</td>
+	<td>K</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>J</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>李志伟啦啦啦啦啦啦啦啦啦啦啦啦啦啦</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>J</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

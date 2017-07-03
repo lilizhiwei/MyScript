@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>错误-套餐</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">错误-套餐</td></tr>
+</thead><tbody>
+<!--验证所有项填写正确可以正确添加套餐-->
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=商品库存</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.page-aside-title.margin-top-0</td>
+	<td>筛选</td>
+</tr>
+<!--套餐名为空-->
+<tr>
+	<td>click</td>
+	<td>link=新增套餐</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>套餐名不能为空！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>套餐名不能为空！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;名称&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<!--不添加商品-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>套餐至少要包含一件商品！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>套餐至少要包含一件商品！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;addgoods&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>套餐商品至少有2个以上！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>套餐商品至少有2个以上！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;addgoods&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<!--套餐名重复-->
+<tr>
+	<td>click</td>
+	<td>link=新增套餐</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;addgoods&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>套餐名称已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>套餐名称已存在！</td>
+	<td></td>
+</tr>
+<!--条码重复及不合格-->
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;名称&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>条码已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>条码已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>条码输入不合格，必须是邮箱、数字或字母组成</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>条码输入不合格，必须是邮箱、数字或字母组成</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;bar&quot;])</td>
+	<td>${bianhao1}</td>
+</tr>
+<!--批发价或零售价大于1亿-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;sellprice&quot;])</td>
+	<td>100000001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>零售价不能大于或小于1亿</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>零售价不能大于或小于1亿</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

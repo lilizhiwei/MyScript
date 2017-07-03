@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>修改+离职</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">修改+离职</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<!--修改-->
+<tr>
+	<td>click</td>
+	<td>link=联系人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//li[@data-power=&quot;400&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-plugin=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h4.media-heading</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-hide=&quot;ispackage&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>gonghao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;snum&quot;]/div/input</td>
+	<td>${gonghao}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;salary&quot;]/div/input</td>
+	<td>1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=male</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//div[@data-option=&quot;birthday&quot;]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>xpath=//li[@data-value=&quot;1995&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//li[@data-value=&quot;1995&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>xpath=//li[@data-value=&quot;3&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//li[@data-value=&quot;3&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>xpath=//li[@data-value=&quot;19&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//li[@data-value=&quot;19&quot;]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-option=&quot;sgroup&quot;]/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div/div/input</td>
+	<td>13140023070</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-option=&quot;nation&quot;]/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div/div/input</td>
+	<td>1548790965</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;email&quot;]/div/div/input</td>
+	<td>li@qq.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;saddress&quot;]/div/div/input</td>
+	<td>郑州</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;card&quot;]/div/input</td>
+	<td>411403</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=unmarried</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nochild</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;emPerson&quot;]/div/div/input</td>
+	<td>我</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;emPerson&quot;]/div[2]/div/input</td>
+	<td>13140023070</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;memo&quot;]/div/input</td>
+	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-plugin=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 工号：${gonghao}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>手机：13140023070</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 性别：男</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>QQ：1548790965</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>手机：13140023070</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>QQ：1548790965</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>住址：郑州</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>个人邮箱：li@qq.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 婚姻状况：未婚</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 子女：无</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 民族：汉族</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>生日：1995年3月19日 (*岁)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 身份证号：411403</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 紧急联系人：我</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 紧急电话：13140023070</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>备注：无</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5:contains(&quot;新增客户&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@data-role=&quot;staff&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-append=&quot;staff&quot;]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<!--离职禁登-->
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>付款</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">付款</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=供货商</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;171&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>新增客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;供货商名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=其他信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//tbody/tr/td[2]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(9)}</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr/td[/]/h5/span</td>
+	<td>qiankuan</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.yingshou.substring(0,storedVars.yingshou.length-8) + storedVars.yingshou.substring(storedVars.yingshou.length-7,storedVars.yingshou.length-4) + storedVars.yingshou.substring(storedVars.yingshou.length-3))-8}</td>
+	<td>yingshou1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;221&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;discount&quot;]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@title=&quot;现金&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//input[@data-role=&quot;date&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tfoot/tr/th</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@title=&quot;老板&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=老板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//a[@data-slide-action=&quot;close&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[/]/h5/span</td>
+	<td>javascript{Number(storedVars['qiankuan'])-8}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.yingshou.substring(0,storedVars.yingshou.length-8) + storedVars.yingshou.substring(storedVars.yingshou.length-7,storedVars.yingshou.length-4) + storedVars.yingshou.substring(storedVars.yingshou.length-3))}</td>
+	<td>yingshou2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yingshou1}==${yingshou2}</td>
+	<td>Y</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Y</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=应付报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[5]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[6]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
+	<td>2</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>cuowu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">cuowu</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=同事</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--员工姓名为空及姓名相同及不符合规则-->
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>员工姓名不能为空！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>李志伟、</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>员工名称中不能含有标点符号！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>员工名称已经存在</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>12345678901</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>员工名称输入字符过多！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<!--编号重复及字符超过20位-->
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>gonghao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;snum&quot;]/div/input</td>
+	<td>${gonghao}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot;</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;snum&quot;]/div/input</td>
+	<td>${gonghao}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>编号已经被使用！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;snum&quot;]/div/input</td>
+	<td>123456789012345678901</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>编号输入字符最多不能超过20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>gonghao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;snum&quot;]/div/input</td>
+	<td>${gonghao}</td>
+</tr>
+<!--手机号不符合规则-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div/div/input</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>电话项的第1条手机，内容必须是合格的！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div/div/input</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div[2]/div/input</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>电话项的第2条住宅电话，内容必须是合格的！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div[2]/div/input</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div[3]/div/input</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>电话项的第3条办公电话，内容必须是合格的！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;phone&quot;]/div[3]/div/input</td>
+	<td>123456</td>
+</tr>
+<!--QQ不正确-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div/div/input</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>即时聊天项的第1条QQ，内容必须是合格的！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div/div/input</td>
+	<td>154</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='exampleTabsLineOne']/div[5]/div/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=微信</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div[2]/div/input</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>即时聊天项的第2条微信，内容必须是合格的！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div[2]/div/input</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='exampleTabsLineOne']/div[5]/div/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div[3]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[5]/div[3]/div[1]/ul/li[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div[3]/div/input</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>即时聊天项的第3条旺旺，内容必须是合格的！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;qq&quot;]/div[3]/div/input</td>
+	<td>123456</td>
+</tr>
+<!--备注大于255字符-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;memo&quot;]/div/input</td>
+	<td>无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜无呜呜呜呜呜呜呜呜呜呜</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>备注输入字符最多不能超过255</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;memo&quot;]/div/input</td>
+	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=其他信息</td>
+	<td></td>
+</tr>
+<!--工资大于或小于1亿-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;salary&quot;]/div/input</td>
+	<td>-100000001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>工资不能大于或小于1亿</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;salary&quot;]/div/input</td>
+	<td>100000001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>工资不能大于或小于1亿</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;salary&quot;]/div/input</td>
+	<td>10000</td>
+</tr>
+<!--身份证号大于18位字符-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;card&quot;]/div/input</td>
+	<td>4114031995033060111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>身份证输入字符最多不能超过18</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;card&quot;]/div/input</td>
+	<td>411403199503306011</td>
+</tr>
+<!--紧急联系人输入字符最多不能超过10-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;emPerson&quot;]/div/div/input</td>
+	<td>12345678901</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>紧急联系人输入字符最多不能超过10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;emPerson&quot;]/div/div/input</td>
+	<td>1234567890</td>
+</tr>
+<!--紧急联系人电话输入字符最多不能超过20-->
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;emPerson&quot;]/div[2]/div/input</td>
+	<td>123456789012345678901</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>紧急联系人电话输入字符最多不能超过20</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

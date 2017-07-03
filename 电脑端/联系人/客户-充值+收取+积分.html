@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>chongzhi+shouqu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">chongzhi+shouqu</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--验证对用户充值的正确性-->
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//tbody/tr/td[2]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(9)}</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>jifen</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr/td[/]/h5/span</td>
+	<td>yue</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zongfen)+20}</td>
+	<td>zongfen1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalBalance&quot;]</td>
+	<td>yucun</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.yucun)+12}</td>
+	<td>yucun1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//button[@data-power=&quot;221&quot;]</td>
+	<td>充值</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;221&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.col-sm-9.col-sm-offset-3 &gt; button.btn.btn-primary</td>
+	<td>保存 (Ctrl+Enter)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;discount&quot;]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@title=&quot;现金&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=微信</td>
+	<td>微信</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//input[@data-role=&quot;date&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=th.today</td>
+	<td>今日</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tfoot/tr/th</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@title=&quot;老板&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=老板</td>
+	<td>老板</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=老板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>当前余额：12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>当前余额：12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-power=&quot;220&quot;]/ul/li[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody[@class=&quot;wrapcontainer&quot;]/tr[2]/td[4]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody[@class=&quot;wrapcontainer&quot;]/tr[2]/td[5]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody[@class=&quot;wrapcontainer&quot;]/tr[2]/td[7]</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-sm.btn-icon.btn-inverse.btn-round</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//a[@data-slide-action=&quot;close&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>javascript{Number(storedVars['jifen'])+20}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[/]/h5/span</td>
+	<td>javascript{Number(storedVars['yue'])+12}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen3</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zongfen3)}</td>
+	<td>zongfen2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zongfen1}==${zongfen2}</td>
+	<td>K</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalBalance&quot;]</td>
+	<td>yucun3</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.yucun3)}</td>
+	<td>yucun2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yucun1}==${yucun2}</td>
+	<td>N</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>N</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=储值报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[2]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[4]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[5]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//div[@data-power=&quot;220&quot;]/ul/li[2]/a</td>
+	<td>储值历史</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-power=&quot;220&quot;]/ul/li[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tbody/tr[2]/td[@class=&quot;text-left&quot;]</td>
+	<td>*充值*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr[2]/td[@class=&quot;text-left&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>删除成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//td[8]/h5/span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[8]/h5/span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[7]/h5</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalBalance&quot;]</td>
+	<td>yucun4</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yucun}==${yucun4}</td>
+	<td>Z</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Z</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen4</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zongfen}==${zongfen4}</td>
+	<td>A</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>A</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>当前余额：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>当前余额：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=储值报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//section[3]/h5</td>
+	<td>导航</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextNotPresent</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<!--验证对用户收款的正确性-->
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=其他信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//tbody/tr/td[2]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(9)}</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>jifen</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr/td[/]/h5/span</td>
+	<td>qiankuan</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zongfen)+12}</td>
+	<td>zongfen1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.yingshou)-8}</td>
+	<td>yingshou1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//button[@data-power=&quot;221&quot;]</td>
+	<td>收款</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;221&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.col-sm-9.col-sm-offset-3 &gt; button.btn.btn-primary</td>
+	<td>保存 (Ctrl+Enter)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;discount&quot;]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@title=&quot;现金&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=微信</td>
+	<td>微信</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//input[@data-role=&quot;date&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=th.today</td>
+	<td>今日</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tfoot/tr/th</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@title=&quot;老板&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=老板</td>
+	<td>老板</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=老板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-hover=&quot;dropdown&quot;])[2]</td>
+	<td>操作</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-power=&quot;220&quot;]/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.visible-lg</td>
+	<td>期初</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody[@class=&quot;wrapcontainer&quot;]/tr[2]/td[5]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody[@class=&quot;wrapcontainer&quot;]/tr[2]/td[6]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody[@class=&quot;wrapcontainer&quot;]/tr[2]/td[7]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-sm.btn-icon.btn-inverse.btn-round</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//a[@data-slide-action=&quot;close&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>javascript{Number(storedVars['jifen'])+12}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[/]/h5/span</td>
+	<td>javascript{Number(storedVars['qiankuan'])-8}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen3</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zongfen3)}</td>
+	<td>zongfen2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zongfen1}==${zongfen2}</td>
+	<td>J</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>J</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou3</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.yingshou3)}</td>
+	<td>yingshou2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yingshou1}==${yingshou2}</td>
+	<td>Y</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Y</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=应收报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[2]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[5]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[6]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=欠款历史</td>
+	<td>欠款历史</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=欠款历史</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tbody/tr[2]/td[@class=&quot;text-left&quot;]</td>
+	<td>*收款*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr[2]/td[@class=&quot;text-left&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>删除成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//td[8]/h5/span</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[8]/h5/span</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[7]/h5</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou4</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yingshou}==${yingshou}</td>
+	<td>S</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>S</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen4</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zongfen}==${zongfen4}</td>
+	<td>D</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>D</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>当前欠款：10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>当前欠款：10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=应收报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[2]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[5]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[6]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
+	<td>10</td>
+</tr>
+<!--验证对积分操作的正确性-->
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>jifen</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.zongfen.substring(0,storedVars.zongfen.length-8) + storedVars.zongfen.substring(storedVars.zongfen.length-7,storedVars.zongfen.length-4) + storedVars.zongfen.substring(storedVars.zongfen.length-3))+21}</td>
+	<td>zongfen1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tbody/tr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-hover=&quot;dropdown&quot;])[2]</td>
+	<td>操作</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=增加积分</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.layui-layer-title</td>
+	<td>增加积分</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;输入要增加的积分&quot;]</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;增加积分的原因是...&quot;]</td>
+	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=增加</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：21</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=查看积分历史</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.pull-right.red-600</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.pull-right.red-600</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>javascript{Number(storedVars['jifen'])+21}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalscore&quot;]</td>
+	<td>zongfen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.zongfen.substring(0,storedVars.zongfen.length-8) + storedVars.zongfen.substring(storedVars.zongfen.length-7,storedVars.zongfen.length-4) + storedVars.zongfen.substring(storedVars.zongfen.length-3))}</td>
+	<td>zongfen2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zongfen1}==${zongfen2}</td>
+	<td>L</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

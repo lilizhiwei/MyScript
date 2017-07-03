@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>shengri+fenzu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">shengri+fenzu</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--创建分组是否成功的验证及分组名相同不能创建的验证-->
+<tr>
+	<td>click</td>
+	<td>link=添加新分组</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.layui-layer-title</td>
+	<td>新增分组</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;分组&quot; +Math.round(Math.random()*1000) </td>
+	<td>fenzu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${fenzu}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;${fenzu}&quot;)</td>
+	<td>${fenzu}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span:contains(&quot;${fenzu}&quot;)</td>
+	<td>${fenzu}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加新分组</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${fenzu}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>分组已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>分组已存在！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=取消</td>
+	<td></td>
+</tr>
+<!--修改分组名称并验证此分组内用户分组是否跟随变化-->
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-option=&quot;group&quot;]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${fenzu}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>css=span:contains(&quot;${fenzu}&quot;)@data-id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//span[@data-id=&quot;${id}&quot;]/../div/span/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;分组&quot; +Math.round(Math.random()*1000) </td>
+	<td>fenzu</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.layui-layer-input</td>
+	<td>${fenzu}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;${fenzu}&quot;)</td>
+	<td>${fenzu}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span:contains(&quot;${fenzu}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<!--删除分组验证用户是否划分到未分组中-->
+<tr>
+	<td>click</td>
+	<td>xpath=//span[@data-id=&quot;${id}&quot;]/../div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>错误-进退货</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">错误-进退货</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<!--新增供货商-->
+<tr>
+	<td>click</td>
+	<td>link=联系人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5:contains(&quot;新增供货商&quot;)</td>
+	<td>新增供货商</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5:contains(&quot;新增供货商&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;供应商名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>ghs</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;供应商名称&quot;]</td>
+	<td>${ghs}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=工作</td>
+	<td>工作</td>
+</tr>
+<!--新增二个商品-->
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;141&quot;]</td>
+	<td>商品</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;141&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.padding-10.margin-bottom-0</td>
+	<td>常用功能</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@onclick=&quot;window.location.hash='#page/gadd'&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.white</td>
+	<td>新增商品</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;参考进货价&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;buyprice&quot;]/div/div/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;商品&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;商品名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;当前库存&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;currentStock&quot;]/div/div/input</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.padding-10.margin-bottom-0</td>
+	<td>常用功能</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@onclick=&quot;window.location.hash='#page/gadd'&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.white</td>
+	<td>新增商品</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;参考进货价&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;buyprice&quot;]/div/div/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;商品&quot; +Math.round(Math.random()*1000) </td>
+	<td>name2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;商品名称&quot;]</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;当前库存&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;currentStock&quot;]/div/div/input</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.padding-10.margin-bottom-0</td>
+	<td>常用功能</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;121&quot;]</td>
+	<td>进货</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;121&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=small.pull-right.font-size-12</td>
+	<td>进货额：*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addnewbill</td>
+	<td></td>
+</tr>
+<!--进货-->
+<!--无商品-->
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td>结算本单</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>您需要选择商品去结算!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>您需要选择商品去结算!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<!--进负数量商品库存不足-->
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.mid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>添加商品</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[2]/div/div[2]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>添加商品</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@onclick='window.history.go(-1);']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>-10</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: -990</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>第 1 行 ${name2} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>第 1 行 ${name2} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: -990</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 1010</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr[2]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>-10</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>第 2 行 ${name} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>第 2 行 ${name} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 0</td>
+	<td></td>
+</tr>
+<!--退货库存不足-->
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;selltype typeout&nbsp;&nbsp;col-xs-6&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>第 1 行 ${name2} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>第 1 行 ${name2} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody/tr/td[2]</td>
+	<td>${name2}*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>-10</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: -2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr[2]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>第 2 行 ${name} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>第 2 行 ${name} 库存不足！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody/tr/td[2]</td>
+	<td>${name2}*</td>
+</tr>
+<!--数量为0-->
+<tr>
+	<td>click</td>
+	<td>//tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>请输入正确的商品数量!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>请输入正确的商品数量!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;cancel&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr[2]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>确认商品</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.text-center</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.text-center</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--配送手机号错误-->
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;input-group-addon blue-grey-400 padding-left-15&quot;]</td>
+	<td>送货方式</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.utel</td>
+	<td>131</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>手机号码输入不正确！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>手机号码输入不正确！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;input-group-addon blue-grey-400 padding-left-15&quot;]</td>
+	<td>送货方式</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.utel</td>
+	<td>13140023070</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//input[@value=&quot;200&quot;]</td>
+	<td></td>
+</tr>
+<!--零散客户不可欠账-->
+<tr>
+	<td>type</td>
+	<td>//input[@value=&quot;200&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@value=&quot;200&quot;]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${ghs}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-toggle=&quot;collapse&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=site-search</td>
+	<td>${ghs}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=site-search</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.mid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td>结算本单</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>该单欠款 199 (元), 确定继续？</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;cancel&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.selltype.typepassin</td>
+	<td>进货</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.selltype.typepassin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td>结算本单</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[2]/button</td>
+	<td>保存</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>该单欠款 199 (元), 确定继续？</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>保存成功</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>199*${ghs}*应付</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>199*${ghs}*应付</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

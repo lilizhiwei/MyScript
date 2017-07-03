@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="客户-创建客户.html">客户-创建客户</a></td></tr>
+<tr><td><a href="客户-余额+应收客户.html">客户-余额+应收客户</a></td></tr>
+<tr><td><a href="客户-错误验证.html">客户-错误验证</a></td></tr>
+<tr><td><a href="客户-修改验证.html">客户-修改验证</a></td></tr>
+<tr><td><a href="客户-筛选+搜索.html">客户-筛选+搜索</a></td></tr>
+<tr><td><a href="客户-充值+收取+积分.html">客户-充值+收取+积分</a></td></tr>
+<tr><td><a href="客户-分组.html">客户-分组</a></td></tr>
+</tbody></table>
+</body>
+</html>

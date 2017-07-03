@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>yanzheng-yue+yingshou</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">yanzheng-yue+yingshou</td></tr>
+</thead><tbody>
+<!--打开页面-->
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--创建欠费用户并验证-->
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.yingshou.substring(0,storedVars.yingshou.length-8) + storedVars.yingshou.substring(storedVars.yingshou.length-7,storedVars.yingshou.length-4) + storedVars.yingshou.substring(storedVars.yingshou.length-3))+10}</td>
+	<td>yingshou1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=其他信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody/tr[1]/td[8]/h5</td>
+	<td>应收：10</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalNeedpay&quot;]</td>
+	<td>yingshou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.yingshou.substring(0,storedVars.yingshou.length-8) + storedVars.yingshou.substring(storedVars.yingshou.length-7,storedVars.yingshou.length-4) + storedVars.yingshou.substring(storedVars.yingshou.length-3))}</td>
+	<td>yingshou2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yingshou1}==${yingshou2}</td>
+	<td>Y</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Y</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//tbody/tr/td[2]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(9)}</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=应收报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[2]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[3]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
+	<td>10</td>
+</tr>
+<!--创建余额用户并验证-->
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalBalance&quot;]</td>
+	<td>yucun</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.yucun.substring(0,storedVars.yucun.length-8) + storedVars.yucun.substring(storedVars.yucun.length-7,storedVars.yucun.length-4) + storedVars.yucun.substring(storedVars.yucun.length-3))+10}</td>
+	<td>yucun1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=其他信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>-10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tbody/tr[1]/td[8]/h5</td>
+	<td>余额：10</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//span[@data-role=&quot;totalBalance&quot;]</td>
+	<td>yucun</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Number(storedVars.yucun.substring(0,storedVars.yucun.length-8) + storedVars.yucun.substring(storedVars.yucun.length-7,storedVars.yucun.length-4) + storedVars.yucun.substring(storedVars.yucun.length-3))}</td>
+	<td>yucun2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${yucun1}==${yucun2}</td>
+	<td>N</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>N</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//tbody/tr/td[2]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(9)}</td>
+	<td>id1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=储值报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[2]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[3]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
+	<td>10</td>
+</tr>
+</tbody></table>
+</body>
+</html>
