@@ -651,10 +651,45 @@
 </tr>
 <tr>
 	<td>waitForText</td>
+	<td>link=取消</td>
+	<td>取消</td>
+</tr>
+<!--缺少进货金额提醒验证-->
+<tr>
+	<td>click</td>
+	<td>link=取消</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=inputHorizontalMale</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>实收：1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>该单欠款 9 (元), 确定继续？</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>该单欠款 9 (元), 确定继续？</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
 	<td>link=确定</td>
 	<td>确定</td>
 </tr>
-<!--缺少进货金额提醒验证-->
 <tr>
 	<td>click</td>
 	<td>link=确定</td>
@@ -687,12 +722,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>对该供货商已有 -9 欠款，请注意付款金额</td>
+	<td>对该供货商已有 9 欠款，请注意付款金额</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>对该供货商已有 -9 欠款，请注意付款金额</td>
+	<td>对该供货商已有 9 欠款，请注意付款金额</td>
 	<td></td>
 </tr>
 <!--供货商验证-->
@@ -713,12 +748,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>当前欠款：-9</td>
+	<td>当前欠款：9</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>当前欠款：-9</td>
+	<td>当前欠款：9</td>
 	<td></td>
 </tr>
 </tbody></table>
