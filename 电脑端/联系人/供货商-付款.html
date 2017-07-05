@@ -36,6 +36,43 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
+<!--获取财务信息-->
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin)-6}</td>
+	<td>zijin1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payout</td>
+	<td>fu</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.fu)+10}</td>
+	<td>fu1</td>
+</tr>
+<!--操作供货商-->
 <tr>
 	<td>click</td>
 	<td>link=供货商</td>
@@ -123,6 +160,66 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payout</td>
+	<td>fu2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.fu2)}</td>
+	<td>fu3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${fu1}==${fu3}</td>
+	<td>Q</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Q</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=供货商</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>xpath=//tbody/tr</td>
 	<td></td>
 </tr>
@@ -149,7 +246,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
-	<td>6</td>
+	<td>9</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -215,6 +312,26 @@
 	<td>type</td>
 	<td>xpath=//textarea[@placeholder=&quot;其他说明&quot;]</td>
 	<td>无</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>付款金额不能大于10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>付款金额不能大于10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
+	<td>6</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -298,6 +415,131 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin2)}</td>
+	<td>zijin3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payout</td>
+	<td>fu2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.fu2)+8}</td>
+	<td>fu3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin3}</td>
+	<td>W</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>W</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${fu1}==${fu3}</td>
+	<td>E</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>E</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 支出 项目 归还欠款</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 供货商 ${name} 帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2} 优惠 2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>link=供货商</td>
 	<td></td>
 </tr>
@@ -348,12 +590,32 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=del</td>
-	<td></td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 支出 项目 归还欠款</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 供货商 ${name} 帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2} 优惠 2</td>
 	<td></td>
 </tr>
 <tr>
@@ -460,6 +722,81 @@
 	<td>verifyText</td>
 	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
 	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin5</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payout</td>
+	<td>fu5</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin5)-6}</td>
+	<td>zijin6</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.fu5)}</td>
+	<td>fu6</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin6}</td>
+	<td>R</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>R</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${fu1}==${fu6}</td>
+	<td>T</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>T</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>

@@ -46,6 +46,67 @@
 	<td>//a[2]/i</td>
 	<td></td>
 </tr>
+<!--获取财务信息-->
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=aster</td>
+	<td>exact:******</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=balance</td>
+	<td>zijin</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[@sort=&quot;6&quot;]/span[2]</td>
+	<td>shou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin)+10}</td>
+	<td>zijin1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.shou)+10}</td>
+	<td>shou1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
 <!--充值-->
 <tr>
 	<td>click</td>
@@ -248,13 +309,83 @@
 	<td>javascript{Number(storedVars.zongfen)+20}</td>
 </tr>
 <tr>
-	<td>goBack</td>
-	<td></td>
+	<td>open</td>
+	<td>/mobile</td>
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
+</tr>
+<tr>
 	<td>pause</td>
-	<td>1500</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=aster</td>
+	<td>exact:******</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=balance</td>
+	<td>zijin2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin2)}</td>
+	<td>zijin3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin3}</td>
+	<td>K</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
 	<td></td>
 </tr>
 <tr>
@@ -318,23 +449,13 @@
 	<td>期末余额：12</td>
 </tr>
 <tr>
-	<td>goBack</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1500</td>
+	<td>open</td>
+	<td>/mobile</td>
 	<td></td>
 </tr>
 <tr>
-	<td>goBack</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1500</td>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
 	<td></td>
 </tr>
 <!--收取-->
@@ -450,6 +571,86 @@
 </tr>
 <tr>
 	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=aster</td>
+	<td>exact:******</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[@sort=&quot;6&quot;]/span[2]</td>
+	<td>shou2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.shou2)}</td>
+	<td>shou3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${shou1}==${shou3}</td>
+	<td>Q</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Q</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=联系人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
 	<td>1500</td>
 	<td></td>
 </tr>
@@ -491,12 +692,37 @@
 <tr>
 	<td>type</td>
 	<td>//input[@type='text']</td>
-	<td>6</td>
+	<td>9</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>xpath=(//input[@type='text'])[2]</td>
 	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>收款金额不能大于10!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>收款金额不能大于10!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>6</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -629,23 +855,113 @@
 	<td>期末应收：2</td>
 </tr>
 <tr>
-	<td>goBack</td>
+	<td>open</td>
+	<td>/mobile</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
 	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1500</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>goBack</td>
+	<td>click</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
 	<td></td>
-	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=aster</td>
+	<td>exact:******</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1500</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=balance</td>
+	<td>zijin4</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//li[@sort=&quot;6&quot;]/span[2]</td>
+	<td>shou4</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin4)-6}</td>
+	<td>zijin5</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.shou4)+8}</td>
+	<td>shou5</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin5}</td>
+	<td>E</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>E</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${shou1}==${shou5}</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>w</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/mobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
 	<td></td>
 </tr>
 <!--积分-->

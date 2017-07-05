@@ -36,6 +36,33 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
+<!--获取财务总资金-->
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin)+10}</td>
+	<td>zijin1</td>
+</tr>
+<!--验证对用户充值的正确性-->
 <tr>
 	<td>click</td>
 	<td>link=客户</td>
@@ -61,7 +88,6 @@
 	<td>500</td>
 	<td></td>
 </tr>
-<!--验证对用户充值的正确性-->
 <tr>
 	<td>storeEval</td>
 	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
@@ -273,24 +299,19 @@
 	<td>12</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=button.btn.btn-sm.btn-icon.btn-inverse.btn-round</td>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>xpath=//a[@data-slide-action=&quot;close&quot;]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>javascript{Number(storedVars['jifen'])+20}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -360,6 +381,101 @@
 <tr>
 	<td>verifyTextPresent</td>
 	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin2)}</td>
+	<td>zijin3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin3}</td>
+	<td>V</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>V</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 10</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 会员充值</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>客户 ${name} 帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2} 赠送 2</td>
 	<td></td>
 </tr>
 <tr>
@@ -444,7 +560,32 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=del</td>
+	<td>css=h3.yahei</td>
+	<td>金额 10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 10</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 会员充值</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>客户 ${name} 帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2} 赠送 2</td>
 	<td></td>
 </tr>
 <tr>
@@ -587,6 +728,51 @@
 	<td>${name}</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin4</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin4)+10}</td>
+	<td>zijin5</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin5}</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>c</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
 <!--验证对用户收款的正确性-->
 <tr>
 	<td>click</td>
@@ -693,9 +879,56 @@
 	<td>javascript{lz(storedVars.yingshou)-8}</td>
 	<td>yingshou1</td>
 </tr>
+<!--获取财务信息-->
 <tr>
 	<td>click</td>
-	<td>xpath=//tbody/tr</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin)+6}</td>
+	<td>zijin1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payin</td>
+	<td>shou</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.shou)-8}</td>
+	<td>shou1</td>
+</tr>
+<!--收款-->
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[4]/div/div</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//tr/td[4]/div/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -721,7 +954,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
-	<td>6</td>
+	<td>9</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -794,6 +1027,26 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForTextPresent</td>
+	<td>收款金额不能大于10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>收款金额不能大于10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;money&quot;]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>xpath=(//button[@data-hover=&quot;dropdown&quot;])[2]</td>
 	<td>操作</td>
@@ -834,24 +1087,19 @@
 	<td>2</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=button.btn.btn-sm.btn-icon.btn-inverse.btn-round</td>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>xpath=//a[@data-slide-action=&quot;close&quot;]/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>xpath=//tr/td[7]/h5</td>
+	<td>javascript{Number(storedVars['jifen'])+12}</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -955,6 +1203,131 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin2)}</td>
+	<td>zijin3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payin</td>
+	<td>shou2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.shou2)}</td>
+	<td>shou3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin3}</td>
+	<td>Q</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Q</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${shou1}==${shou3}</td>
+	<td>W</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>W</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 收回欠款</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>客户 ${name} 帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2} 优惠 2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>link=客户</td>
 	<td></td>
 </tr>
@@ -1005,12 +1378,32 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=del</td>
-	<td></td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 6</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 收回欠款</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>客户 ${name} 帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2} 优惠 2</td>
 	<td></td>
 </tr>
 <tr>
@@ -1157,6 +1550,81 @@
 	<td>verifyText</td>
 	<td>xpath=//tr[@data-id=&quot;${id1}&quot;]/td[7]</td>
 	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin4</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin4)+6}</td>
+	<td>zijin5</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=payin</td>
+	<td>shou4</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.shou4)-8}</td>
+	<td>shou5</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin5}</td>
+	<td>E</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>E</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${shou1}==${shou5}</td>
+	<td>R</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>R</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
 </tr>
 <!--验证对积分操作的正确性-->
 <tr>
