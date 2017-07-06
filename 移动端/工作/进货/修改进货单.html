@@ -837,7 +837,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//ul/li[@data-handle=&quot;chosen&quot;][2]</td>
+	<td>//ul/li[@data-handle=&quot;chosen&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -851,9 +851,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=div &gt; span</td>
-	<td>送货</td>
+	<td>waitForTextPresent</td>
+	<td>经办人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -933,16 +938,6 @@
 <tr>
 	<td>verifyTextPresent</td>
 	<td>经手人*${yg}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>联系电话*13140023070</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>送货方式*自取</td>
 	<td></td>
 </tr>
 <tr>
@@ -1387,13 +1382,18 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>css=li.list-group-item &gt; h5</td>
 	<td>按商品分析</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>

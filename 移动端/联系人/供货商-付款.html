@@ -296,37 +296,12 @@
 <tr>
 	<td>type</td>
 	<td>//input[@type='text']</td>
-	<td>9</td>
+	<td>6</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>xpath=(//input[@type='text'])[2]</td>
 	<td>2</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@data-action=&quot;save&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>付款金额不能大于10!</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>付款金额不能大于10!</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//input[@type='text']</td>
-	<td>6</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -506,6 +481,36 @@
 <tr>
 	<td>verifyTextPresent</td>
 	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=652</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0</td>
+	<td>归还欠款6</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.padding-20.margin-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>余　额 ${zijin4}*优　惠 2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>联系人 ${name}*帐　户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余　额 ${zijin4}*优　惠 2</td>
 	<td></td>
 </tr>
 </tbody></table>
