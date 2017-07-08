@@ -1019,7 +1019,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>1500</td>
 	<td></td>
 </tr>
 <tr>
@@ -1155,17 +1155,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>进货数量：-3 进货单价：17.27 进货金额：-51.82</td>
+	<td>进货数量：-3*进货成本单价：17.27*进货成本小计：-51.82</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货数量：-3 进货单价：17.27 进货金额：-51.82</td>
+	<td>进货数量：-3*进货成本单价：17.27*进货成本小计：-51.82</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>结余数量：47 结余金额：-51.82</td>
+	<td>结余数量：47 结余成本总值：-51.82</td>
 	<td></td>
 </tr>
 <tr>
@@ -1176,6 +1176,11 @@
 <tr>
 	<td>refreshAndWait</td>
 	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -1225,17 +1230,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>进货数量：-20 进货单价：6.91 进货金额：-138.18</td>
+	<td>进货数量：-20 进货成本单价：6.91 进货成本小计：-138.18</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货数量：-20 进货单价：6.91 进货金额：-138.18</td>
+	<td>进货数量：-20 进货成本单价：6.91 进货成本小计：-138.18</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>结余数量：30 结余金额：-138.18</td>
+	<td>结余数量：30 结余成本总值：-138.18</td>
 	<td></td>
 </tr>
 <tr>
@@ -1720,7 +1725,12 @@
 </tr>
 <tr>
 	<td>verifyTextNotPresent</td>
-	<td>进货数量：-3 进货单价：17.27 进货金额：-51.82</td>
+	<td>进货数量：-3 </td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextNotPresent</td>
+	<td>结余数量：47</td>
 	<td></td>
 </tr>
 <tr>
@@ -1835,27 +1845,12 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <tr>
@@ -1900,77 +1895,12 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextNotPresent</td>
-	<td>200*61.82*20*6.91*138.18</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>200*61.82*20*6.91*138.18</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=按员工分析</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${yg}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <tr>
@@ -2005,22 +1935,12 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <!--库存警告消失-->
@@ -2077,6 +1997,16 @@
 <tr>
 	<td>click</td>
 	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextNotPresent</td>
+	<td>60*8.18*3*17.27*51.82</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextNotPresent</td>
+	<td>200*61.82*20*6.91*138.18</td>
 	<td></td>
 </tr>
 <tr>

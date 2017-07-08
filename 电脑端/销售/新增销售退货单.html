@@ -59,7 +59,7 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.zijin)-200}</td>
+	<td>javascript{lz(storedVars.zijin)-220}</td>
 	<td>zijin1</td>
 </tr>
 <!--新增二个商品一套餐-->
@@ -122,6 +122,11 @@
 	<td>type</td>
 	<td>xpath=//input[@data-action=&quot;stockNumChange&quot;]</td>
 	<td>50</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockPriceChange&quot;]</td>
+	<td>10</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -227,6 +232,11 @@
 	<td>type</td>
 	<td>xpath=//input[@data-action=&quot;stockNumChange&quot;]</td>
 	<td>50</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-action=&quot;stockPriceChange&quot;]</td>
+	<td>10</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -907,13 +917,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>css=div.font-size-14</td>
+	<td>${kh}</td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>//span[@class=&quot;layui-layer-setwin&quot;]/a</td>
+	<td>css=div.font-size-14</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>销售额：*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td> 进货额：-190</td>
+	<td>销售额：*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：-400</td>
 	<td></td>
 </tr>
 <tr>
@@ -924,12 +949,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=div.media-body &gt; span.pull-right</td>
-	<td>-190</td>
+	<td>*</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.media-body &gt; span.pull-right</td>
-	<td>-190</td>
+	<td>*</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -939,12 +964,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h5.margin-vertical-0 &gt; span.pull-right</td>
-	<td>-3</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h5.margin-vertical-0 &gt; span.pull-right</td>
-	<td>-3</td>
+	<td>-2</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -953,22 +973,42 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>进货量：*-3*进货额：*-51.818181</td>
+	<td>销售量：*-2*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货量：*-3*进货额：*-51.818181</td>
+	<td>销售量：*-2</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[5]/div/div/div/div/div/div/ul/li/a/span</td>
+	<td>//div[@id='layui-layer1']/span/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@data-action=&quot;seeSells&quot;][2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td> 进货额：-190</td>
+	<td>销售量：*-12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>销售量：*-12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='layui-layer2']/span/a</td>
 	<td></td>
 </tr>
 <!--财务验证-->
@@ -1120,17 +1160,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>进货数量：-3 进货单价：17.27 进货金额：-51.82</td>
+	<td>出货数量：-2 出货单价：0 出货金额：0*结余数量：52 结余金额：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货数量：-3 进货单价：17.27 进货金额：-51.82</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>结余数量：47 结余金额：-51.82</td>
+	<td>出货数量：-2 出货单价：0 出货金额：0*结余数量：52 结余金额：0</td>
 	<td></td>
 </tr>
 <tr>
@@ -1190,37 +1225,42 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>进货数量：-20 进货单价：6.91 进货金额：-138.18</td>
+	<td>出货数量：-2 出货单价：0 出货金额：0*结余数量：52 结余金额：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货数量：-20 进货单价：6.91 进货金额：-138.18</td>
+	<td>出货数量：-2 出货单价：0 出货金额：0*结余数量：52 结余金额：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>结余数量：30 结余金额：-138.18</td>
+	<td>出货数量：-10 出货单价：0 出货金额：0*结余数量：62 结余金额：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=进货报表</td>
+	<td>link=销售报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td>按商品分析</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1255,12 +1295,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>-20*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>-20*</td>
 	<td></td>
 </tr>
 <tr>
@@ -1269,8 +1309,13 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td>按商品分析</td>
 </tr>
 <tr>
@@ -1280,7 +1325,7 @@
 </tr>
 <tr>
 	<td>clickAt</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1315,17 +1360,27 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>-200*-61.82*-20*6.91*-138.18</td>
+	<td>销售额：*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>-180*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>-200*-61.82*-20*6.91*-138.18</td>
+	<td>-180*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>-40*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=按员工分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block users&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1365,22 +1420,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*-60*-8.18*-3*17.27*-51.82</td>
+	<td>${name4}**${name2}*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*-60*-8.18*-3*17.27*-51.82</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*-200*-61.82*-20*6.91*-138.18</td>
+	<td>${name4}**${name2}*</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=按供货商分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block client&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1401,7 +1451,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${ghs}</td>
+	<td>${kh}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -1420,29 +1470,74 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>${name4}*${name2}*${name4}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>${name4}*${name2}*${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block bills&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.visible-lg.text-center</td>
+	<td>名 称</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}*${name2}*${name4}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>-200*-61.82*-20*6.91*-138.18</td>
+	<td>${name4}*${name2}*${name4}</td>
 	<td></td>
 </tr>
 <!--将历史删除-->
 <tr>
 	<td>click</td>
-	<td>link=进货历史</td>
+	<td>link=销售历史</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
 	<td>css=div.title</td>
-	<td>${ghs}</td>
+	<td>${kh}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1476,15 +1571,15 @@
 </tr>
 <tr>
 	<td>waitForTextNotPresent</td>
-	<td>${ghs}</td>
+	<td>${kh}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextNotPresent</td>
-	<td>${ghs}</td>
+	<td>${kh}</td>
 	<td></td>
 </tr>
-<!--商品及供货商验证-->
+<!--商品验证-->
 <tr>
 	<td>click</td>
 	<td>link=商品库存</td>
@@ -1512,24 +1607,19 @@
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>参考进货价：8 　　　库　存：50个</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>供货商：无</td>
+	<td>零售价：20*库　存：50个</td>
 	<td></td>
 </tr>
 <!--进货商的验证-->
 <tr>
 	<td>click</td>
-	<td>link=供货商</td>
+	<td>link=客户</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
 	<td>css=div.font-size-14</td>
-	<td>${ghs}</td>
+	<td>${kh}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1538,12 +1628,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>折扣率：100%*进货额：0*当前欠款：0</td>
+	<td>折扣率：100%*销售额：0*当前余额：0*积分：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>折扣率：100%*进货额：0*当前欠款：0</td>
+	<td>折扣率：100%*销售额：0*当前余额：0*积分：0</td>
 	<td></td>
 </tr>
 <tr>
@@ -1554,12 +1644,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=big</td>
-	<td>没有进货记录</td>
+	<td>没有销售记录</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=big</td>
-	<td>没有进货记录</td>
+	<td>没有销售记录</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1569,12 +1659,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=big</td>
-	<td>没有进货记录</td>
+	<td>没有销售记录</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=big</td>
-	<td>没有进货记录</td>
+	<td>没有销售记录</td>
 </tr>
 <!--财务验证-->
 <tr>
@@ -1599,7 +1689,7 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.zijin4)+190}</td>
+	<td>javascript{lz(storedVars.zijin4)-200}</td>
 	<td>zijin5</td>
 </tr>
 <tr>
@@ -1685,7 +1775,7 @@
 </tr>
 <tr>
 	<td>verifyTextNotPresent</td>
-	<td>进货数量：-3 进货单价：17.27 进货金额：-51.82</td>
+	<td>出货数量</td>
 	<td></td>
 </tr>
 <tr>
@@ -1755,27 +1845,32 @@
 </tr>
 <tr>
 	<td>verifyTextNotPresent</td>
-	<td>进货数量</td>
+	<td>出货数量</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=进货报表</td>
+	<td>link=销售报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td>按商品分析</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1800,27 +1895,12 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <tr>
@@ -1829,8 +1909,13 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td>按商品分析</td>
 </tr>
 <tr>
@@ -1840,7 +1925,7 @@
 </tr>
 <tr>
 	<td>clickAt</td>
-	<td>link=按商品分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1865,32 +1950,17 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextNotPresent</td>
-	<td>200*61.82*20*6.91*138.18</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>200*61.82*20*6.91*138.18</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=按员工分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block users&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1911,7 +1981,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${yg}</td>
+	<td>老板</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -1920,27 +1990,17 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=按供货商分析</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block client&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -1961,7 +2021,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${ghs}</td>
+	<td>${kh}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -1970,22 +2030,52 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr/td/div</td>
+	<td>//button[@class=&quot;btn btn-primary btn-block bills&quot;]</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.visible-lg.text-center</td>
+	<td>名 称</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTextNotPresent</td>
-	<td>-60*-8.18*-3*17.27*-51.82</td>
+	<td>clickAt</td>
+	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
 	<td></td>
 </tr>
 <!--库存警告消失-->
@@ -2092,6 +2182,11 @@
 <tr>
 	<td>verifyTextNotPresent</td>
 	<td>VE${name2} 库　存：47*单　位：空*低下限：48*差　值：1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>销售额：-280.70</td>
 	<td></td>
 </tr>
 </tbody></table>
