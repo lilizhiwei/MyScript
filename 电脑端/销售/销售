@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="新增销售单.html">新增销售单</a></td></tr>
+<tr><td><a href="新增销售退货单.html">新增销售退货单</a></td></tr>
+<tr><td><a href="修改销售单.html">修改销售单</a></td></tr>
+<tr><td><a href="修改销售退货单.html">修改销售退货单</a></td></tr>
+<tr><td><a href="修改草稿销售单.html">修改草稿销售单</a></td></tr>
+<tr><td><a href="修改草稿销售退货单.html">修改草稿销售退货单</a></td></tr>
+<tr><td><a href="状态.html">状态</a></td></tr>
+<tr><td><a href="筛选+搜索.html">筛选+搜索</a></td></tr>
+<tr><td><a href="错误-销售.html">错误-销售</a></td></tr>
+</tbody></table>
+</body>
+</html>
