@@ -298,117 +298,6 @@
 	<td>保存成功</td>
 	<td></td>
 </tr>
-<!--新增客户-->
-<tr>
-	<td>click</td>
-	<td>link=客户</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span:contains(&quot;未分组&quot;)</td>
-	<td>未分组</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
-	<td>kh</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
-	<td>${kh}</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>保存成功</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=员工</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span:contains(&quot;未分配&quot;)</td>
-	<td>未分配</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
-	<td>yg</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
-	<td>${yg}</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>xpath=//h4[@class=&quot;media-heading text-truncate&quot;]</td>
-	<td>${yg}</td>
-</tr>
 <!--新增进货单-->
 <tr>
 	<td>click</td>
@@ -616,7 +505,102 @@
 	<td>css=span.goodsStock</td>
 	<td>合计:</td>
 </tr>
-<!--新增退货单-->
+<!--新增销售单-->
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-search.fa-fw</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=添加新客户</td>
+	<td>添加新客户</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加新客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>kh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@placeholder=&quot;导购员/业务员/负责人&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>添加新员工</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=i.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;and@data-role=&quot;sname&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>yg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;and@data-role=&quot;sname&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[2]/from/div/label</td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
@@ -629,7 +613,7 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
 	<td>*${name1}*</td>
 </tr>
 <tr>
@@ -639,12 +623,12 @@
 </tr>
 <tr>
 	<td>mouseOver</td>
-	<td>//div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>mouseDown</td>
-	<td>//div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -655,36 +639,6 @@
 <tr>
 	<td>waitForTextPresent</td>
 	<td>${name1}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>xpath=(//input[@placeholder=&quot;名称/编号/卡号/手机号&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
-	<td>${kh}</td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//input[@placeholder=&quot;导购员/业务员/负责人&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
-	<td>${yg}</td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
 	<td></td>
 </tr>
 <tr>
@@ -1265,13 +1219,7 @@
 	<td>css=div.content&gt;div:contains(&quot;${name1}&quot;)</td>
 	<td>${name1}</td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>css=div.content&gt;div:contains(&quot;${name1}&quot;)</td>
-	<td></td>
-</tr>
-<!--缺少套餐月销客销验证-->
-<!--客户的验证（待完成）-->
+<!--客户的验证-->
 <tr>
 	<td>click</td>
 	<td>link=客户</td>
@@ -1996,7 +1944,7 @@
 	<td>500</td>
 	<td></td>
 </tr>
-<!--商品及供货商验证-->
+<!--商品验证-->
 <tr>
 	<td>click</td>
 	<td>link=商品库存</td>
