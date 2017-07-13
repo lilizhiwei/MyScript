@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.yyddd.com/" />
+<title>进货+销售</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">进货+销售</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/pc/login.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--获取财务总资金-->
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin)-780}</td>
+	<td>zijin1</td>
+</tr>
+<!--新增二个商品一套餐-->
+<tr>
+	<td>click</td>
+	<td>link=商品库存</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.page-aside-title.margin-top-0</td>
+	<td>筛选</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@title=&quot;请选择分组&quot;])</td>
+	<td>请选择分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;buyprice&quot;])</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;sellprice&quot;])</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;小类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>VE${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增商品</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@title=&quot;请选择分组&quot;])</td>
+	<td>请选择分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;buyprice&quot;])</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@data-role=&quot;sellprice&quot;])</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;小类&quot; +Math.round(Math.random()*1000) </td>
+	<td>name4</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增套餐</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;套餐&quot; +Math.round(Math.random()*1000) </td>
+	<td>name1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
+	<td>${name1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-role=&quot;rem&quot;]</td>
+	<td>套餐</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;addgoods&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=添加新商品</td>
+	<td>添加新商品</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//h5[2]</td>
+	<td>合计参考进货价20</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<!--新增客户-->
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分组&quot;)</td>
+	<td>未分组</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;162&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>kh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=员工</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分配&quot;)</td>
+	<td>未分配</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>yg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//h4[@class=&quot;media-heading text-truncate&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<!--对商品进货-->
+<tr>
+	<td>click</td>
+	<td>link=新增进货单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.goodsStock</td>
+	<td>合计:</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[@id='1']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[@id='1']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[2]/td[3]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[5]/input</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[5]/input</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[4]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<!--循环销售商品-->
+<tr>
+	<td>click</td>
+	<td>link=新增销售单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n}&lt;9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.goodsStock</td>
+	<td>合计:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//input[@placeholder=&quot;名称/编号/卡号/手机号&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@placeholder=&quot;导购员/业务员/负责人&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>*${name1}*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[@id='2']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[3]/td[3]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[5]/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[5]/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[4]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;备注&quot;]</td>
+	<td>销售</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>实收：600</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>实收：600</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--再次进货-->
+<tr>
+	<td>click</td>
+	<td>link=新增进货单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.goodsStock</td>
+	<td>合计:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[@id='1']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[@id='1']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[2]/td[3]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[5]/input</td>
+	<td>80</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[5]/input</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[4]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<!--再次销售-->
+<tr>
+	<td>click</td>
+	<td>link=新增销售单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n}&lt;5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.goodsStock</td>
+	<td>合计:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//input[@placeholder=&quot;名称/编号/卡号/手机号&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@placeholder=&quot;导购员/业务员/负责人&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>*${name1}*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[@id='2']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[3]/td[3]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[5]/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[5]/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[4]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;备注&quot;]</td>
+	<td>销售</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.lcs_label.lcs_label_on</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value=&quot;100&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@value=&quot;100&quot;]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>实收：590</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>实收：590</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${n} + 1</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--数据验证（商品、客户、库存报表、销售报表）-->
+</tbody></table>
+</body>
+</html>
