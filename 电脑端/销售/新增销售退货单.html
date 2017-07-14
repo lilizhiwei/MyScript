@@ -36,6 +36,207 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
+<!--获取报表数据-->
+<tr>
+	<td>click</td>
+	<td>link=库存报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=canvas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei ins&quot;]</td>
+	<td>s</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.s)+1000}</td>
+	<td>s1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei out&quot;]</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.d)-140}</td>
+	<td>d1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei last&quot;]</td>
+	<td>f</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.f)+1140}</td>
+	<td>f1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei out&quot;]</td>
+	<td>j</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.j)-14}</td>
+	<td>j1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei ins&quot;]</td>
+	<td>h</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.h)+100}</td>
+	<td>h1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei last&quot;]</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.k)+114}</td>
+	<td>k1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=销售报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div/h5</td>
+	<td>销售额</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei sellmoney&quot;]</td>
+	<td>q</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.q)-200}</td>
+	<td>q1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei sellnum&quot;]</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.w)+1}</td>
+	<td>w1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei selldisc&quot;]</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.e)-60}</td>
+	<td>e1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei veragemoney&quot;]</td>
+	<td>r</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.r)-200}</td>
+	<td>r1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=canvas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center profit&quot;]</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.z)-60}</td>
+	<td>z1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center profitlv&quot;]</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei pmoney&quot;]</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.c)-200}</td>
+	<td>c1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center cb&quot;]</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.v)-140}</td>
+	<td>v1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@class=&quot;col-xs-4&quot;]/h3[@class=&quot;red-600 yahei veragemoney&quot;]</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.b)-60}</td>
+	<td>b1</td>
+</tr>
 <!--获取财务总资金-->
 <tr>
 	<td>click</td>
@@ -260,7 +461,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>500</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -901,12 +1102,12 @@
 <tr>
 	<td>storeText</td>
 	<td>css=div.metas&gt;div</td>
-	<td>a</td>
+	<td>az</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{storedVars.a.substring(storedVars.a.length-1,storedVars.a.length-15)}</td>
-	<td>b</td>
+	<td>javascript{storedVars.az.substring(storedVars.az.length-1,storedVars.az.length-15)}</td>
+	<td>bz</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1450,12 +1651,202 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=按商品分析</td>
-	<td>按商品分析</td>
+	<td>css=canvas</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei ins&quot;]</td>
+	<td>s</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.s)}</td>
+	<td>s2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei out&quot;]</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.d)}</td>
+	<td>d2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei last&quot;]</td>
+	<td>f</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.f)}</td>
+	<td>f2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei out&quot;]</td>
+	<td>j</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.j)}</td>
+	<td>j2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei ins&quot;]</td>
+	<td>h</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.h)}</td>
+	<td>h2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei last&quot;]</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.k)}</td>
+	<td>k2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${s1}==${s2}</td>
+	<td>s</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>s</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${d1}==${d2}</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>d</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${f1}==${f2}</td>
+	<td>f</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>f</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${j1}==${j2}</td>
+	<td>j</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>j</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${h1}==${h2}</td>
+	<td>h</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>h</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${k1}==${k2}</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>k</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
 	<td></td>
 </tr>
 <tr>
@@ -1591,6 +1982,281 @@
 <tr>
 	<td>click</td>
 	<td>link=销售报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div/h5</td>
+	<td>销售额</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei sellmoney&quot;]</td>
+	<td>q</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.q)}</td>
+	<td>q2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei sellnum&quot;]</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.w)}</td>
+	<td>w2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei selldisc&quot;]</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.e)}</td>
+	<td>e2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei veragemoney&quot;]</td>
+	<td>r</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.r)}</td>
+	<td>r2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=canvas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center profit&quot;]</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.z)}</td>
+	<td>z2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center profitlv&quot;]</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei pmoney&quot;]</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.c)}</td>
+	<td>c2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center cb&quot;]</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.v)}</td>
+	<td>v2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@class=&quot;col-xs-4&quot;]/h3[@class=&quot;red-600 yahei veragemoney&quot;]</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.b)}</td>
+	<td>b2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${q1}==${q2}</td>
+	<td>q</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>q</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${w1}==${w2}</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>w</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${e1}==${e2}</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>e</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${r1}==${r2}</td>
+	<td>r</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>r</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${z1}==${z2}</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>z</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${c1}==${c2}</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>c</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${v1}==${v2}</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>v</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${b1}==${b2}</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -1856,7 +2522,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${b}</td>
+	<td>${bz}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -2469,12 +3135,202 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=按商品分析</td>
-	<td>按商品分析</td>
+	<td>css=canvas</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei ins&quot;]</td>
+	<td>s</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.s)+1000}</td>
+	<td>s3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei out&quot;]</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.d)-140}</td>
+	<td>d3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei last&quot;]</td>
+	<td>f</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.f)+1140}</td>
+	<td>f3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei out&quot;]</td>
+	<td>j</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.j)-14}</td>
+	<td>j3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei ins&quot;]</td>
+	<td>h</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.h)+100}</td>
+	<td>h3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei last&quot;]</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.k)+114}</td>
+	<td>k3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${s1}==${s3}</td>
+	<td>s3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>s3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${d1}==${d3}</td>
+	<td>d3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>d3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${f1}==${f3}</td>
+	<td>f3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>f3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${j1}==${j3}</td>
+	<td>j3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>j3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${h1}==${h3}</td>
+	<td>h3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${k1}==${k3}</td>
+	<td>k3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>k3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
 	<td></td>
 </tr>
 <tr>
@@ -2600,6 +3456,281 @@
 <tr>
 	<td>click</td>
 	<td>link=销售报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div/h5</td>
+	<td>销售额</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei sellmoney&quot;]</td>
+	<td>q</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.q)-200}</td>
+	<td>q3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei sellnum&quot;]</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.w)+1}</td>
+	<td>w3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei selldisc&quot;]</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.e)-60}</td>
+	<td>e3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei veragemoney&quot;]</td>
+	<td>r</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.r)-200}</td>
+	<td>r3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=canvas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center profit&quot;]</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.z)-60}</td>
+	<td>z3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center profitlv&quot;]</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei pmoney&quot;]</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.c)-200}</td>
+	<td>c3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//h3[@class=&quot;red-600 yahei text-center cb&quot;]</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.v)-140}</td>
+	<td>v3</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@class=&quot;col-xs-4&quot;]/h3[@class=&quot;red-600 yahei veragemoney&quot;]</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.b)-60}</td>
+	<td>b3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${q1}==${q3}</td>
+	<td>q3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>q3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${w1}==${w3}</td>
+	<td>w3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>w3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${e1}==${e3}</td>
+	<td>e3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>e3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${r1}==${r3}</td>
+	<td>r3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>r3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${z1}==${z3}</td>
+	<td>z3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>z3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${c1}==${c3}</td>
+	<td>c3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>c3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${v1}==${v3}</td>
+	<td>v3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>v3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${b1}==${b3}</td>
+	<td>b3</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>b3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
