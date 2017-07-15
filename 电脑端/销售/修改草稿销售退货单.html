@@ -224,6 +224,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//table/tbody/tr[1]/td[1]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(11)}</td>
+	<td>id2</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=新增套餐</td>
 	<td></td>
@@ -1508,12 +1523,12 @@
 <tr>
 	<td>storeText</td>
 	<td>css=div.metas&gt;div</td>
-	<td>a</td>
+	<td>az</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{storedVars.a.substring(storedVars.a.length-1,storedVars.a.length-15)}</td>
-	<td>b</td>
+	<td>javascript{storedVars.az.substring(storedVars.az.length-1,storedVars.az.length-15)}</td>
+	<td>bz</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -2146,7 +2161,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${b}</td>
+	<td>${bz}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -2173,6 +2188,7 @@
 	<td>${name5}*-180*-32.46*-10*14.75*-147.54*${name2}*-40*-13.77*-2*13.11*-26.23*${name5}*-40*-13.77*-2*13.11*-26.23</td>
 	<td></td>
 </tr>
+<!--销售利润（缺少）-->
 </tbody></table>
 </body>
 </html>

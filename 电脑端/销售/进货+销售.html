@@ -320,6 +320,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=新增商品</td>
 	<td></td>
@@ -363,6 +368,21 @@
 	<td>waitForTextPresent</td>
 	<td>VE${name4}</td>
 	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//table/tbody/tr[1]/td[1]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(11)}</td>
+	<td>id2</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -497,8 +517,18 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>500</td>
+	<td>1000</td>
 	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//tbody/tr/td[2]/span/input@id</td>
+	<td>id</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.id.substring(9)}</td>
+	<td>id1</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -648,16 +678,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>store</td>
-	<td>0</td>
-	<td>n</td>
-</tr>
-<tr>
-	<td>while</td>
-	<td>${n}&lt;9</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForText</td>
 	<td>css=span.goodsStock</td>
 	<td>合计:</td>
@@ -765,6 +785,211 @@
 <tr>
 	<td>click</td>
 	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[3]/td[3]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[5]/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[5]/input</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[4]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;备注&quot;]</td>
+	<td>销售</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>实收：600</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>实收：600</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${n}&lt;8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.goodsStock</td>
+	<td>合计:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//input[@placeholder=&quot;名称/编号/卡号/手机号&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@placeholder=&quot;导购员/业务员/负责人&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>*${name1}*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//div[@class=&quot;ac_menu_wrap tt-menu ac_menu_fixed&quot;]/div/div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>上次购买价</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[@id='2']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>上次购买价</td>
 	<td></td>
 </tr>
 <tr>
@@ -1035,6 +1260,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForTextPresent</td>
+	<td>上次购买价</td>
+	<td></td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
@@ -1072,6 +1302,11 @@
 <tr>
 	<td>click</td>
 	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>上次购买价</td>
 	<td></td>
 </tr>
 <tr>
@@ -1658,7 +1893,7 @@
 	<td>经手人 ${yg}</td>
 	<td></td>
 </tr>
-<!--报表验证-->
+<!--报表验证(日均销售和日均利润未解决)-->
 <tr>
 	<td>click</td>
 	<td>link=库存报表</td>
@@ -2161,7 +2396,7 @@
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
+	<td>*</td>
 	<td></td>
 </tr>
 <tr>
@@ -2241,7 +2476,7 @@
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
+	<td>*</td>
 	<td></td>
 </tr>
 <tr>
@@ -2574,7 +2809,7 @@
 	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*3.33*10*19.67*196.67</td>
 	<td></td>
 </tr>
-<!--销售利润（未完成，缺少搜索功能）-->
+<!--销售利润-->
 <tr>
 	<td>click</td>
 	<td>link=利　润</td>
@@ -2592,87 +2827,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${name2}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>销售额：2,783.33</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>${name2}*200*3.33*10*19.67*196.67</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name2}*200*3.33*10*19.67*196.67</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>${name2}*200*100*10*20*200</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name2}*200*100*10*20*200</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//button[@class=&quot;btn btn-primary btn-block goods&quot;]</td>
-	<td>按商品分析</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -2682,57 +2837,42 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${name4}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
+	<td>//tr[@data-id=&quot;${id2}&quot;]</td>
+	<td>*${name4}*</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr/td/div</td>
+	<td>//tr[@data-id=&quot;${id2}&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售额：5,566.67</td>
+	<td>利润额：2,766.67</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67</td>
+	<td>${name4}*196.67*100*10*96.67*49.15%</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67</td>
+	<td>${name4}*196.67*100*10*96.67*49.15%</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*200*0*10*20*200</td>
+	<td>${name4}*200*100*10*100*50%</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*200*0*10*20*200</td>
+	<td>${name4}*200*100*10*100*50%</td>
 	<td></td>
 </tr>
 <tr>
@@ -2742,43 +2882,8 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td>css=tbody.wrapcontainer&gt;tr&gt;td&gt;div:contains(&quot;${yg}&quot;)</td>
 	<td>${yg}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>销售额：8,350</td>
-	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -2786,15 +2891,11 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*0*10*20*200*${name2}*200*0*10*20*200</td>
+	<td>click</td>
+	<td>css=tbody.wrapcontainer&gt;tr&gt;td&gt;div:contains(&quot;${yg}&quot;)</td>
 	<td></td>
 </tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*0*10*20*200*${name2}*200*0*10*20*200</td>
-	<td></td>
-</tr>
+<!--无数据(成员分析)-->
 <tr>
 	<td>click</td>
 	<td>//button[@class=&quot;btn btn-primary btn-block client&quot;]</td>
@@ -2802,97 +2903,32 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
+	<td>css=tbody.wrapcontainer&gt;tr&gt;td&gt;div:contains(&quot;${kh}&quot;)</td>
 	<td>${kh}</td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr/td/div</td>
+	<td>css=tbody.wrapcontainer&gt;tr&gt;td&gt;div:contains(&quot;${kh}&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*0*10*20*200*${name2}*200*0*10*20*200</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*0*10*20*200*${name2}*200*0*10*20*200</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@class=&quot;btn btn-primary btn-block bills&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${b}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
+	<td>利润额：4,150</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*3.33*10*19.67*196.67</td>
+	<td>${name4}*196.67*100*10*96.67*49.15%</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*200*3.33*10*19.67*196.67*${name2}*200*3.33*10*19.67*196.67*${name4}*200*3.33*10*19.67*196.67</td>
+	<td>${name4}*196.67*100*10*96.67*49.15%</td>
 	<td></td>
 </tr>
 </tbody></table>
