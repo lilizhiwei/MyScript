@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://www.yyddd.com/" />
-<title>New Test</title>
+<title>新增销售退货单</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">New Test</td></tr>
+<tr><td rowspan="1" colspan="3">新增销售退货单</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -84,7 +84,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@data-value=&quot;1&quot;])</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
 	<td></td>
 </tr>
 <tr>
@@ -94,33 +94,33 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>id=sellmoney</td>
-	<td>z</td>
+	<td>//h5[@class=&quot;green-600 margin-0 sellmoney&quot;]</td>
+	<td>r</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.z)+176}</td>
-	<td>z1</td>
+	<td>javascript{lz(storedVars.s)-176}</td>
+	<td>r1</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>id=sellnum</td>
-	<td>x</td>
+	<td>//h5[@class=&quot;red-600 margin-0 outAmount&quot;]</td>
+	<td>t</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.x)+1}</td>
-	<td>x1</td>
+	<td>javascript{lz(storedVars.s)-176}</td>
+	<td>t1</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>id=selldisc</td>
-	<td>c</td>
+	<td>//h5[@class=&quot;green-600 margin-0 profit&quot;]</td>
+	<td>y</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.c)+54}</td>
-	<td>c1</td>
+	<td>javascript{lz(storedVars.s)-176}</td>
+	<td>y1</td>
 </tr>
 <tr>
 	<td>goBack</td>
@@ -159,7 +159,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@data-value=&quot;1&quot;])</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
 	<td></td>
 </tr>
 <tr>
@@ -169,33 +169,23 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 start&quot;]</td>
-	<td>g</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.g)+150}</td>
-	<td>g1</td>
-</tr>
-<tr>
-	<td>storeText</td>
 	<td>//span[@class=&quot;font-size-16 red-600 end&quot;]</td>
-	<td>h</td>
+	<td>s</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.h)+173}</td>
-	<td>h1</td>
+	<td>javascript{lz(storedVars.s)-176}</td>
+	<td>s1</td>
 </tr>
 <tr>
 	<td>storeText</td>
 	<td>//span[@class=&quot;font-size-16 red-600 goodsin&quot;]</td>
-	<td>j</td>
+	<td>d</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.j)+23}</td>
-	<td>j1</td>
+	<td>javascript{lz(storedVars.d)-176}</td>
+	<td>d1</td>
 </tr>
 <!--获取财务信息-->
 <tr>
@@ -258,7 +248,8 @@
 	<td>//a[2]/i</td>
 	<td></td>
 </tr>
-<!--销售-->
+<!--销售退货-->
+
 </tbody></table>
 </body>
 </html>
