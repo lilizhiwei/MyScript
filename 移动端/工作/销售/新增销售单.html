@@ -46,163 +46,7 @@
 	<td>//a[2]/i</td>
 	<td></td>
 </tr>
-<!--获取报表数据-->
-<tr>
-	<td>click</td>
-	<td>link=工作</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>xpath=//div[@data-power=&quot;310|320|330|340|350|360|370&quot;]</td>
-	<td>报表</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//div[@data-power=&quot;310|320|330|340|350|360|370&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>xpath=//li[@data-power=&quot;330&quot;]/div/div/h4</td>
-	<td>进货报表</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//li[@data-power=&quot;330&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//ul/li/h5</td>
-	<td>按商品分析</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=sellmoney</td>
-	<td>z</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.z)+176}</td>
-	<td>z1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=sellnum</td>
-	<td>x</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.x)+1}</td>
-	<td>x1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=selldisc</td>
-	<td>c</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.c)+54}</td>
-	<td>c1</td>
-</tr>
-<tr>
-	<td>goBack</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//li[@data-power=&quot;340&quot;]/div/div/h4</td>
-	<td>库存报表</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//li[@data-power=&quot;340&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=li.list-group-item &gt; h5</td>
-	<td>按商品分析</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-value=&quot;1&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 start&quot;]</td>
-	<td>g</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.g)+150}</td>
-	<td>g1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 end&quot;]</td>
-	<td>h</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.h)+173}</td>
-	<td>h1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 goodsin&quot;]</td>
-	<td>j</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.j)+23}</td>
-	<td>j1</td>
-</tr>
 <!--获取财务信息-->
-<tr>
-	<td>open</td>
-	<td>/mobile</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//a[2]/i</td>
-	<td></td>
-</tr>
 <tr>
 	<td>click</td>
 	<td>link=工作</td>
@@ -712,13 +556,18 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>waitForText</td>
+	<td>css=small.pull-right.font-size-12</td>
+	<td>进货额：*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addnewbill</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=addnewbill</td>
+	<td>css=i.fa.fa-plus</td>
 	<td></td>
 </tr>
 <tr>
@@ -728,22 +577,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=addnewbill</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td>css=i.fa.fa-plus</td>
 	<td></td>
 </tr>
 <tr>
@@ -808,7 +642,7 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td>css=i.fa.fa-plus</td>
 	<td></td>
 </tr>
 <tr>
@@ -819,7 +653,7 @@
 <!--新增进货单-->
 <tr>
 	<td>click</td>
-	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td>css=i.fa.fa-plus</td>
 	<td></td>
 </tr>
 <tr>
@@ -865,17 +699,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
 	<td>20</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -965,17 +789,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
 	<td>80</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1024,7 +838,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>2000</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -1827,12 +1641,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>账户余额 ${zijin4}</td>
+	<td>余　额 ${zijin4}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>账户余额 ${zijin4}</td>
+	<td>联系人 ${ghs}*帐　户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余　额 ${zijin4}</td>
 	<td></td>
 </tr>
 <!--报表验证-->
@@ -1877,101 +1696,6 @@
 	<td>按商品分析</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=sellmoney</td>
-	<td>z</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.z)}</td>
-	<td>z2</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=sellnum</td>
-	<td>x</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.x)}</td>
-	<td>x2</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=selldisc</td>
-	<td>c</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.c)}</td>
-	<td>c2</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${z1}==${z2}</td>
-	<td>z</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>z</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${x1}==${x2}</td>
-	<td>x</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>x</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${c1}==${c2}</td>
-	<td>c</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>c</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>//ul/li/h5</td>
 	<td></td>
@@ -2008,12 +1732,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${ghs}*${yg}*原金额：200*折扣额：72*进货额：128*数　量：20*单　价：6.4</td>
+	<td>${ghs}*${yg}*原金额：160*折扣额：32*进货额：128*数　量：20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${ghs}*${yg}*原金额：200*折扣额：72*进货额：128*数　量：20*单　价：6.4</td>
+	<td>${ghs}*${yg}*原金额：160*折扣额：32*进货额：128*数　量：20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
@@ -2053,12 +1777,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${ghs}*${yg}*原金额：30*折扣额：-18*进货额：48*数　量：3*单　价：16</td>
+	<td>${ghs}*${yg}*原金额：60*折扣额：12*进货额：48*数　量：3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${ghs}*${yg}*原金额：30*折扣额：-18*进货额：48*数　量：3*单　价：16</td>
+	<td>${ghs}*${yg}*原金额：60*折扣额：12*进货额：48*数　量：3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
@@ -2118,17 +1842,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*${yg}*原金额：30*折扣额：-18*进货额：48*数　量：3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：60*折扣额：12*进货额：48*数　量：3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*${yg}*原金额：30*折扣额：-18*进货额：48*数　量：3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：60*折扣额：12*进货额：48*数　量：3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*${yg}*原金额：200*折扣额：72*进货额：128*数　量：20*单　价：6.4</td>
+	<td>${name4}*${yg}*原金额：160*折扣额：32*进货额：128*数　量：20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
@@ -2188,17 +1912,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*${yg}*原金额：30*折扣额：-18*进货额：48*数　量：3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：60*折扣额：12*进货额：48*数　量：3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*${yg}*原金额：30*折扣额：-18*进货额：48*数　量：3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：60*折扣额：12*进货额：48*数　量：3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*${yg}*原金额：200*折扣额：72*进货额：128*数　量：20*单　价：6.4</td>
+	<td>${name4}*${yg}*原金额：160*折扣额：32*进货额：128*数　量：20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
@@ -2248,147 +1972,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-value=&quot;1&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 start&quot;]</td>
-	<td>g</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.g)}</td>
-	<td>g2</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 end&quot;]</td>
-	<td>h</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.h)}</td>
-	<td>h2</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//span[@class=&quot;font-size-16 red-600 goodsin&quot;]</td>
-	<td>j</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.j)}</td>
-	<td>j2</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${s1}==${s2}</td>
-	<td>s</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>s</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${f1}==${f2}</td>
-	<td>f</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>f</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${g1}==${g2}</td>
-	<td>g</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>g</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${h1}==${h2}</td>
-	<td>h</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>h</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${k1}==${k2}</td>
-	<td>k</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>k</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>

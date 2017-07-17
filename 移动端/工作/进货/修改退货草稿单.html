@@ -486,7 +486,7 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=i.fa.fa-plus</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -496,7 +496,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=i.fa.fa-plus</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -566,7 +566,7 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=i.fa.fa-plus</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -607,7 +607,7 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=i.fa.fa-plus</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -617,7 +617,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=i.fa.fa-plus</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -652,6 +652,11 @@
 </tr>
 <tr>
 	<td>type</td>
+	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
 	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
 	<td>20</td>
 </tr>
@@ -712,6 +717,11 @@
 </tr>
 <tr>
 	<td>type</td>
+	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
 	<td>xpath=(//input[@data-this=&quot;goodsdiscprice&quot;])</td>
 	<td>80</td>
 </tr>
@@ -941,8 +951,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=i.fa.fa-plus</td>
+	<td>waitForTextPresent</td>
+	<td>订单金额*220</td>
 	<td></td>
 </tr>
 <tr>
@@ -1183,12 +1193,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${ghs}*${yg}*原金额：-160*折扣额：-32*进货额：-128*数　量：-20*单　价：6.4</td>
+	<td>${ghs}*${yg}*原金额：-200*折扣额：-72*进货额：-128*数　量：-20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${ghs}*${yg}*原金额：-160*折扣额：-32*进货额：-128*数　量：-20*单　价：6.4</td>
+	<td>${ghs}*${yg}*原金额：-200*折扣额：-72*进货额：-128*数　量：-20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
@@ -1228,12 +1238,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${ghs}*${yg}*原金额：-60*折扣额：-12*进货额：-48*数　量：-3*单　价：16</td>
+	<td>${ghs}*${yg}*原金额：-30*折扣额：18*进货额：-48*数　量：-3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${ghs}*${yg}*原金额：-60*折扣额：-12*进货额：-48*数　量：-3*单　价：16</td>
+	<td>${ghs}*${yg}*原金额：-30*折扣额：18*进货额：-48*数　量：-3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
@@ -1293,17 +1303,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*${yg}*原金额：-60*折扣额：-12*进货额：-48*数　量：-3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：-30*折扣额：18*进货额：-48*数　量：-3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*${yg}*原金额：-60*折扣额：-12*进货额：-48*数　量：-3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：-30*折扣额：18*进货额：-48*数　量：-3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*${yg}*原金额：-160*折扣额：-32*进货额：-128*数　量：-20*单　价：6.4</td>
+	<td>${name4}*${yg}*原金额：-200*折扣额：-72*进货额：-128*数　量：-20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
@@ -1363,17 +1373,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*${yg}*原金额：-60*折扣额：-12*进货额：-48*数　量：-3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：-30*折扣额：18*进货额：-48*数　量：-3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*${yg}*原金额：-60*折扣额：-12*进货额：-48*数　量：-3*单　价：16</td>
+	<td>${name2}*${yg}*原金额：-30*折扣额：18*进货额：-48*数　量：-3*单　价：16</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*${yg}*原金额：-160*折扣额：-32*进货额：-128*数　量：-20*单　价：6.4</td>
+	<td>${name4}*${yg}*原金额：-200*折扣额：-72*进货额：-128*数　量：-20*单　价：6.4</td>
 	<td></td>
 </tr>
 <tr>
