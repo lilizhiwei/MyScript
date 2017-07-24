@@ -1541,7 +1541,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>//span[@class=&quot;pull-right&quot;]</td>
-	<td>140</td>
+	<td>200</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -1556,7 +1556,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.yahei</td>
-	<td>金额 140</td>
+	<td>金额 200</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -1566,26 +1566,11 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=h3.yahei</td>
-	<td>金额 140</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>类型 支出 项目 进货支出</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>供货商 零散供货商*帐户 现金</td>
-	<td></td>
+	<td>金额 200</td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
 	<td>余额 ${ziji}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>经手人 老板</td>
 	<td></td>
 </tr>
 <!--报表验证-->
@@ -1641,17 +1626,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：-2 结余成本总值：-20</td>
+	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：0 结余成本总值：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：-2 结余成本总值：-20</td>
+	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：0 结余成本总值：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货数量：2 进货成本单价：10 进货成本小计：20*结余数量：0 结余成本总值：0</td>
+	<td>进货数量：2 进货成本单价：10 进货成本小计：20*结余数量：2 结余成本总值：20</td>
 	<td></td>
 </tr>
 <tr>
@@ -1716,22 +1701,22 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>出货数量：10 出货成本单价：10 出货成本小计：100*结余数量：-12 结余成本总值：-120</td>
+	<td>出货数量：10 出货成本单价：10 出货成本小计：100*结余数量：0 结余成本总值：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>出货数量：10 出货成本单价：10 出货成本小计：100*结余数量：-12 结余成本总值：-120</td>
+	<td>出货数量：10 出货成本单价：10 出货成本小计：100*结余数量：0 结余成本总值：0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：-2 结余成本总值：-20</td>
+	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：10 结余成本总值：100</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>进货数量：12 进货成本单价：10 进货成本小计：120*结余数量：0 结余成本总值：0</td>
+	<td>进货数量：12 进货成本单价：10 进货成本小计：120*结余数量：12 结余成本总值：120</td>
 	<td></td>
 </tr>
 <tr>
