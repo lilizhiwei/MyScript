@@ -2496,6 +2496,371 @@
 </tr>
 <tr>
 	<td>waitForText</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
+	<td>利润</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li/h5</td>
+	<td>按商品分析</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${name4}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.margin-0</td>
+	<td>${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.margin-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${kh}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.margin-0</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.margin-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${kh}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[2]/h5</td>
+	<td>按客户分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[2]/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.margin-0</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.margin-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name4}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name2}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name4}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[3]/h5</td>
+	<td>按员工分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[3]/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.margin-0</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.margin-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name4}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name2}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name4}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[4]/h5</td>
+	<td>按单据分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[4]/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${bz}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.margin-0</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.margin-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name4}*${yg}*销售额：-138.46*成　本：-100*数　量：-10*利润率：27.78%*利　润：-38.46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name2}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name4}*${yg}*销售额：-30.77*成　本：-20*数　量：-2*利润率：35%*利　润：-10.77</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
 	<td>//ul/li[4]/h5</td>
 	<td>按单据分析</td>
 </tr>
@@ -3418,6 +3783,201 @@
 	<td>type</td>
 	<td>//input[@placeholder=&quot;搜索&quot;]</td>
 	<td>${yg}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
+	<td>利润</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li/h5</td>
+	<td>按商品分析</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${name4}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${name2}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[2]/h5</td>
+	<td>按客户分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[2]/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[3]/h5</td>
+	<td>按员工分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[3]/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>--暂无内容--</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[4]/h5</td>
+	<td>按单据分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[4]/h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.margin-bottom-0</td>
+	<td>利润分析</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-toggle=&quot;collapse&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;搜索&quot;]</td>
+	<td>${bz}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
