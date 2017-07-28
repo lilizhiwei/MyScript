@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="不允许负库存.html">不允许负库存</a></td></tr>
+<tr><td><a href="开启单条商品折扣.html">开启单条商品折扣</a></td></tr>
+<tr><td><a href="自动更新进货价.html">自动更新进货价</a></td></tr>
+<tr><td><a href="销售价低于进货价提醒.html">销售价低于进货价提醒</a></td></tr>
+<tr><td><a href="允许客户欠账.html">允许客户欠账</a></td></tr>
+<tr><td><a href="价格跟踪.html">价格跟踪</a></td></tr>
+</tbody></table>
+</body>
+</html>
