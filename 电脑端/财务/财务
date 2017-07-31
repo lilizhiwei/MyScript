@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="新增账户.html">新增账户</a></td></tr>
+<tr><td><a href="新增支出.html">新增支出</a></td></tr>
+<tr><td><a href="新增收入.html">新增收入</a></td></tr>
+<tr><td><a href="新增转账.html">新增转账</a></td></tr>
+<tr><td><a href="支出补录.html">支出补录</a></td></tr>
+<tr><td><a href="收入补录.html">收入补录</a></td></tr>
+<tr><td><a href="进+销.html">进+销</a></td></tr>
+</tbody></table>
+</body>
+</html>

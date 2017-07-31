@@ -1,6 +1,6 @@
 var login = {
 	userName: "13140023070",
-	passWord: "li1548790965",
+	passWord: "154879",
 	url: "https://www.yyddd.com/pc/login.html",
 	url1: "https://www.yyddd.com/mobile"
 };

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>新增账户</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">新增账户</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>javascript{login.url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--获取初始数据-->
+<tr>
+	<td>click</td>
+	<td>link=资金帐户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.text-info</td>
+	<td>共有 * 个帐户</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=numbers</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${a} + 1</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin)+1000}</td>
+	<td>zijin1</td>
+</tr>
+<!--新增账户-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=新增账户</td>
+	<td>新增账户</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增账户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>name=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;工商&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=name</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=memo</td>
+	<td>资金</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.text-info</td>
+	<td>共有 ${b} 个帐户</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.text-info</td>
+	<td>共有 ${b} 个帐户</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name}*资金*1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${name}*资金*1000</td>
+	<td></td>
+</tr>
+<!--退出登录-->
+<tr>
+	<td>click</td>
+	<td>css=span.avatar.avatar-online &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=安全退出</td>
+	<td>安全退出</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=安全退出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>统金 - 后台登录</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>统金 - 后台登录</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
