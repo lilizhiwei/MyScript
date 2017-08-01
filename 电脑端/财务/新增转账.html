@@ -11,7 +11,6 @@
 <thead>
 <tr><td rowspan="1" colspan="3">新增转账</td></tr>
 </thead><tbody>
-<!--几个账户互相转账-->
 <tr>
 	<td>open</td>
 	<td>javascript{login.url}</td>
@@ -37,7 +36,6 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
-<!--获取初始数据-->
 <!--新增转账单-->
 <tr>
 	<td>click</td>
@@ -67,6 +65,322 @@
 <tr>
 	<td>click</td>
 	<td>link=新增转账单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.col-sm-3.control-label</td>
+	<td>转出帐户:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel1</td>
+	<td>label=工商(*)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel2</td>
+	<td>label=现金(*)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增转账单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.col-sm-3.control-label</td>
+	<td>转出帐户:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel1</td>
+	<td>label=工商(*)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel2</td>
+	<td>label=微信(*)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增转账单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.col-sm-3.control-label</td>
+	<td>转出帐户:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel1</td>
+	<td>label=工商(*)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel2</td>
+	<td>label=银联卡(*)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增转账单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.col-sm-3.control-label</td>
+	<td>转出帐户:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel1</td>
+	<td>label=工商(*)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel2</td>
+	<td>label=支付宝(*)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=totalmoney</td>
+	<td>1,000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td.text-danger</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[2]/td[3]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[3]/td[3]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[5]/td[3]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=totalmoney</td>
+	<td>1,000</td>
+</tr>
+<!--流水-->
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div/div/div/div/div/div/div/div/div/h5</td>
+	<td>*收入 1,000 支出 1,000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 转账收入</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>帐户 支付宝</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 200</td>
 	<td></td>
 </tr>
 </tbody></table>

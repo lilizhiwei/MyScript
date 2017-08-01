@@ -67,16 +67,6 @@
 	<td>${a} + 1</td>
 	<td>b</td>
 </tr>
-<tr>
-	<td>storeText</td>
-	<td>id=totalmoney</td>
-	<td>zijin</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.zijin)+1000}</td>
-	<td>zijin1</td>
-</tr>
 <!--新增账户-->
 <tr>
 	<td>click</td>
@@ -104,14 +94,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>Math.round(Math.random()*1000) + &quot;工商&quot; +Math.round(Math.random()*1000) </td>
-	<td>name</td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>name=name</td>
-	<td>${name}</td>
+	<td>工商</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -134,6 +119,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>css=span.text-info</td>
 	<td>共有 ${b} 个帐户</td>
@@ -145,12 +135,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name}*资金*1000</td>
+	<td>工商*资金*1,000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name}*资金*1000</td>
+	<td>工商*资金*1,000</td>
 	<td></td>
 </tr>
 <!--退出登录-->
