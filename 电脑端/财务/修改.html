@@ -36,6 +36,61 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
+<!--新增员工-->
+<tr>
+	<td>click</td>
+	<td>link=员工</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分配&quot;)</td>
+	<td>未分配</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>yg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//h4[@class=&quot;media-heading text-truncate&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<!--新增及修改支出单-->
+<!--新增及修改收入单-->
+<!--新增及修改转账单-->
+<!--新增员工-->
 </tbody></table>
 </body>
 </html>
