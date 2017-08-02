@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>修改</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">修改</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>javascript{login.url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--新增员工-->
+<tr>
+	<td>click</td>
+	<td>link=员工</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;未分配&quot;)</td>
+	<td>未分配</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>yg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//h4[@class=&quot;media-heading text-truncate&quot;]</td>
+	<td>${yg}</td>
+</tr>
+<!--新增及修改支出单-->
+<tr>
+	<td>click</td>
+	<td>link=资金帐户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td>新增</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=新增支出单</td>
+	<td>新增支出单</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增支出单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=capital</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=capital</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.example-wrap&gt;div&gt;button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 支出 项目 *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>经手人 老板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=capital</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=capital</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.example-wrap&gt;div&gt;button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@title=&quot;请选择账户&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=银联卡</td>
+	<td>银联卡</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=银联卡</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@title=&quot;请选择经手人&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=${yg}</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${yg}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=memo</td>
+	<td>支出</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=totalmoney</td>
+	<td>900</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td.text-danger</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[2]/td[3]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 支出 项目 *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>帐户 银联卡</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>经手人 ${yg}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--新增及修改收入单-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=新增收入单</td>
+	<td>新增收入单</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增收入单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=capital</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=capital</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.example-wrap&gt;div&gt;button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 300</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>经手人 老板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=capital</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=capital</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.example-wrap&gt;div&gt;button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@title=&quot;请选择账户&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=支付宝</td>
+	<td>支付宝</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=支付宝</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@title=&quot;请选择经手人&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=${yg}</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${yg}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=memo</td>
+	<td>收入</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=totalmoney</td>
+	<td>1,100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td.text-danger</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[3]/td[3]</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>帐户 支付宝</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>经手人 ${yg}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--新增及修改转账单-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=新增转账单</td>
+	<td>新增转账单</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增转账单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.col-sm-3.control-label</td>
+	<td>转出帐户:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel1</td>
+	<td>label=支付宝(*)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel2</td>
+	<td>label=现金(*)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.col-sm-3.control-label</td>
+	<td>转出帐户:</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel1</td>
+	<td>label=支付宝(*)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sel2</td>
+	<td>label=微信(*)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@placeholder=&quot;其他说明&quot;]</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-primary save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=totalmoney</td>
+	<td>1,100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td.text-danger</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[3]/td[3]</td>
+	<td>400</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
+	<td>250</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>帐户 微信</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 250</td>
+	<td></td>
+</tr>
+<!--财务报表验证-->
+<tr>
+	<td>click</td>
+	<td>link=财务报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[3]/div/div/div[2]</td>
+	<td>名称 占比 金额 销售收入 33.33% 200 * 66.67% 400 <br /> <br /> <br /><br /><br /> 合计收入 600 <br /> 日均收入 600</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=支 出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[3]/div/div/div[2]</td>
+	<td>名称 占比 金额 进货支出 20% 100 12 80% 400 <br /> <br /> <br /><br /><br /> 合计支出 500 <br /> 日均支出 500</td>
+</tr>
+<!--删除三单-->
+<tr>
+	<td>click</td>
+	<td>link=资金帐户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td>新增</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>删除成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//li/h5/span</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span[name=&quot;money&quot;]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>删除成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//li/h5/span</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span[name=&quot;money&quot;]</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=del</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>删除成功！</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=totalmoney</td>
+	<td>1,100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td.text-danger</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[2]/td[3]</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[3]/td[3]</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
+	<td>150</td>
+</tr>
+<!--财务报表验证-->
+<tr>
+	<td>click</td>
+	<td>link=财务报表</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[3]/div/div/div[2]</td>
+	<td>名称 占比 金额 销售收入 50% 200 * 50% 200 <br /> <br /> <br /><br /><br /> 合计收入 400 <br /> 日均收入 400</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=支 出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[3]/div/div/div[2]</td>
+	<td>名称 占比 金额 进货支出 33.33% 100 * 66.67% 200 <br /> <br /> <br /><br /><br /> 合计支出 300 <br /> 日均支出 300</td>
+</tr>
+</tbody></table>
+</body>
+</html>
