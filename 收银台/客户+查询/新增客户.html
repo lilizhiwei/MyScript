@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href=" " />
+<title>新增客户</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">新增客户</td></tr>
+</thead><tbody>
+<!--打开页面-->
+<tr>
+	<td>open</td>
+	<td>https://www.baidu.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>javascript{login.url2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.text-center</td>
+	<td>登　录</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-role=&quot;uname&quot;]</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-role=&quot;pwd&quot;]</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-plugin=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.menu_item_label</td>
+	<td>新增客户</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--新增客户-->
+<tr>
+	<td>click</td>
+	<td>css=div.menu_item_label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=cname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cname</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bh</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.lcs_label.lcs_label_off</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=upwd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=upwd</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=reupwd</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phone</td>
+	<td>13140023070</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=brd</td>
+	<td>1995-03-19</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=a.white.jiaoban &gt; div.menu_item_label</td>
+	<td>交班</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--交班-->
+<tr>
+	<td>click</td>
+	<td>css=a.white.jiaoban &gt; div.menu_item_label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td>交班并退出（Enter）</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--验证-->
+<tr>
+	<td>open</td>
+	<td>javascript{login.url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=客户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.font-size-14</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.font-size-14</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td> 编号：${bianhao}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 电话： 131-4002-3070</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 负责人：老板</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>折扣率：90%</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 生日：1995/03/19　(*岁)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 销售额：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>当前余额：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：0</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
