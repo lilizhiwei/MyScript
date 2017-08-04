@@ -89,34 +89,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeEval</td>
 	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
 	<td>name</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
-	<td>bianhao</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=cname</td>
 	<td>${name}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=bh</td>
-	<td>${bianhao}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -139,6 +119,51 @@
 	<td>123456</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>请输入卡号</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bh</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>两次输入的密码不一致</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=reupwd</td>
+	<td>12345</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>两次输入的密码不一致</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=reupwd</td>
 	<td>123456</td>
@@ -146,21 +171,101 @@
 <tr>
 	<td>type</td>
 	<td>id=phone</td>
-	<td>13140023070</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=brd</td>
-	<td>1995-03-19</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=rate</td>
-	<td>90</td>
+	<td>李志伟</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>请填写正确的手机格式</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phone</td>
+	<td>13140023070</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.menu_item_label</td>
+	<td>新增客户</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.menu_item_label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=cname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cname</td>
+	<td>${name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bh</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>String(Math.round(Math.random()*1000)) + String(Math.round(Math.random()*1000))</td>
+	<td>bianhao</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bh</td>
+	<td>${bianhao}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -173,6 +278,33 @@
 	<td>500</td>
 	<td></td>
 </tr>
+<!--交班-->
+<tr>
+	<td>click</td>
+	<td>css=a.white.jiaoban &gt; div.menu_item_label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td>交班并退出（Enter）</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--验证（有误，重复名字失效）-->
 </tbody></table>
 </body>
 </html>
