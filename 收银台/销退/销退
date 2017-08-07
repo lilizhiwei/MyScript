@@ -8,14 +8,10 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="销售.html">销售</a></td></tr>
-<tr><td><a href="挂取销.html">挂取销</a></td></tr>
-<tr><td><a href="挂挂取销.html">挂挂取销</a></td></tr>
-<tr><td><a href="退.html">退</a></td></tr>
-<tr><td><a href="销销销.html">销销销</a></td></tr>
-<tr><td><a href="销销退销.html">销销退销</a></td></tr>
-<tr><td><a href="优惠赊账充值赠送.html">优惠赊账充值赠送</a></td></tr>
+<tr><td><a href="销+退+销.html">销+退+销</a></td></tr>
+<tr><td><a href="销+挂取+挂挂取.html">销+挂取+挂挂取</a></td></tr>
 <tr><td><a href="错误.html">错误</a></td></tr>
+<tr><td><a href="优惠赊账充值赠送.html">优惠赊账充值赠送</a></td></tr>
 <tr><td><a href="功能开关对收银台影响.html">功能开关对收银台影响</a></td></tr>
 </tbody></table>
 </body>
