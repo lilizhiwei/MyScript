@@ -8,7 +8,7 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="../../电脑端/联系人/客户-创建客户.html">客户-创建客户</a></td></tr>
+<tr><td><a href="客户-创建客户.html">客户-创建客户</a></td></tr>
 <tr><td><a href="../../电脑端/联系人/客户-余额+应收客户.html">客户-余额+应收客户</a></td></tr>
 <tr><td><a href="../../电脑端/联系人/客户-错误验证.html">客户-错误验证</a></td></tr>
 <tr><td><a href="../../电脑端/联系人/客户-修改验证.html">客户-修改验证</a></td></tr>
@@ -26,6 +26,8 @@
 <tr><td><a href="../../电脑端/联系人/员工-修改+离职.html">员工-修改+离职</a></td></tr>
 <tr><td><a href="../../电脑端/联系人/员工-筛选+搜索.html">员工-筛选+搜索</a></td></tr>
 <tr><td><a href="../../电脑端/联系人/员工-职位.html">员工-职位</a></td></tr>
+<tr><td><a href="客户-批量.html">客户-批量</a></td></tr>
+<tr><td><a href="供货商-批量.html">供货商-批量</a></td></tr>
 </tbody></table>
 </body>
 </html>
