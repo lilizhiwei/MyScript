@@ -390,7 +390,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=操作</td>
+	<td>link=批量操作</td>
 	<td></td>
 </tr>
 <tr>
@@ -506,7 +506,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=操作</td>
+	<td>link=批量操作</td>
 	<td></td>
 </tr>
 <tr>
@@ -677,7 +677,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=操作</td>
+	<td>link=批量操作</td>
 	<td></td>
 </tr>
 <tr>
@@ -703,7 +703,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=div.panel-header.fa-1_5x</td>
-	<td>3个往来单位删除成功，2个删除失败！</td>
+	<td>5个往来单位删除成功，0个删除失败！</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -716,21 +716,15 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
-	<td>${name2}*${name1}</td>
-	<td></td>
-</tr>
-<tr>
 	<td>pause</td>
-	<td>500</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextNotPresent</td>
-	<td>${name5}*${name4}*${name3}</td>
+	<td>${name5}*${name4}*${name3}*${name2}*${name1}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

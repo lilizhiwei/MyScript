@@ -426,91 +426,6 @@
 <tr>
 	<td>storeEval</td>
 	<td>Math.round(Math.random()*1000) + &quot;套餐&quot; +Math.round(Math.random()*1000) </td>
-	<td>name7</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
-	<td>${name7}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//input[@data-role=&quot;rem&quot;]</td>
-	<td>套餐</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@data-action=&quot;addgoods&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=添加新商品</td>
-	<td>添加新商品</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr[3]/td[8]/div/div/span[2]/i</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=确定</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//h5[2]</td>
-	<td>合计参考进货价20</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-action=&quot;save&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>保存成功</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=新增套餐</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>xpath=//input[@data-role=&quot;gname&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>Math.round(Math.random()*1000) + &quot;套餐&quot; +Math.round(Math.random()*1000) </td>
 	<td>name8</td>
 </tr>
 <tr>
@@ -625,12 +540,12 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td>//tr/td[8]/div/div/span[2]/i</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tr[4]/td[8]/div/div/span[2]/i</td>
+	<td>//tr[5]/td[8]/div/div/span[2]/i</td>
 	<td></td>
 </tr>
 <tr>
@@ -646,7 +561,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>//h5[2]</td>
-	<td>合计参考进货价20</td>
+	<td>合计参考进货价10</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -690,18 +605,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tr[3]/td/span/input[@type=&quot;checkbox&quot;]</td>
-	<td></td>
-</tr>
-<tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=操作</td>
+	<td>link=批量操作</td>
 	<td></td>
 </tr>
 <tr>
@@ -764,51 +674,6 @@
 	<td>500</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAt</td>
-	<td>css=span:contains(&quot;${name10}&quot;)</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>css=span.indent</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[2]/span/span/small</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>${name9}*${name8}*${name7}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>refreshAndWait</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
 <!--批量操作-修改商品分组-->
 <tr>
 	<td>click</td>
@@ -842,7 +707,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=操作</td>
+	<td>link=批量操作</td>
 	<td></td>
 </tr>
 <tr>
@@ -963,7 +828,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=操作</td>
+	<td>link=批量操作</td>
 	<td></td>
 </tr>
 <tr>
@@ -989,7 +854,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=div.panel-header.fa-1_5x</td>
-	<td>3个商品删除成功，2个删除失败！</td>
+	<td>2个商品删除成功，3个删除失败！</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -999,6 +864,188 @@
 <tr>
 	<td>click</td>
 	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name5}*VE${name2}*VE${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>VE${name4}*VE${name3}</td>
+	<td></td>
+</tr>
+<!--批量操作-删除套餐-->
+<tr>
+	<td>click</td>
+	<td>//a[2]/span/span/small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name9}*${name8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr/td/span/input[@type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td/span/input[@type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=批量操作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=批量删除</td>
+	<td>批量删除</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=批量删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.panel-header.fa-1_5x</td>
+	<td>2个商品删除成功，0个删除失败！</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>VE${name9}*VE${name8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--批量操作-删除商品-->
+<tr>
+	<td>click</td>
+	<td>//tr/td/span/input[@type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td/span/input[@type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td/span/input[@type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=批量操作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=批量删除</td>
+	<td>批量删除</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=批量删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=确定</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.panel-header.fa-1_5x</td>
+	<td>1个商品删除成功，2个删除失败！</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -1013,11 +1060,9 @@
 </tr>
 <tr>
 	<td>waitForTextNotPresent</td>
-	<td>VE${name5}*VE${name4}*VE${name3}</td>
+	<td>VE${name5}</td>
 	<td></td>
 </tr>
-<!--批量操作-删除套餐-->
-
 </tbody></table>
 </body>
 </html>
