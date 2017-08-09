@@ -1491,6 +1491,26 @@
 </tr>
 <tr>
 	<td>waitForText</td>
+	<td>css=span.inmoney</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div/p</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div[2]/p</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>销售笔数2*销售优惠44*欠账赊销0*销售退货0*充值赠送0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
 	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
 	<td>交班并退出（Enter）</td>
 </tr>
@@ -1639,7 +1659,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售笔数*2*销售优惠*44*欠账赊销*0*销售退货**充值赠送*0</td>
+	<td>销售笔数*2*销售优惠*44*欠账赊销*0*销售退货*0*充值赠送*0</td>
 	<td></td>
 </tr>
 <!--商品验证-->
@@ -1967,6 +1987,117 @@
 <tr>
 	<td>pause</td>
 	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--财务验证-->
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin2)}</td>
+	<td>zijin3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin3}</td>
+	<td>K</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.yahei</td>
+	<td>金额 100</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>类型 收入 项目 销售收入</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>客户 ${kh}*帐户 现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>余额 ${zijin2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>经手人 ${yg}</td>
 	<td></td>
 </tr>
 <tr>
@@ -2417,7 +2548,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售额：200</td>
+	<td>销售额：100</td>
 	<td></td>
 </tr>
 <tr>
@@ -2677,7 +2808,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>利润额：60</td>
+	<td>利润额：30</td>
 	<td></td>
 </tr>
 <tr>
