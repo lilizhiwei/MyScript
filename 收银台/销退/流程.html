@@ -1908,7 +1908,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>合计金额*120*数　量*2*金额*60*实收金额*60</td>
+	<td>合计金额*120*数　量*2*折后金额*60*实收金额*60</td>
 	<td></td>
 </tr>
 <tr>
@@ -1933,7 +1933,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>合计金额*120*数　量*6.5*金额*20*实收金额*100</td>
+	<td>合计金额*120*数　量*6.5* 折后金额 100*实收金额*100</td>
 	<td></td>
 </tr>
 <tr>
@@ -1958,7 +1958,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>合计金额*40*数　量*3*金额*0*实收金额*20</td>
+	<td>合计金额*40*数　量*3*折后金额 40*实收金额*20</td>
 	<td></td>
 </tr>
 <tr>
@@ -1993,7 +1993,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>合计金额*20*数　量*1*金额*0*实收金额*20</td>
+	<td>合计金额*20*数　量*1*折后金额 20*实收金额*20</td>
 	<td></td>
 </tr>
 <tr>
@@ -2304,31 +2304,6 @@
 	<td>verifyText</td>
 	<td>css=div.media-body &gt; span.pull-right</td>
 	<td>13.33</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[@href=&quot;#sellcontacts&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h5.margin-vertical-0 &gt; span.pull-right</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=h5.margin-vertical-0 &gt; span.pull-right</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>销售量：*1*销售额：*20*销售利润：*10*利润率：*50%*最近销售单价：*20</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>销售量：*1*销售额：*20*销售利润：*10*利润率：*50%*最近销售单价：*20</td>
-	<td></td>
 </tr>
 <tr>
 	<td>refreshAndWait</td>
@@ -2800,27 +2775,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>出货数量：10 出货成本单价：10 出货成本小计：100*结余数量：38 结余成本总值：380</td>
+	<td>出货数量：5 出货成本单价：10 出货成本小计：50*结余数量：37 结余成本总值：370</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>出货数量：10 出货成本单价：10 出货成本小计：100*结余数量：38 结余成本总值：380</td>
+	<td>出货数量：5 出货成本单价：10 出货成本小计：50*结余数量：37 结余成本总值：370</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>出货数量：2 出货成本单价：10 出货成本小计：20*结余数量：48 结余成本总值：480</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>出货数量：-2 出货成本单价：10 出货成本小计：-20*结余数量：40 结余成本总值：400</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>出货数量：-10 出货成本单价：10 出货成本小计：-100*结余数量：50 结余成本总值：500</td>
+	<td>出货数量：0.50 出货成本单价：10 出货成本小计：5*结余数量：42 结余成本总值：420</td>
 	<td></td>
 </tr>
 <tr>
@@ -2875,17 +2840,27 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售额：26.23</td>
+	<td>销售额：33.33</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*0*-26.23*2*13.11*26.23</td>
+	<td>${kh1}*0*-5*0.50*10*5</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*0*-26.23*2*13.11*26.23</td>
+	<td>${kh1}*0*-5*0.50*10*5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh1}*0*-8.33*0.50*16.67*8.33</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh}*20*0*1*20*20</td>
 	<td></td>
 </tr>
 <tr>
@@ -2945,12 +2920,32 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售额：173.77</td>
+	<td>销售额：186.67</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${kh1}*0*-5*0.50*10*5</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>销售额：173.77</td>
+	<td>${kh1}*0*-5*0.50*10*5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh1}*0*-8.33*0.50*16.67*8.33</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh1}*100*16.67*5*16.67*83.33</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>${kh}*20*0*1*20*20</td>
 	<td></td>
 </tr>
 <tr>
@@ -3000,12 +2995,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*200*52.46*10*14.75*147.54*${name2}*0*-26.23*2*13.11*26.23*${name4}*0*-26.23*2*13.11*26.23</td>
+	<td>${name4}*100*50*5*10*50*${name2}*0*-5*0.50*10*5*${name4}*0*-5*0.50*10*5*${name4}*100*16.67*5*16.67*83.33*${name2}*0*-8.33*0.50*16.67*8.33*${name4}*0*-8.33*0.50*16.67*8.33*${name2}*20*0*1*20*20*${name4}*20*0*1*20*20</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*200*52.46*10*14.75*147.54*${name2}*0*-26.23*2*13.11*26.23*${name4}*0*-26.23*2*13.11*26.23</td>
+	<td>${name4}*100*50*5*10*50*${name2}*0*-5*0.50*10*5*${name4}*0*-5*0.50*10*5*${name4}*100*16.67*5*16.67*83.33*${name2}*0*-8.33*0.50*16.67*8.33*${name4}*0*-8.33*0.50*16.67*8.33*${name2}*20*0*1*20*20*${name4}*20*0*1*20*20</td>
 	<td></td>
 </tr>
 <tr>
@@ -3031,7 +3026,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${kh}</td>
+	<td>${kh1}</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -3050,72 +3045,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售额：200</td>
+	<td>销售额：160</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*200*52.46*10*14.75*147.54*${name2}*0*-26.23*2*13.11*26.23*${name4}*0*-26.23*2*13.11*26.23</td>
+	<td>${name4}*100*50*5*10*50*${name2}*0*-5*0.50*10*5*${name4}*0*-5*0.50*10*5*${name4}*100*16.67*5*16.67*83.33*${name2}*0*-8.33*0.50*16.67*8.33*${name4}*0*-8.33*0.50*16.67*8.33</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*200*52.46*10*14.75*147.54*${name2}*0*-26.23*2*13.11*26.23*${name4}*0*-26.23*2*13.11*26.23</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@class=&quot;btn btn-primary btn-block bills&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${bz}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>销售额：200</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>${name4}*200*52.46*10*14.75*147.54*${name2}*0*-26.23*2*13.11*26.23*${name4}*0*-26.23*2*13.11*26.23</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*200*52.46*10*14.75*147.54*${name2}*0*-26.23*2*13.11*26.23*${name4}*0*-26.23*2*13.11*26.23</td>
+	<td>${name4}*100*50*5*10*50*${name2}*0*-5*0.50*10*5*${name4}*0*-5*0.50*10*5*${name4}*100*16.67*5*16.67*83.33*${name2}*0*-8.33*0.50*16.67*8.33*${name4}*0*-8.33*0.50*16.67*8.33</td>
 	<td></td>
 </tr>
 <tr>
@@ -3200,12 +3140,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name2}*26.23*20*2*6.23*23.75%</td>
+	<td>${kh1}*5*5*0.50*0*0%*${kh1}*8.33*5*0.50*3.33*40%*${kh}*20*10*1*10*50%</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name2}*26.23*20*2*6.23*23.75%</td>
+	<td>${kh1}*5*5*0.50*0*0%*${kh1}*8.33*5*0.50*3.33*40%*${kh}*20*10*1*10*50%</td>
 	<td></td>
 </tr>
 <tr>
@@ -3255,17 +3195,32 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*-147.54*-100*-10*-47.54*32.22%*${name2}*-26.23*-20*-2*-6.23*23.75%*${name4}*-26.23*-20*-2*-6.23*23.75%</td>
+	<td>${name4}*5*5*0.50*0*0%</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*-147.54*-100*-10*-47.54*32.22%*${name2}*-26.23*-20*-2*-6.23*23.75%*${name4}*-26.23*-20*-2*-6.23*23.75%</td>
+	<td>waitForTextPresent</td>
+	<td>${name2}*5*5*0.50*0*0%</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*147.54*100*10*47.54*32.22%*${name2}*26.23*20*2*6.23*23.75%*${name4}*26.23*20*2*6.23*23.75%</td>
+	<td>waitForTextPresent</td>
+	<td>${name4}*50*50*5*0*0%</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}*83.33*50*5*33.33*40%</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}*8.33*5*0.50*3.33</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name2}*8.33*5*0.50*3.33</td>
 	<td></td>
 </tr>
 <tr>
@@ -3310,77 +3265,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>利润额：60</td>
+	<td>利润额：20</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>${name4}*-147.54*-100*-10*-47.54*32.22%*${name2}*-26.23*-20*-2*-6.23*23.75%*${name4}*-26.23*-20*-2*-6.23*23.75%</td>
+	<td>${name2}*20*10*1*10*50%*${name4}*20*10*1*10*50%</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>${name4}*-147.54*-100*-10*-47.54*32.22%*${name2}*-26.23*-20*-2*-6.23*23.75%*${name4}*-26.23*-20*-2*-6.23*23.75%</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*147.54*100*10*47.54*32.22%*${name2}*26.23*20*2*6.23*23.75%*${name4}*26.23*20*2*6.23*23.75%</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@class=&quot;btn btn-primary btn-block bills&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=span.visible-lg.text-center</td>
-	<td>名 称</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>//div[@class=&quot;container-fluid padding-left-15 padding-right-15&quot;]/ul/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td>${bz}</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>xpath=//div[@id=&quot;example-navbar-default-search&quot;]/form[@role=&quot;search&quot;]/div[@class=&quot;form-group&quot;]/div/input[@placeholder=&quot;搜索...&quot;]</td>
-	<td> </td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>利润额：60</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>${name4}*147.54*100*10*47.54*32.22%*${name2}*26.23*20*2*6.23*23.75%*${name4}*26.23*20*2*6.23*23.75%</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>${name4}*147.54*100*10*47.54*32.22%*${name2}*26.23*20*2*6.23*23.75%*${name4}*26.23*20*2*6.23*23.75%</td>
+	<td>${name2}*20*10*1*10*50%*${name4}*20*10*1*10*50%</td>
 	<td></td>
 </tr>
 </tbody></table>
