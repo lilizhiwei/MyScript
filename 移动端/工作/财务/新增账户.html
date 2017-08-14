@@ -3,85 +3,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="%20" />
-<title>销售查询</title>
+<link rel="selenium.base" href="http://www.yyddd.com/" />
+<title>新增账户</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">销售查询</td></tr>
+<tr><td rowspan="1" colspan="3">新增账户</td></tr>
 </thead><tbody>
-<!--打开页面-->
 <tr>
 	<td>open</td>
-	<td>https://www.baidu.com</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>javascript{login.url2}</td>
+	<td>javascript{login.url}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=h3.text-center</td>
-	<td>登　录</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>//input[@data-role=&quot;uname&quot;]</td>
+	<td>id=loginAccount</td>
 	<td>javascript{login.userName}</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>//input[@data-role=&quot;pwd&quot;]</td>
+	<td>id=loginPassword</td>
 	<td>javascript{login.passWord}</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//button[@data-plugin=&quot;save&quot;]</td>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>javascript{login.url1}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=div.menu_item_label</td>
-	<td>新增客户</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>//a[2]/i</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=a.white.jiaoban &gt; div.menu_item_label</td>
-	<td>交班</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<!--交班-->
+<!--获取报表数据-->
 <tr>
 	<td>click</td>
-	<td>css=a.white.jiaoban &gt; div.menu_item_label</td>
+	<td>link=工作</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
-	<td>交班并退出（Enter）</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -90,13 +64,28 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-power=&quot;261&quot;]</td>
+	<td>新增账户</td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;261&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=font</td>
+	<td>填写账户信息</td>
 </tr>
 </tbody></table>
 </body>

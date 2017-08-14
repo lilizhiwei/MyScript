@@ -36,31 +36,41 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
+<tr>
+	<td>open</td>
+	<td>javascript{login.url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
 <!--重置数据-->
 <tr>
 	<td>click</td>
-	<td>link=通用设置</td>
+	<td>link=我的</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=span.padding-left-5</td>
-	<td>重置数据</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
+	<td>//li[@onclick=&quot;location.hash='#page/setting'&quot;]/div/h5</td>
+	<td>设置</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=span.padding-left-5</td>
+	<td>//li[@onclick=&quot;location.hash='#page/setting'&quot;]/div/h5</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//div/div/div[2]/div/button</td>
-	<td>全选</td>
+	<td>//li[@onclick=&quot;location.hash='#page/reset'&quot;]/h5/span</td>
+	<td>删账重置</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -69,7 +79,12 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div/div/div[2]/div/button</td>
+	<td>//li[@onclick=&quot;location.hash='#page/reset'&quot;]/h5/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=Rgoods</td>
 	<td></td>
 </tr>
 <tr>
@@ -79,63 +94,113 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[2]/div/button[2]</td>
+	<td>id=Rgoods</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=RAccount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Rtype</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=contacts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=RNotepad</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;sure&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=div.layui-layer-title</td>
-	<td>请输入密码</td>
+	<td>css=p.red-600</td>
+	<td>请输入登录密码确认身份！</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=input.layui-layer-input</td>
+	<td>css=input.form-control</td>
 	<td>javascript{login.passWord}</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;sure&quot;]</td>
+	<td>确认</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=a.layui-layer-btn0.pull-right</td>
+	<td>//button[@data-handler=&quot;sure&quot;]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
-	<td>保存成功</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
 	<td></td>
 </tr>
 <!--新增员工-->
 <tr>
+	<td>waitForText</td>
+	<td>link=联系人</td>
+	<td>联系人</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>link=员工</td>
+	<td>link=联系人</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=span:contains(&quot;未分配&quot;)</td>
-	<td>未分配</td>
+	<td>xpath=//li[@data-power=&quot;400&quot;]</td>
+	<td>员工</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//button[@data-power=&quot;401&quot;]</td>
+	<td>xpath=//li[@data-power=&quot;400&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-power=&quot;401&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-power=&quot;401&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
 	<td>xpath=//input[@placeholder=&quot;姓名&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -155,24 +220,39 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//button[@data-action=&quot;save&quot;] </td>
+	<td>xpath=//button[@data-plugin=&quot;save&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>xpath=//h4[@class=&quot;media-heading text-truncate&quot;]</td>
-	<td>${yg}</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
 </tr>
-<!--新增支出单-->
 <tr>
 	<td>click</td>
-	<td>link=资金帐户</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${yg}</td>
+	<td></td>
+</tr>
+<!--新增支出收入单-->
+<tr>
+	<td>open</td>
+	<td>javascript{login.url1}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
-	<td>新增</td>
+	<td>//a[2]/i</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -181,22 +261,147 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td>link=工作</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=新增支出单</td>
-	<td>新增支出单</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=新增支出单</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=capital</td>
+	<td>//i[@data-toggle=&quot;dropdown&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//i[@data-toggle=&quot;dropdown&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=新增支出</td>
+	<td>新增支出</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新增支出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account2&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.pull-left</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.pull-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account2&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.list-group-item.clearfix&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item.clearfix&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.font-size-16.remakes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=textarea.remake-frame</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.remake-frame</td>
+	<td>支出</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -205,53 +410,83 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
+	<td>保存</td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=capital</td>
-	<td>100</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>css=div.example-wrap&gt;div&gt;button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择账户&quot;])</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=现金</td>
-	<td>现金</td>
+	<td>css=div.bootbox-body</td>
+	<td>保存成功！</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=现金</td>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择经手人&quot;])</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;btn-group top&quot;]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=${yg}</td>
-	<td>${yg}</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td>1</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=${yg}</td>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=memo</td>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.font-size-16.remakes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=textarea.remake-frame</td>
 	<td>支出</td>
 </tr>
 <tr>
@@ -260,170 +495,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>保存成功！</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=totalmoney</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=td.text-danger</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=td.text-danger</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=totalmoney</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<!--新增收入单-->
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=新增收入单</td>
-	<td>新增收入单</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=新增收入单</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=capital</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
-	<td>id=capital</td>
-	<td>100</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.example-wrap&gt;div&gt;button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择账户&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=现金</td>
-	<td>现金</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=现金</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择经手人&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=${yg}</td>
-	<td>${yg}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=${yg}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=memo</td>
+	<td>css=textarea.remake-frame</td>
 	<td>收入</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=totalmoney</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=td.text-danger</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=td.text-danger</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=totalmoney</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<!--新增支出单-->
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=新增支出单</td>
-	<td>新增支出单</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=新增支出单</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=capital</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -432,54 +510,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=capital</td>
-	<td>100</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.example-wrap&gt;div&gt;button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择账户&quot;])</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForText</td>
-	<td>link=微信</td>
-	<td>微信</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=微信</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择经手人&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=老板</td>
-	<td>老板</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=老板</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=memo</td>
-	<td>支出</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
+	<td>保存</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -488,58 +521,67 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=save</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
 	<td>保存成功！</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=totalmoney</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
-	<td>-100</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=totalmoney</td>
-	<td>-100</td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
 </tr>
-<!--新增收入单-->
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@data-toggle=&quot;dropdown&quot;])</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>link=新增收入单</td>
-	<td>新增收入单</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=新增收入单</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account1&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=capital</td>
+	<td>//ul/li[2]/div</td>
+	<td>银联卡</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[2]/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -548,223 +590,212 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
+	<td>保存</td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=capital</td>
+	<td>click</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>保存成功！</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=balance</td>
 	<td>100</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.example-wrap&gt;div&gt;button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择账户&quot;])</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForText</td>
-	<td>link=微信</td>
-	<td>微信</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=微信</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@title=&quot;请选择经手人&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=老板</td>
-	<td>老板</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=老板</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=memo</td>
-	<td>收入</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>保存成功！</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=totalmoney</td>
+	<td>css=span.pull-right.rtext</td>
 	<td>0</td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
-	<td>0</td>
+	<td>css=#1469 &gt; div &gt; span.pull-right.rtext</td>
+	<td>100</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//tbody[@id='tbody']/tr[4]/td[3]</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=totalmoney</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
+	<td>storeText</td>
+	<td>id=balance</td>
+	<td>zijin</td>
 </tr>
 <!--流水-->
 <tr>
 	<td>click</td>
-	<td>//button[@data-power=&quot;250&quot;]</td>
+	<td>//li[@sort=&quot;1&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//div/div/div/div/div/div/div/div/div/h5</td>
-	<td>*收入 200 支出 200</td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//span[@class=&quot;pull-right&quot;]</td>
-	<td>100</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
+	<td>css=h5.padding-20.margin-0</td>
+	<td>*100</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//span[@class=&quot;pull-right&quot;]</td>
+	<td>css=h5.padding-20.margin-0</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=h3.yahei</td>
-	<td>金额 100</td>
+	<td>waitForTextPresent</td>
+	<td>账户余额 0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>账户余额 0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--财务报表验证-->
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//div[@data-power=&quot;310|320|330|340|350|360|370&quot;]</td>
+	<td>报表</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-power=&quot;310|320|330|340|350|360|370&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//li[@data-power=&quot;370&quot;]//h4</td>
+	<td>财务报表</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//li[@data-power=&quot;370&quot;]//h4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=canvas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>*100%200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=账户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>银联卡50%100　现金50%100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=成员</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>*100%200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>*100%100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=账户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>现金100%100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=分类</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>*100%100</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=h3.yahei</td>
-	<td>金额 100</td>
+	<td>css=table.table.table-hover</td>
+	<td>*100%100</td>
 </tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>类型 收入 项目 *</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>帐户 微信</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>余额 0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>经手人 老板</td>
-	<td></td>
-</tr>
-<!--财务验证-->
-<tr>
-	<td>click</td>
-	<td>link=财务报表</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[3]/div/div/div[2]</td>
-	<td>名称 占比 金额 * 100% 200 <br /> <br /> <br /><br /><br /> 合计收入 200 <br /> 日均收入 200</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//section[3]/div/a[2]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[3]/div/div/div[2]</td>
-	<td>名称 占比 金额 现金 50% 100 微信 50% 100 <br /> <br /> <br /><br /><br /> 合计收入 200 <br /> 日均收入 200</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[3]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[3]/div/div/div[2]</td>
-	<td>名称 占比 金额 老板 50% 100 ${yg} 50% 100 <br /> <br /> <br /><br /><br /> 合计收入 200 <br /> 日均收入 200</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[2]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[3]/div/div/div[2]</td>
-	<td>名称 占比 金额 老板 50% 100 ${yg} 50% 100 <br /> <br /> <br /><br /><br /> 合计支出 200 <br /> 日均支出 200</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//section[3]/div/a[2]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[3]/div/div/div[2]</td>
-	<td>名称 占比 金额 现金 50% 100 微信 50% 100 <br /> <br /> <br /><br /><br /> 合计支出 200 <br /> 日均支出 200</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=按分类</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//div[3]/div/div/div[2]</td>
-	<td>名称 占比 金额 * 100% 200 <br /> <br /> <br /><br /><br /> 合计支出 200 <br /> 日均支出 200</td>
-</tr>
-
 </tbody></table>
 </body>
 </html>
