@@ -83,9 +83,124 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
-	<td>css=font</td>
-	<td>填写账户信息</td>
+	<td>name=count-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=count-name</td>
+	<td>工商</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=remark</td>
+	<td>工商卡</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=count-balance</td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span:contains(&quot;完成&quot;)</td>
+	<td>完成</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span:contains(&quot;完成&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.margin-top-10.margin-bottom-10</td>
+	<td>我的账户(5)</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul[@id='ul-list']/li[5]</td>
+	<td>工商 1,000</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=我的</td>
+	<td>我的</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=我的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;panel padding-0 margin-0 margin-bottom-10 radius-0 exit&quot;]//h5</td>
+	<td>退出登录</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class=&quot;panel padding-0 margin-0 margin-bottom-10 radius-0 exit&quot;]//h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
