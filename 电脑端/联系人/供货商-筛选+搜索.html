@@ -75,7 +75,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//button[@data-action=&quot;addgroup&quot;]</td>
+	<td>xpath=//div[@data-action=&quot;addgroup&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -105,7 +105,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//button[@data-action=&quot;addgroup&quot;]</td>
+	<td>xpath=//div[@data-action=&quot;addgroup&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -151,16 +151,6 @@
 <tr>
 	<td>click</td>
 	<td>link=取消</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//div[@data-option=&quot;group&quot;]/div/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=${fenzu}</td>
 	<td></td>
 </tr>
 <tr>
@@ -288,7 +278,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]//input</td>
 	<td>-10</td>
 </tr>
 <tr>
@@ -343,7 +333,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]//input</td>
 	<td>10</td>
 </tr>
 <tr>
@@ -463,7 +453,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//div[@data-option=&quot;begin&quot;]/div/input</td>
+	<td>xpath=//div[@data-option=&quot;begin&quot;]//input</td>
 	<td>-10</td>
 </tr>
 <tr>
@@ -778,9 +768,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=div.btn-group.bootstrap-select.input-group-btn.staff&gt;button&gt;span.filter-option.pull-left</td>
+	<td>waitForTextPresent</td>
 	<td>请选择负责人</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -789,7 +779,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=div.btn-group.bootstrap-select.input-group-btn.staff&gt;button&gt;span.filter-option.pull-left</td>
+	<td>xpath=//div[@data-option=&quot;staff&quot;]/div/div/button</td>
 	<td></td>
 </tr>
 <tr>
@@ -890,12 +880,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//div[@data-option=&quot;weburl&quot;]/div/input</td>
+	<td>xpath=//div[@data-option=&quot;weburl&quot;]//input</td>
 	<td>www.baidu.com</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//div[@data-option=&quot;area&quot;]/div/div/input</td>
+	<td>xpath=//div[@data-option=&quot;area&quot;]//input</td>
 	<td></td>
 </tr>
 <tr>
@@ -1046,12 +1036,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//div[@data-option=&quot;bh&quot;]/div/input</td>
+	<td>xpath=//div[@data-option=&quot;bh&quot;]//input</td>
 	<td>${bianhao}</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//div[@data-option=&quot;area&quot;]/div[2]/div/input</td>
+	<td>xpath=//div[@data-option=&quot;area&quot;]/div[2]//input</td>
 	<td>你就是你</td>
 </tr>
 <tr>
@@ -1187,7 +1177,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=brd</td>
+	<td>//input[@data-action=&quot;formatter&quot;]</td>
 	<td></td>
 </tr>
 <tr>

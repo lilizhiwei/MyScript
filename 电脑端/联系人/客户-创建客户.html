@@ -129,7 +129,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//img[@data-action=&quot;img&quot;]</td>
+	<td>//div[@data-action=&quot;addimg&quot;]/i</td>
 	<td></td>
 </tr>
 <tr>
@@ -154,12 +154,12 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//div[2]/div/a/img</td>
+	<td>css=div.mask</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=//button[@data-action=&quot;addgroup&quot;]</td>
+	<td>xpath=//div[@data-action=&quot;addgroup&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -185,16 +185,6 @@
 <tr>
 	<td>pause</td>
 	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=//div[@data-option=&quot;group&quot;]/div/div/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=${fenzu}</td>
 	<td></td>
 </tr>
 <tr>
@@ -289,7 +279,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=//[@data-option=&quot;rate&quot;]//input</td>
+	<td>xpath=//div[@data-option=&quot;rate&quot;]//input</td>
 	<td>5</td>
 </tr>
 <tr>
@@ -309,7 +299,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=brd</td>
+	<td>//input[@data-action=&quot;formatter&quot;]</td>
 	<td></td>
 </tr>
 <tr>
