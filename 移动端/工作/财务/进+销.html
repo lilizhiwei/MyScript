@@ -46,7 +46,889 @@
 	<td>//a[2]/i</td>
 	<td></td>
 </tr>
-<!--获取报表数据-->
+<!--新增余额客户-->
+<tr>
+	<td>click</td>
+	<td>link=联系人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5:contains(&quot;新增客户&quot;)</td>
+	<td>新增客户</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5:contains(&quot;新增客户&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;李志伟&quot; +Math.round(Math.random()*1000) </td>
+	<td>kh</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//input[@placeholder=&quot;客户名称&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@data-role=&quot;begin&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//div[@data-append=&quot;begin&quot;]/div/div/input</td>
+	<td>-100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<!--新增商品-->
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.padding-10.margin-bottom-0</td>
+	<td>常用功能</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>javascript{login.url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;141&quot;]</td>
+	<td>商品</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;141&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.padding-10.margin-bottom-0</td>
+	<td>常用功能</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@onclick=&quot;window.location.hash='#page/gadd'&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.white</td>
+	<td>新增商品</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;参考进货价&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;buyprice&quot;]/div/div/input</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*1000) + &quot;商品&quot; +Math.round(Math.random()*1000) </td>
+	<td>name4</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;商品名称&quot;]</td>
+	<td>${name4}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-center.padding-vertical-15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains(&quot;当前库存&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;sellprice&quot;]/div/div/input</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-option=&quot;currentStock&quot;]/div/div/input</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-action=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.padding-10.margin-bottom-0</td>
+	<td>常用功能</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--对商品进货-->
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;121&quot;]</td>
+	<td>进货</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;121&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=addnewbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addnewbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.mid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>添加商品</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@onclick='window.history.go(-1);']</td>
+	<td>确认选择</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@onclick='window.history.go(-1);']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@data-ichose=&quot;add&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-ichose=&quot;add&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.list-group-item&gt;div:contains(&quot;工商&quot;)</td>
+	<td>工商</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item&gt;div:contains(&quot;工商&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@value=&quot;0&quot;]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--销售商品-->
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;101&quot;]/h6</td>
+	<td>销售</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;101&quot;]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=addnewbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addnewbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.mid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td>添加商品</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-this=&quot;addgoods&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@onclick='window.history.go(-1);']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计: 200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-chevron-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${kh}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-toggle=&quot;collapse&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=site-search</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=site-search</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.mid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-danger.radius-0.padding-15.cashbill</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@data-ichose=&quot;add&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-ichose=&quot;add&quot;]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.list-group-item&gt;div:contains(&quot;现金&quot;)</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.list-group-item&gt;div:contains(&quot;现金&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td>确定</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@class=&quot;btn btn-success selectgoods width-full padding-10 radius-0&quot;]/i[@class=&quot;fa fa-plus&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--客户验证-->
+<tr>
+	<td>open</td>
+	<td>javascript{login.url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=联系人</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5:contains(&quot;客户&quot;)</td>
+	<td>客户</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5:contains(&quot;客户&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.media-heading</td>
+	<td>*${kh}*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h4.media-heading</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>预存款：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>预存款：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 累计销售：200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td> 积分：200 </td>
+	<td></td>
+</tr>
+<!--财务验证-->
+<tr>
+	<td>open</td>
+	<td>javascript{login.url1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=balance</td>
+	<td>1,100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.pull-right.rtext</td>
+	<td>350</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1469 &gt; div &gt; span.pull-right.rtext</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1472 &gt; div &gt; span.pull-right.rtext</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[5]//span[2]</td>
+	<td>450</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=balance</td>
+	<td>zijin</td>
+</tr>
+<!--流水-->
+<tr>
+	<td>click</td>
+	<td>//li[@sort=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h6.margin-0.blue-grey-400</td>
+	<td>*收入 700 支出 350</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0</td>
+	<td>*100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.up.atype</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=工商</td>
+	<td>工商</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工商</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0</td>
+	<td>*50</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--财务报表验证-->
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//div[@data-power=&quot;310|320|330|340|350|360|370&quot;]</td>
+	<td>报表</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//div[@data-power=&quot;310|320|330|340|350|360|370&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=//li[@data-power=&quot;370&quot;]//h4</td>
+	<td>财务报表</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//li[@data-power=&quot;370&quot;]//h4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=canvas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>销售收入33.33%100*66.67%200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=账户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>银联卡33.33%100　现金66.67%200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=成员</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>老板33.33%100*${yg}66.67%200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@data-value=&quot;0&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>老板50%100*${yg}50%100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=账户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>现金75%150　工商25%50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=分类</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=table.table.table-hover</td>
+	<td>*50%100*50%100</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=table.table.table-hover</td>
+	<td>*50%100*50%100</td>
+</tr>
 </tbody></table>
 </body>
 </html>
