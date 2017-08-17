@@ -46,7 +46,539 @@
 	<td>//a[2]/i</td>
 	<td></td>
 </tr>
-<!--获取报表数据-->
+<!--修改转账-->
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=工作</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td>财务</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-power=&quot;260&quot;]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1472 &gt; div &gt; span.pull-right.rtext</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#1472 &gt; div &gt; span.pull-right.rtext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-edit.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-edit.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>name=money</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=money</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=out-number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[3]/div[@class=&quot;pull-left&quot;]</td>
+	<td>支付宝</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[3]/div[@class=&quot;pull-left&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li&gt;div:contains(&quot;写备注&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=textarea.remake-frame</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.remake-frame</td>
+	<td>转账</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span:contains(&quot;完成&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1471 &gt; div &gt; span.pull-right.rtext</td>
+	<td>-300</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1472 &gt; div &gt; span.pull-right.rtext</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.pull-right.rtext</td>
+	<td>550</td>
+</tr>
+<!--修改收入-->
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span:contains(&quot;银联卡&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-edit.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-edit.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[1]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[3]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@class=&quot;table padding-0 table-bordered&quot;]/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@data-ichosen=&quot;account1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//ul/li[3]/div</td>
+	<td>支付宝</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul/li[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.panel-title.text-center&gt;span:contains(&quot;保存&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>保存成功！</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1469 &gt; div &gt; span.pull-right.rtext</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1471 &gt; div &gt; span.pull-right.rtext</td>
+	<td>-100</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#1471 &gt; div &gt; span.pull-right.rtext</td>
+	<td>-100</td>
+</tr>
+<!--删除-->
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#1468 &gt; div &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.caret.margin-left-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.caret.margin-left-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=全部</td>
+	<td>全部</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=全部</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-trash-o.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-trash-o.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>是否确认删除？</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1471 &gt; div &gt; span.pull-right.rtext</td>
+	<td>-300</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#1468 &gt; div &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.caret.margin-left-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.caret.margin-left-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=全部</td>
+	<td>全部</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=全部</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h5.padding-20.margin-0 &gt; span.pull-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-trash-o.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-trash-o.margin-right-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.bootbox-body</td>
+	<td>是否确认删除？</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;ok&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1471 &gt; div &gt; span.pull-right.rtext</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#1472 &gt; div &gt; span.pull-right.rtext</td>
+	<td>0</td>
+</tr>
 </tbody></table>
 </body>
 </html>
