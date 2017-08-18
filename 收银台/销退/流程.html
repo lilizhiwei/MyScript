@@ -736,6 +736,46 @@
 </tr>
 <tr>
 	<td>waitForText</td>
+	<td>css=div.text-truncate.blue-600</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.text-truncate.blue-600</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-primary.width-100.reselect</td>
+	<td>重新选择</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-primary.width-100.reselect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td:contains(&quot;${kh}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
 	<td>css=i.fa.fa-calculator</td>
 	<td></td>
 </tr>
@@ -2350,11 +2390,51 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=div.font-size-14</td>
-	<td>${kh1}</td>
+	<td>*${kh}*</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>css=div.font-size-14</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>销售额：40</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>销售额：40</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>当前余额：0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>积分：60</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[2]/td[4]/div/div</td>
+	<td>${kh1}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[4]/div/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -2460,36 +2540,6 @@
 <tr>
 	<td>pause</td>
 	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//tr[2]/td[4]/div/div</td>
-	<td>${kh}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tr[2]/td[4]/div/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>销售额：40</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>销售额：40</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>当前余额：0</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>积分：60</td>
 	<td></td>
 </tr>
 <!--财务验证-->
