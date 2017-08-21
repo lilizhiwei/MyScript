@@ -1,0 +1,20 @@
+1503304740922	geckodriver	INFO	Listening on 127.0.0.1:54283
+1503304742923	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.8vW8mpj12uWO
+1503304742929	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1503304743052	geckodriver::marionette	INFO	Connecting to Marionette on localhost:54289
+1503304743852	Marionette	INFO	Listening on port 54289
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/ModuleEngine/core.js, line 459: unreachable code after return statement
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/ModuleEngine/core.js, line 466: unreachable code after return statement
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/jquery/jquery2x.min.js, line 205: unreachable code after return statement
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/jquery/jquery2x.min.js line 2 > eval, line 205: unreachable code after return statement
+[Child 35244] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1503304791039	geckodriver	INFO	Listening on 127.0.0.1:54354
+1503304793066	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.25K7yEifoZku
+1503304793072	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1503304793093	geckodriver::marionette	INFO	Connecting to Marionette on localhost:54360
+1503304793842	Marionette	INFO	Listening on port 54360
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/ModuleEngine/core.js, line 459: unreachable code after return statement
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/ModuleEngine/core.js, line 466: unreachable code after return statement
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/jquery/jquery2x.min.js, line 205: unreachable code after return statement
+JavaScript warning: http://cdn.yyddd.com/assets/ge/core/jquery/jquery2x.min.js line 2 > eval, line 205: unreachable code after return statement
+[Child 37848] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
