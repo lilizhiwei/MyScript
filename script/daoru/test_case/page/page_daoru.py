@@ -51,7 +51,7 @@ class login(object):
 		self.driver.find_element_by_xpath("//li[@data-power='167']//i").click()
 
 	def clickshang(self):
-		self.driver.find_element_by_css_selector("p:contains('上传数据文件模板')>button").click()
+		self.driver.find_element_by_xpath("//i[@class='fa fa-cloud-upload fa-4x fa-fw']").click()
 
 	def clicktijiao(self):
 		self.driver.find_element_by_css_selector(".fa.fa-check.fa-fw").click()

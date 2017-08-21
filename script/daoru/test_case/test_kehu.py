@@ -1,6 +1,6 @@
 from selenium import webdriver
 from time import sleep
-import unittest,sys
+import unittest,sys,os
 sys.path.append("./page")
 from page.page_daoru import login
 
@@ -8,7 +8,7 @@ class loginTest(unittest.TestCase):
 	'''社区登录测试'''
 
 	def setUp(self):
-		self.driver = webdriver.Firefox()
+		self.driver = webdriver.Chrome()
 		self.driver.implicitly_wait(10)
 		self.driver.maximize_window()
 
