@@ -11,7 +11,7 @@ class daoru(object):
 
 	password = '123456'
 
-	def __init__(self, selenium_driver,user=username,pwd=password):
+	def __init__(self, selenium_driver,pwd=password):
 		self.pwd = pwd
 		self.driver = selenium_driver
 		self.timeout = 30
