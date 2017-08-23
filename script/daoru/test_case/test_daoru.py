@@ -4,8 +4,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import unittest,sys,os
-sys.path.append("./page")
-from page.page_daoru import login
+sys.path.append("../../page_obj")
+sys.path.append("../../page_obj/page_daoru")
+from page_obj.page_zong import login
+from page_daoru.page_daoru import daoru
 
 class loginTest(unittest.TestCase):
 	'''批量导入功能测试'''
