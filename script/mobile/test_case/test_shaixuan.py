@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
-import unittest,sys,os
+import unittest,sys,os,random
 sys.path.append("../../page_obj")
 from page_obj.mobile_lianxiren import shaixuan
 
@@ -23,7 +23,10 @@ class loginTest(unittest.TestCase):
 		shaixuan(self.driver).fuzeren()
 		shaixuan(self.driver).tjgdx1()
 		shaixuan(self.driver).dqqk()
-		shaixuan(self.driver).typeuser()
+		a = random.randint(0,1000)
+		b = random.randint(0,1000)
+		name1 = str(a) + '李志伟' + str(b)
+		shaixuan(self.driver).typeuser(name1)
 		shaixuan(self.driver).typeqk(100)
 		shaixuan(self.driver).baocun()
 		shaixuan(self.driver).bccg1()
@@ -36,16 +39,29 @@ class loginTest(unittest.TestCase):
 		shaixuan(self.driver).fuzeren()
 		shaixuan(self.driver).tjgdx1()
 		shaixuan(self.driver).dqqk()
-		shaixuan(self.driver).typeuser()
+		a = random.randint(0,1000)
+		b = random.randint(0,1000)
+		name2 = str(a) + '李志伟' + str(b)
+		shaixuan(self.driver).typeuser(name2)
 		shaixuan(self.driver).clickfenzu()
 		shaixuan(self.driver).clickfuzeren()
 		shaixuan(self.driver).typeqk(-100)
 		shaixuan(self.driver).baocun()
 		shaixuan(self.driver).bccg1()
-		sleep(5)
-		#筛选
+		shaixuan(self.driver).clickkehu()
+		shaixuan(self.driver).clickshaixuan()
 
+		#筛选
+		#分组先跳过
 		
+		#负责人：
+		shaixuan(self.driver).sx_fuzeren()
+		shaixuan(self.driver).sx_laoban()
+		shaixuan(self.driver).sx_queding()
+		
+
+		sleep(5)
+
 	def tearDown(self):
 		self.driver.quit()
 

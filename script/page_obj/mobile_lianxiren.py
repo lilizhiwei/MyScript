@@ -28,19 +28,19 @@ class shaixuan(page):
 		self.driver.find_element_by_css_selector("div.text-center.padding-vertical-15").click()
 
 	def fenzu(self):
+		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-role='group']").click()
 
 	def dqqk(self):
+		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-role='begin']").click()
 
 	def fuzeren(self):
+		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-role='staff']").click()
 
-	def typeuser(self):
-		a = random.randint(0,1000)
-		b = random.randint(0,1000)
-		c = str(a) + '李志伟' + str(b)
-		self.driver.find_element_by_xpath("//*[@placeholder='客户名称']").send_keys(c)
+	def typeuser(self,name):
+		self.driver.find_element_by_xpath("//*[@placeholder='客户名称']").send_keys(name)
 
 	def typeqk(self,qk):
 		self.driver.find_element_by_xpath("//*[@data-append='begin']//input").send_keys(qk)
@@ -66,21 +66,28 @@ class shaixuan(page):
 		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[text()='营业员']").click()
 
+	def clickkehu(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[@data-power='161']//h5"),"客户"))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[@data-power='161']").click()
 
-	def fz(self):
-		pass
+	def clickshaixuan(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,".fa.fa-filter")))
+		sleep(0.5)
+		self.driver.find_element_by_css_selector(".fa.fa-filter").click()
 
-	def fz(self):
-		pass
+	def sx_fuzeren(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[text()='负责人']"),"负责人"))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[text()='负责人']").click()
 
-	def fz(self):
-		pass
+	def sx_laoban(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[text()='老板']"),"老板"))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[text()='老板']").click()
 
-	def fz(self):
-		pass
-
-	def fz(self):
-		pass
+	def sx_queding(self):
+		self.driver.find_element_by_xpath("//*[@data-handle='sure']").click()
 
 	def fz(self):
 		pass
