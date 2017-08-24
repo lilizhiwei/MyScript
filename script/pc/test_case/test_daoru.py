@@ -5,8 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import unittest,sys,os
 sys.path.append("../../page_obj")
-from page_obj.page_zong import login
-from page_obj.page_daoru import daoru
+from page_obj.pc_daoru import daoru
 
 class loginTest(unittest.TestCase):
 	'''批量导入功能测试'''
@@ -16,7 +15,7 @@ class loginTest(unittest.TestCase):
 
 	def test_1kehu(self):
 		#导入正确
-		login(self.driver).user_login()
+		daoru(self.driver).user_login()
 		daoru(self.driver).clickqingkong()
 		daoru(self.driver).bccg()
 		daoru(self.driver).clickkehu()

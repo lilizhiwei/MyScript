@@ -1,5 +1,5 @@
-import unittest,time
 from HTMLTestRunner import HTMLTestRunner
+import unittest,time
 
 if __name__ == '__main__':
 	now = time.strftime("%Y-%m-%d %H-%M-%S")
@@ -8,6 +8,6 @@ if __name__ == '__main__':
 	fp = open(filename,'wb')
 	runner = HTMLTestRunner(stream=fp,title='测试报告',description='用例执行情况')
 
-	discover = unittest.defaultTestLoader.discover('./',pattern='test_*.py')
+	discover = unittest.defaultTestLoader.discover('./mobile/test_case',pattern='test_*.py')
 	runner.run(discover)
 	fp.close()
