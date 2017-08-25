@@ -10,7 +10,7 @@ class page(object):
 	'''用户登录页面'''
 
 	username = '13140023070'
-	password = 'li154879'
+	password = '123456'
 
 	def __init__(self, driver,user=username,pwd=password):
 		self.user = user
@@ -20,12 +20,12 @@ class page(object):
 
 	#打开网址
 	def openpc(self):
-		self.driver.get('https://www.yyddd.com/pc/login.html')
+		self.driver.get('http://www.yyddd.com/pc/login.html')
 		self.driver.implicitly_wait(30)
 		self.driver.maximize_window()
 
 	def openmobile(self):
-		self.driver.get('https://www.yyddd.com/mobile')
+		self.driver.get('http://www.yyddd.com/mobile')
 
 	
 	#统一登录
