@@ -60,3 +60,5 @@ class page(object):
 	def bccg1(self):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[@data-handler='ok']"),"确定"))
 		self.driver.find_element_by_xpath("//*[@data-handler='ok']").click()
+
+
