@@ -1,5 +1,5 @@
 var login = {
-	userName: "123",
+	userName: "13140023070",
 	passWord: "123456",
 	url: "http://www.yyddd.com/pc/login.html",
 	url1: "http://www.yyddd.com/mobile",
