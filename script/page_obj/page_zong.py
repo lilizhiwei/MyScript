@@ -31,7 +31,6 @@ class page(object):
 	def openmobile(self):
 		self.driver.get('http://www.yyddd.com/mobile')
 
-	
 	#统一登录
 	def user_login(self):
 		self.openpc()
@@ -39,6 +38,32 @@ class page(object):
 		self.driver.find_element_by_id("loginPassword").send_keys(self.pwd)
 		self.driver.find_element_by_xpath("//*[@type='submit']").click()
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".remember"),"老板"))
+		sleep(0.5)
+
+	def user_login_xh(self):
+		self.openpc()
+		self.driver.find_element_by_id("loginAccount").send_keys(self.qx_user)
+		self.driver.find_element_by_id("loginPassword").send_keys(self.qx_pwd)
+		self.driver.find_element_by_xpath("//*[@type='submit']").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".remember"),"李志伟小号"))
+		sleep(0.5)
+
+	def clickyg(self):
+		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-group']").click()
+		self.driver.find_element_by_link_text("员工").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[text()='业务员']"),"业务员"))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[text()='业务员']").click()
+		sleep(1)
+
+	def clickqx(self):
+		self.driver.find_element_by_xpath("//div[@class='list-group-item listactive']//i").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[@aria-controls='goods']"),"商品业务"))
+		sleep(0.5)
+
+	def clickbc(self):
+		self.driver.find_element_by_xpath("//button[@data-action='save']").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".layui-layer-content.layui-layer-padding"),"保存成功！"))
 		sleep(0.5)
 
 	#清空数据
@@ -60,6 +85,10 @@ class page(object):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".layui-layer-content.layui-layer-padding"),"保存成功！"))
 		sleep(0.5)
 	
+	#权限不足
+	def qxbz(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".layui-layer-content.layui-layer-padding"),"权限不足"))
+		
 	#移动端保存成功
 	def bccg1(self):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[@data-handler='ok']"),"确定"))

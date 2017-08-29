@@ -10,8 +10,32 @@ import unittest
 class wldw(page):
 
 	#进入页面
+	def clickwldw(self):
+		self.driver.find_element_by_xpath("//*[@aria-controls='contacts']").click()
+
+	def qx_jifen(self):
+		self.driver.find_element_by_id("169").click()
+
+	def qx_gongxiang(self):
+		self.driver.find_element_by_id("168").click()
+
+	def qx_daoru(self):
+		self.driver.find_element_by_id("167").click()
+
+	def qx_shanchu(self):
+		self.driver.find_element_by_id("164").click()
+
+	def qx_xiugai(self):
+		self.driver.find_element_by_id("163").click()
+
+	def qx_xinzeng(self):
+		self.driver.find_element_by_id("162").click()
+
+	def qx_chakan(self):
+		self.driver.find_element_by_id("161").click()
+
+	
+
 	def clickkehu(self):
 		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-group']").click()
 		self.driver.find_element_by_link_text("客户").click()
-
-	

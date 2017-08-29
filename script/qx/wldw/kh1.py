@@ -14,16 +14,45 @@ class loginTest(unittest.TestCase):
 		self.driver = webdriver.Chrome()
 
 	def test_1kehu(self):
-		#修改权限
+		#打开第一页面
 		wldw(self.driver).user_login()
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
+		#获取第一页面handle信息
+		sreach_windows = self.driver.current_window_handle
 
+		#打开第二页面
+		wldw(self.driver).openxh()
+
+		#获取所有页面信息
+		all_handles = self.driver.window_handles
+		#切到第二页面
+		for handle in all_handles:
+			if handle != sreach_windows:
+				self.driver.switch_to.window(handle)
+				sleep(5)
+
+		wldw(self.driver).user_login_xh()
+
+		#切回第一页面
+		for handle in all_handles:
+			if handle == sreach_windows:
+				self.driver.switch_to.window(handle)
+				sleep(5)
+
+		#修改权限
 		
 
+
+
+		#切回第二页面
+		for handle in all_handles:
+			if handle != sreach_windows:
+				self.driver.switch_to.window(handle)
+				sleep(5)
+
 		#验证
-		wldw(self.driver).openxh()
-		wldw(self.driver).user_login_xh()
+		
 
 	def test_2kehu(self):
 		#导入正确
@@ -34,6 +63,5 @@ class loginTest(unittest.TestCase):
 
 if __name__ == '__main__':
 	unittest.main()
-
 
 
