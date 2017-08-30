@@ -13,6 +13,9 @@ class wldw(page):
 	def clickwldw(self):
 		self.driver.find_element_by_xpath("//*[@aria-controls='contacts']").click()
 
+	def clickquanxuan(self):
+		self.driver.find_element_by_xpath("//div/span[text()='客户']/../button").click()
+
 	def qx_jifen(self):
 		self.driver.find_element_by_id("169").click()
 
@@ -34,8 +37,24 @@ class wldw(page):
 	def qx_chakan(self):
 		self.driver.find_element_by_id("161").click()
 
-	
+	def clickquanxuan_ghs(self):
+		self.driver.find_element_by_xpath("//div/span[text()='供应商']/../button").click()
 
-	def clickkehu(self):
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-group']").click()
-		self.driver.find_element_by_link_text("客户").click()
+	def qx_ghs_gongxiang(self):
+		self.driver.find_element_by_id("178").click()
+
+	def qx_ghs_daoru(self):
+		self.driver.find_element_by_id("176").click()
+
+	def qx_ghs_shanchu(self):
+		self.driver.find_element_by_id("173").click()
+
+	def qx_ghs_xiugai(self):
+		self.driver.find_element_by_id("172").click()
+
+	def qx_ghs_xinzeng(self):
+		self.driver.find_element_by_id("171").click()
+
+	def qx_ghs_chakan(self):
+		self.driver.find_element_by_id("170").click()
+

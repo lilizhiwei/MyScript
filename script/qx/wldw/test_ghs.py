@@ -9,41 +9,13 @@ from page_obj.qx_wldw import wldw
 from page_obj.pc_daoru import daoru
 
 class loginTest(unittest.TestCase):
-	'''权限-客户'''
+	'''权限-供货商'''
 
 	def setUp(self):
 		self.driver = webdriver.Chrome()
 
-	def test_1jifen(self):
-		#修改权限
-		wldw(self.driver).user_login_xh()
-		wldw(self.driver).clickyg()
-		wldw(self.driver).clickqx()
-		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_jifen()
-		wldw(self.driver).clickbc()
-
-		#验证1
-		daoru(self.driver).clickkehu()
-		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='169']//i")))
-		sleep(0.5)
-		self.driver.find_element_by_xpath("//*[@data-power='169']//i").click()
-		self.driver.find_element_by_xpath("//*[@data-action='addScore']/a").click()
-		self.driver.find_element_by_xpath("//*[@placeholder='输入要增加的积分']").send_keys(10)
-		self.driver.find_element_by_xpath("//*[@class='layui-layer-btn0']").click()
-		wldw(self.driver).qxbz()
-		self.assertEqual(self.driver.find_element_by_css_selector(".layui-layer-content.layui-layer-padding").text,'权限不足')
-
 	def test_2gongxiang(self):
 		wldw(self.driver).user_login_xh()
-
-		#验证1
-		daoru(self.driver).clickkehu()
-		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='169']")))
-		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='169']").get_attribute("class"))
 	
 		#创建一个无负责人客户
 		
@@ -51,13 +23,12 @@ class loginTest(unittest.TestCase):
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_jifen()
-		wldw(self.driver).qx_gongxiang()
+		wldw(self.driver).qx_ghs_gongxiang()
 		wldw(self.driver).clickbc()
 
 		#验证2
 		#有bug
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 
 
 		sleep(1)
@@ -71,14 +42,14 @@ class loginTest(unittest.TestCase):
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_daoru()
-		wldw(self.driver).qx_gongxiang()
+		wldw(self.driver).qx_ghs_daoru()
+		wldw(self.driver).qx_ghs_gongxiang()
 		wldw(self.driver).clickbc()
 
 		#验证3
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		daoru(self.driver).clickX()
-		daoru(self.driver).clickdaoru()
+		daoru(self.driver).clickdaoru2()
 		daoru(self.driver).clickshang()
 		os.system("C:\\Users\\Administrator\\MyScript\\excel\\lq.exe")
 		daoru(self.driver).clicktijiao()
@@ -91,22 +62,22 @@ class loginTest(unittest.TestCase):
 		wldw(self.driver).user_login_xh()
 
 		#验证3
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		daoru(self.driver).clickX()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='167']")))
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='176']")))
 		sleep(0.5)
-		self.assertEqual(self.driver.find_element_by_xpath("//*[@data-power='167']").get_attribute("class"),"hide")
+		self.assertEqual(self.driver.find_element_by_xpath("//*[@data-power='176']").get_attribute("class"),"hide")
 
 		#修改权限
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_daoru()
-		wldw(self.driver).qx_shanchu()
+		wldw(self.driver).qx_ghs_daoru()
+		wldw(self.driver).qx_ghs_shanchu()
 		wldw(self.driver).clickbc()
 
 		#验证4
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-tips-title='删除']")))
 		sleep(0.5)
@@ -119,22 +90,22 @@ class loginTest(unittest.TestCase):
 		wldw(self.driver).user_login_xh()
 
 		#验证4
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='164']")))
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='173']")))
 		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='164']").get_attribute("class"))
+		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='173']").get_attribute("class"))
 
 		#修改权限
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_xiugai()
-		wldw(self.driver).qx_shanchu()
+		wldw(self.driver).qx_ghs_xiugai()
+		wldw(self.driver).qx_ghs_shanchu()
 		wldw(self.driver).clickbc()
 
 		#验证5
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-tips-title='编辑']")))
 		sleep(0.5)
@@ -149,23 +120,23 @@ class loginTest(unittest.TestCase):
 		wldw(self.driver).user_login_xh()
 
 		#验证5
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='163']")))
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='172']")))
 		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='163']").get_attribute("class"))
+		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='172']").get_attribute("class"))
 
 		#修改权限
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_xiugai()
-		wldw(self.driver).qx_xinzeng()
+		wldw(self.driver).qx_ghs_xiugai()
+		wldw(self.driver).qx_ghs_xinzeng()
 		wldw(self.driver).clickbc()
 
 		#验证6
 		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-group']").click()
-		self.driver.find_element_by_link_text("新增客户").click()
+		self.driver.find_element_by_link_text("新增供货商").click()
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-role='cname']")))
 		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-role='cname']").send_keys("李志伟")
@@ -178,20 +149,20 @@ class loginTest(unittest.TestCase):
 
 		#验证6
 		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-group']").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='162']")))
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='171']")))
 		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='162']").get_attribute("class"))
+		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='171']").get_attribute("class"))
 		
 		#修改权限
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).qx_xinzeng()
-		wldw(self.driver).qx_chakan()
+		wldw(self.driver).qx_ghs_xinzeng()
+		wldw(self.driver).qx_ghs_chakan()
 		wldw(self.driver).clickbc()
 
 		#验证7
-		daoru(self.driver).clickkehu()
+		daoru(self.driver).clickghs()
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,".glist-tip>.text-center")))
 		sleep(0.5)
 		self.assertEqual(self.driver.find_element_by_css_selector(".glist-tip>.text-center").text,"出错喇！权限不足")
@@ -200,7 +171,7 @@ class loginTest(unittest.TestCase):
 		wldw(self.driver).clickyg()
 		wldw(self.driver).clickqx()
 		wldw(self.driver).clickwldw()
-		wldw(self.driver).clickquanxuan()
+		wldw(self.driver).clickquanxuan_ghs()
 		wldw(self.driver).clickbc()
 		sleep(1)
 
