@@ -10,8 +10,11 @@ import unittest
 class cwgl(page):
 
 	#进入页面
-	def clickkehu(self):
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-group']").click()
-		self.driver.find_element_by_link_text("客户").click()
+	def clickwldw(self):
+		self.driver.find_element_by_xpath("//*[@aria-controls='contacts']").click()
 
-	
+	def clickquanxuan(self):
+		self.driver.find_element_by_xpath("//div/span[text()='客户']/../button").click()
+
+	def qx_jifen(self):
+		self.driver.find_element_by_id("169").click()
