@@ -8,6 +8,6 @@ if __name__ == '__main__':
 	fp = open(filename,'wb')
 	runner = HTMLTestRunner(stream=fp,title='测试报告',description='用例执行情况')
 
-	discover = unittest.defaultTestLoader.discover('./qx/spyw',pattern='test_xs.py')
+	discover = unittest.defaultTestLoader.discover('./qx/spyw',pattern='test_*.py')
 	runner.run(discover)
 	fp.close()
