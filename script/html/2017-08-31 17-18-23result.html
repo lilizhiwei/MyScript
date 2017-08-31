@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-08-30 17:33:44</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.004000</p>
-<p class='attribute'><strong>Status:</strong> Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2017-08-31 17:18:23</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:20.594588</p>
+<p class='attribute'><strong>Status:</strong> Pass 4</p>
 
 <p class='description'>用例执行情况</p>
 </div>
@@ -221,67 +221,41 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>unittest.loader._FailedTest</td>
-    <td>1</td>
+<tr class='passClass'>
+    <td>test_xs.loginTest: 批量导入功能测试</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
-    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_sp</div></td>
-    <td colspan='5' align='center'>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_1shanchu</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
 
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_2xiugai</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
 
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: ImportError: Failed to import test module: test_sp
-Traceback (most recent call last):
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\unittest\loader.py", line 428, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\unittest\loader.py", line 369, in _get_module_from_name
-    __import__(name)
-  File "C:\Users\Administrator\MyScript\script\qx\spyw\test_sp.py", line 55
-    def test_4xinzeng(self):
-      ^
-IndentationError: expected an indented block
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_3xinzeng</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
 
-ImportError: Failed to import test module: test_sp
-Traceback (most recent call last):
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\unittest\loader.py", line 428, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\unittest\loader.py", line 369, in _get_module_from_name
-    __import__(name)
-  File "C:\Users\Administrator\MyScript\script\qx\spyw\test_sp.py", line 55
-    def test_4xinzeng(self):
-      ^
-IndentationError: expected an indented block
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_4chakan</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>1</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

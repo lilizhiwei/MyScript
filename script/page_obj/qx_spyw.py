@@ -19,7 +19,7 @@ class spyw(page):
 	def clickquanxuan_jhd(self):
 		self.driver.find_element_by_xpath("//div/span[text()='采购单']/../button").click()
 	
-	def clickquanxuan_xhd(self):
+	def clickquanxuan_xsd(self):
 		self.driver.find_element_by_xpath("//div/span[text()='销售单']/../button").click()
 		
 	def sp_chakan(self):

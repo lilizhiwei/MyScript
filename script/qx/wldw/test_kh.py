@@ -139,9 +139,9 @@ class loginTest(unittest.TestCase):
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-tips-title='编辑']")))
 		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-tips-title='编辑']").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//span[text()='大屏展示']/../span[1]")))
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//span[text()='大屏展示']/../span")))
 		sleep(0.5)
-		self.driver.find_element_by_xpath("//span[text()='大屏展示']/../span[1]").click()
+		self.driver.find_element_by_xpath("//span[text()='大屏展示']/../span").click()
 		wldw(self.driver).qxbz()
 		self.assertEqual(self.driver.find_element_by_css_selector(".layui-layer-content.layui-layer-padding").text,'权限不足')
 
@@ -169,7 +169,7 @@ class loginTest(unittest.TestCase):
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-role='cname']")))
 		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-role='cname']").send_keys("李志伟")
-		self.driver.find_element_by_xpath("//span[text()='大屏展示']/../span[1]").click()
+		self.driver.find_element_by_xpath("//span[text()='大屏展示']/../span").click()
 		wldw(self.driver).qxbz()
 		self.assertEqual(self.driver.find_element_by_css_selector(".layui-layer-content.layui-layer-padding").text,'权限不足')
 
