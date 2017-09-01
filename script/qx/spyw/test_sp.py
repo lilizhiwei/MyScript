@@ -9,7 +9,7 @@ from page_obj.qx_spyw import spyw
 from page_obj.pc_daoru import daoru
 
 class loginTest(unittest.TestCase):
-	'''批量导入功能测试'''
+	'''权限-商品测试'''
 
 	def setUp(self):
 		self.driver = webdriver.Chrome()
