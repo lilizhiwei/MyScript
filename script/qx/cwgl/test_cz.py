@@ -10,28 +10,28 @@ from page_obj.qx_cwgl import cwgl
 from page_obj.pc_daoru import daoru
 
 class loginTest(unittest.TestCase):
-	'''权限-支出单测试'''
+	'''权限-充值测试'''
 
 	def setUp(self):
 		self.driver = webdriver.Chrome()
 
 	def test_1shanchu(self):
 		daoru(self.driver).user_login_xh()
-		#新增转账单
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-rmb']").click()
-		self.driver.find_element_by_link_text("新增转账单").click()
-		self.driver.find_element_by_xpath("//*[@title='请选择转出账户']").click()
-		sleep(1)
-		self.driver.find_element_by_xpath('//*[@data-id="sel2"]/../div[2]/ul/li[3]//span').click()
-		self.driver.find_element_by_name("money").send_keys(10)
-		self.driver.find_element_by_xpath('//*[@class="col-sm-9 col-sm-offset-3"]/button').send_keys(Keys.SPACE)
+		#新增充值单
+		daoru(self.driver).clickkehu()
+		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='221']//i")))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[@data-power='221']//i").click()
+		self.driver.find_element_by_xpath("//*[@data-role='money']").send_keys(1)
+		self.driver.find_element_by_xpath("//button[@data-action='save']").click()
 		sleep(1)
 
 		#修改权限
 		cwgl(self.driver).clickyg()
 		cwgl(self.driver).clickqx()
 		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).zz_shanchu()
+		cwgl(self.driver).cz_shanchu()
 		cwgl(self.driver).clickbc()
 
 		#验证1
@@ -66,8 +66,8 @@ class loginTest(unittest.TestCase):
 		cwgl(self.driver).clickyg()
 		cwgl(self.driver).clickqx()
 		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).zz_xiugai()
-		cwgl(self.driver).zz_shanchu()
+		cwgl(self.driver).cz_xiugai()
+		cwgl(self.driver).cz_shanchu()
 		cwgl(self.driver).clickbc()
 
 		#验证2
@@ -80,6 +80,7 @@ class loginTest(unittest.TestCase):
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-tips-title='编辑']")))
 		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[@data-tips-title='编辑']").click()
+		sleep(1)
 		self.driver.find_element_by_xpath('//*[@class="col-sm-9 col-sm-offset-3"]/button').send_keys(Keys.SPACE)
 		cwgl(self.driver).qxbz()
 		self.assertEqual(self.driver.find_element_by_css_selector(".layui-layer-content.layui-layer-padding").text,'权限不足')
@@ -102,18 +103,18 @@ class loginTest(unittest.TestCase):
 		cwgl(self.driver).clickyg()
 		cwgl(self.driver).clickqx()
 		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).zz_xiugai()
-		cwgl(self.driver).zz_xinzeng()
+		cwgl(self.driver).cz_xiugai()
+		cwgl(self.driver).cz_xinzeng()
 		cwgl(self.driver).clickbc()
 
 		#验证3
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-rmb']").click()
-		self.driver.find_element_by_link_text("新增转账单").click()
-		self.driver.find_element_by_xpath("//*[@title='请选择转出账户']").click()
-		sleep(1)
-		self.driver.find_element_by_xpath('//*[@data-id="sel2"]/../div[2]/ul/li[3]//span').click()
-		self.driver.find_element_by_name("money").send_keys(10)
-		self.driver.find_element_by_xpath('//*[@class="col-sm-9 col-sm-offset-3"]/button').send_keys(Keys.SPACE)
+		daoru(self.driver).clickkehu()
+		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='221']")))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[@data-power='221']").click()
+		self.driver.find_element_by_xpath("//*[@data-role='money']").send_keys(1)
+		self.driver.find_element_by_xpath("//button[@data-action='save']").click()
 		cwgl(self.driver).qxbz()
 		self.assertEqual(self.driver.find_element_by_css_selector(".layui-layer-content.layui-layer-padding").text,'权限不足')
 
@@ -121,17 +122,18 @@ class loginTest(unittest.TestCase):
 		daoru(self.driver).user_login_xh()
 
 		#验证3
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-sign-in']").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='241']")))
+		daoru(self.driver).clickkehu()
+		self.driver.find_element_by_xpath("//td/*[@class='avatar avatar-online']/img").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='221']")))
 		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='241']").get_attribute("class"))
+		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='221']").get_attribute("class"))
 
 		#修改权限
 		cwgl(self.driver).clickyg()
 		cwgl(self.driver).clickqx()
 		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).zz_xinzeng()
-		cwgl(self.driver).zz_chakan()
+		cwgl(self.driver).cz_xinzeng()
+		cwgl(self.driver).cz_chakan()
 		cwgl(self.driver).clickbc()
 
 		#验证4
@@ -148,44 +150,8 @@ class loginTest(unittest.TestCase):
 		cwgl(self.driver).clickyg()
 		cwgl(self.driver).clickqx()
 		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).clickquanxuan_zzd()
+		cwgl(self.driver).clickquanxuan_czd()
 		cwgl(self.driver).clickbc()
-
-	def test_5chakan_zj(self):
-		daoru(self.driver).user_login_xh()
-		#修改权限
-		cwgl(self.driver).clickyg()
-		cwgl(self.driver).clickqx()
-		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).zj_chakan()
-		cwgl(self.driver).clickbc()
-
-		#验证4
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-rmb']").click()
-		self.driver.find_element_by_link_text("资金帐户").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@data-power="250"]')))
-		sleep(0.5)
-		self.driver.find_element_by_xpath('//*[@data-power="250"]').click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,".glist-tip")))
-		sleep(0.5)
-		self.assertEqual(self.driver.find_element_by_css_selector(".glist-tip").text,"出错喇！权限不足")
-
-	def test_6yanzheng_zj(self):
-		daoru(self.driver).user_login_xh()
-		#验证4
-		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-rmb']").click()
-		self.driver.find_element_by_link_text("资金帐户").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='250']")))
-		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='250']").get_attribute("class"))
-
-		#还原
-		cwgl(self.driver).clickyg()
-		cwgl(self.driver).clickqx()
-		cwgl(self.driver).clickcwgl()
-		cwgl(self.driver).zj_chakan_quanxuan()
-		cwgl(self.driver).clickbc()
-		
 
 	def tearDown(self):
 		self.driver.quit()

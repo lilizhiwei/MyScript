@@ -23,7 +23,13 @@ class cwgl(page):
 		self.driver.find_element_by_xpath("//div/span[text()='收入单']/../button").click()
 
 	def clickquanxuan_zzd(self):
-		self.driver.find_element_by_xpath("//div/span[text()='收入单']/../button").click()
+		self.driver.find_element_by_xpath("//div/span[text()='账户转账']/../button").click()
+
+	def clickquanxuan_czd(self):
+		self.driver.find_element_by_xpath("//div/span[text()='收款/充值单']/../button").click()
+
+	def clickquanxuan_fkd(self):
+		self.driver.find_element_by_xpath("//div/span[text()='付款单']/../button").click()
 		
 	def zh_chakan(self):
 		self.driver.find_element_by_id("260").click()
@@ -75,5 +81,32 @@ class cwgl(page):
 
 	def zj_chakan(self):
 		self.driver.find_element_by_id("250").click()
+
+	def zj_chakan_quanxuan(self):
+		self.driver.find_element_by_xpath("//div/span[text()='资金流水']/../button").click()
+
+	def cz_chakan(self):
+		self.driver.find_element_by_id("220").click()
+
+	def cz_xinzeng(self):
+		self.driver.find_element_by_id("221").click()
+
+	def cz_xiugai(self):
+		self.driver.find_element_by_id("222").click()
+
+	def cz_shanchu(self):
+		self.driver.find_element_by_id("223").click()
+
+	def fk_chakan(self):
+		self.driver.find_element_by_id("230").click()
+
+	def fk_xinzeng(self):
+		self.driver.find_element_by_id("231").click()
+
+	def fk_xiugai(self):
+		self.driver.find_element_by_id("232").click()
+
+	def fk_shanchu(self):
+		self.driver.find_element_by_id("233").click()
 
 	

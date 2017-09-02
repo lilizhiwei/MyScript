@@ -83,7 +83,8 @@ class loginTest(unittest.TestCase):
 		shaixuan(self.driver).sx_queding()
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".media-heading"),name1))
 		self.assertIn(name1,shaixuan(self.driver).yz_kehu())
-		
+		self.assertRegexpMatches(self.driver.find_element_by_xpath("/html").text, r"[\s\S]*李志伟[\s\S]*")
+
 	def test_2ghs(self):
 		#创建一个有分组，负责人营业员，有欠款
 		shaixuan(self.driver).user_login()
