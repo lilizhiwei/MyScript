@@ -55,9 +55,13 @@ class page(object):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[text()='业务员']"),"业务员"))
 		sleep(0.5)
 		self.driver.find_element_by_xpath("//*[text()='业务员']").click()
-		sleep(1)
+		sleep(0.5)
 
 	def clickqx(self):
+		a = self.driver.find_element_by_xpath("//*[text()='业务员']")
+		ActionChains(self.driver).move_to_element(a).perform()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//div[@class='list-group-item listactive']//i")))
+		sleep(0.5)
 		self.driver.find_element_by_xpath("//div[@class='list-group-item listactive']//i").click()
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[@aria-controls='goods']"),"商品业务"))
 		sleep(0.5)
