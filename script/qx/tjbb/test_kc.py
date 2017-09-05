@@ -9,7 +9,7 @@ from page_obj.qx_tjbb import tjbb
 from page_obj.pc_daoru import daoru
 
 class loginTest(unittest.TestCase):
-	'''权限-进货报表测试'''
+	'''权限-库存报表测试'''
 
 	def setUp(self):
 		self.driver = webdriver.Chrome()
@@ -20,7 +20,7 @@ class loginTest(unittest.TestCase):
 		tjbb(self.driver).clickyg()
 		tjbb(self.driver).clickqx()
 		tjbb(self.driver).clicktjbb()
-		tjbb(self.driver).jh_mingxi()
+		tjbb(self.driver).kc_mingxi()
 		tjbb(self.driver).clickbc()
 
 	def test_2chakan(self):
@@ -28,17 +28,17 @@ class loginTest(unittest.TestCase):
 
 		#验证1
 		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-pie-chart']").click()
-		self.driver.find_element_by_link_text("进货报表").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='331']")))
+		self.driver.find_element_by_link_text("库存报表").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='341']")))
 		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='331']").get_attribute("class")) 
+		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='341']").get_attribute("class"))
 	
 		#修改权限
 		tjbb(self.driver).clickyg()
 		tjbb(self.driver).clickqx()
 		tjbb(self.driver).clicktjbb()
-		tjbb(self.driver).jh_mingxi()
-		tjbb(self.driver).jh_chakan()
+		tjbb(self.driver).kc_mingxi()
+		tjbb(self.driver).kc_chakan()
 		tjbb(self.driver).clickbc()
 		
 	def test_3huanyuan(self):
@@ -46,15 +46,15 @@ class loginTest(unittest.TestCase):
 
 		#验证2
 		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-pie-chart']").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='330']")))
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='340']")))
 		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='330']").get_attribute("class"))
+		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='340']").get_attribute("class"))
 
 		#修改权限
 		tjbb(self.driver).clickyg()
 		tjbb(self.driver).clickqx()
 		tjbb(self.driver).clicktjbb()
-		tjbb(self.driver).clickquanxuan_jh()
+		tjbb(self.driver).clickquanxuan_kc()
 		tjbb(self.driver).clickbc()
 		
 	def tearDown(self):
