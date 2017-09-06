@@ -7,7 +7,7 @@ import unittest,sys,os
 sys.path.append("../../page_obj")
 from page_obj.qx_wldw import wldw
 
-class loginTest(unittest.TestCase):
+class qxTest(unittest.TestCase):
 	'''批量导入功能测试'''
 
 	def setUp(self):

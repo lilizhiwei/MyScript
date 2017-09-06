@@ -8,7 +8,7 @@ sys.path.append("../../page_obj")
 from page_obj.qx_spyw import spyw
 from page_obj.pc_daoru import daoru
 
-class loginTest(unittest.TestCase):
+class qxTest(unittest.TestCase):
 	'''权限-进货单测试'''
 
 	def setUp(self):

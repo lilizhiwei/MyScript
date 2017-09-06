@@ -9,7 +9,7 @@ sys.path.append("../../page_obj")
 from page_obj.qx_cwgl import cwgl
 from page_obj.pc_daoru import daoru
 
-class loginTest(unittest.TestCase):
+class qxTest(unittest.TestCase):
 	'''权限-支出单测试'''
 
 	def setUp(self):

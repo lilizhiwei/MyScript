@@ -8,7 +8,7 @@ sys.path.append("../../page_obj")
 from page_obj.qx_wldw import wldw
 from page_obj.pc_daoru import daoru
 
-class loginTest(unittest.TestCase):
+class qxTest(unittest.TestCase):
 	'''权限-客户'''
 
 	def setUp(self):

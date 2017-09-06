@@ -8,7 +8,7 @@ sys.path.append("../../page_obj")
 from page_obj.qx_tjbb import tjbb
 from page_obj.pc_daoru import daoru
 
-class loginTest(unittest.TestCase):
+class qxTest(unittest.TestCase):
 	'''权限-应付报表测试'''
 
 	def setUp(self):
