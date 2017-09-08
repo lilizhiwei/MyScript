@@ -36,42 +36,6 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
-<!--获取财务总资金-->
-<tr>
-	<td>click</td>
-	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=td</td>
-	<td>现金</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=totalmoney</td>
-	<td>zijin</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.zijin)+1}</td>
-	<td>zijin1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=payin</td>
-	<td>shou</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.shou)+11}</td>
-	<td>shou1</td>
-</tr>
 <!--新增商品-->
 <tr>
 	<td>click</td>
