@@ -10,6 +10,7 @@ import unittest
 class page(object):
 	'''用户登录页面'''
 
+
 	username = '13140023070'
 	password = '123456'
 	qx_username = '123'
