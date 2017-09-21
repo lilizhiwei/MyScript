@@ -183,7 +183,7 @@ class sc(page):
 		sleep(1)
 		self.driver.find_element_by_xpath('//*[@data-gg-action="editModle"]').click()
 		sleep(1)
-		self.driver.find_element_by_xpath('//li[@data-gg-action="choose"]').click()
+		self.driver.find_element_by_xpath('//li[@data-gg-action="choose"]').click()1
 		sleep(1)
 		self.driver.find_element_by_xpath('//button[@data-gg-action="sure"]').click()
 		sleep(1)
@@ -225,4 +225,25 @@ class sc(page):
 		sleep(0.5)
 		self.driver.find_element_by_css_selector('.lcs_cursor').click()
 		sleep(1)
-	
+
+	def ty_ss(self,name):
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.ID,"search")))
+		sleep(0.5)
+		self.driver.find_element_by_id('search').send_keys(name)
+		self.driver.find_element_by_id('search').send_keys(Keys.SPACE)
+
+	def sp_sx(self,name):
+		self.driver.find_element_by_css_selector('.icon.icon-menu').click()
+		sleep(0.5)
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@placeholder="输入关键字..."]')))
+		sleep(0.5)
+		self.driver.find_element_by_xpath('//*[@placeholder="输入关键字..."]').send_keys(name)
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'//*[@class="searchResult"]//span[@class="text-truncate"]'),name))
+		sleep(0.5)
+		self.driver.find_element_by_xpath('//*[@class="searchResult"]//span[@class="text-truncate"]').click()
+
+	def sp_ck(self):
+		self.driver.find_element_by_css_selector('.item-title').click()
+
+	def sp_qx(self):
+		self.driver.find_element_by_css_selector('.button.button-big.button-fill.bg-white.details').click()
