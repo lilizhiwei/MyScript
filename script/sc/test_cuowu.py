@@ -15,6 +15,7 @@ class qxTest(unittest.TestCase):
 		self.driver = webdriver.Chrome()
 
 	def test_cw(self):
+		pass
 
 		#验证错误项
 
