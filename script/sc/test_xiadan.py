@@ -115,6 +115,8 @@ class qxTest(unittest.TestCase):
 		sc(self.driver).liuyan()
 		self.driver.find_element_by_css_selector('.col-30>div').click()
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"购物车空空如也"))
+
+		#pc端验证
 		sc(self.driver).user_login()
 		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-sign-out']").click()
 		self.driver.find_element_by_link_text("订单历史").click()

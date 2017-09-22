@@ -10,7 +10,7 @@ import unittest,random
 
 class sc(page):
 	def opensc(self):
-		self.driver.get('http://lilizhiwei.yyddd.com/')
+		self.driver.get('http://lilizhiwei.yyddd.com')
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".tab-label"),"商城"))
 		sleep(0.5)
 
@@ -33,6 +33,11 @@ class sc(page):
 	
 	def tj_sp3(self):
 		self.driver.find_element_by_xpath('//ul/li[3]//div[@class="item-title"]').click()
+
+	def sp_sl(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[text()='加入购物车']"),"加入购物车"))
+		sleep(0.5)
+		self.driver.find_element_by_xpath('//*[@type="tel"]').send_keys(100)
 	
 	def jr_gwc(self):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"//*[text()='加入购物车']"),"加入购物车"))
@@ -95,6 +100,7 @@ class sc(page):
 		self.driver.find_element_by_css_selector('.col-30>div').click()
 	
 	def liuyan(self):
+		self.driver.find_element_by_css_selector('.setRem').clear()
 		self.driver.find_element_by_css_selector('.setRem').send_keys("尽快送货")
 
 	def cj_kh(self,name1,bh1):
@@ -183,7 +189,7 @@ class sc(page):
 		sleep(1)
 		self.driver.find_element_by_xpath('//*[@data-gg-action="editModle"]').click()
 		sleep(1)
-		self.driver.find_element_by_xpath('//li[@data-gg-action="choose"]').click()1
+		self.driver.find_element_by_xpath('//li[@data-gg-action="choose"]').click()
 		sleep(1)
 		self.driver.find_element_by_xpath('//button[@data-gg-action="sure"]').click()
 		sleep(1)
@@ -247,3 +253,50 @@ class sc(page):
 
 	def sp_qx(self):
 		self.driver.find_element_by_css_selector('.button.button-big.button-fill.bg-white.details').click()
+
+	def sz_sc(self):
+		self.driver.find_element_by_xpath("//*[@class='site-menu-icon fa fa-cog']").click()
+		self.driver.find_element_by_link_text("商店设置").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"功能开关"))
+		sleep(1)
+
+	def sc_kg(self):
+		self.driver.find_element_by_xpath('//*[@data-role="shop_on"]/../div').click()
+
+	def sc_nmfw(self):
+		self.driver.find_element_by_xpath('//*[@data-role="shop_visit"]/../div').click()
+
+	def sc_nmxd(self):
+		self.driver.find_element_by_xpath('//*[@data-role="shop_buy"]/../div').click()
+
+	def sc_zskc(self):
+		self.driver.find_element_by_xpath('//*[@data-role="shop_stock_show"]/../div').click()
+
+	def sc_fkc(self):
+		self.driver.find_element_by_xpath('//*[@data-role="shop_stock_negative"]/../div').click()
+
+	def sc_yysj(self):
+		self.driver.find_element_by_xpath('//*[@data-role="shop_off_buy"]/../div').click()
+
+	def xg_sj1(self,name):
+		self.driver.find_element_by_name('start').click()
+		self.driver.find_element_by_xpath('//*[@class="ui-timepicker-wrapper"][1]//*[text()="%s"]' % name).click()
+		sleep(0.5)
+
+	def xg_sj2(self,name):
+		self.driver.find_element_by_name('end').click()
+		self.driver.find_element_by_xpath('//*[@class="ui-timepicker-wrapper"][2]//*[text()="%s"]' % name).click()
+		sleep(0.5)
+
+	def xg_bc(self):
+		self.driver.find_element_by_xpath('//*[@data-action="saveinfo"]').click()
+
+	def xd_sb(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"非营业时间，无法下单！"))
+		sleep(0.5)
+
+	def sc_szcg(self):
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"设置成功"))
+		sleep(0.5)
+
+	
