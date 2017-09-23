@@ -29,7 +29,7 @@ class tjbb(page):
 		self.driver.find_element_by_xpath("//div/span[text()='应付款报表']/../button").click()
 
 	def clickquanxuan_sz(self):
-		self.driver.find_element_by_xpath("//div/span[text()='收支报表']/../button").click()
+		self.driver.find_element_by_xpath("//div/span[text()='财务报表']/../button").click()
 
 	def xs_chakan(self):
 		self.driver.find_element_by_id("320").click()

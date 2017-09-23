@@ -67,34 +67,6 @@ class qxTest(unittest.TestCase):
 		self.driver.find_element_by_link_text("确定").click()
 		gjqx(self.driver).qxbz()
 		self.assertEqual(self.driver.find_element_by_css_selector(".layui-layer-content.layui-layer-padding").text,'权限不足')
-
-	def test_3shanchu(self):
-		daoru(self.driver).user_login_xh()
-
-		#验证1
-		gjqx(self.driver).clickyg()
-		self.driver.refresh()
-		sleep(0.5)
-		self.driver.find_element_by_css_selector(".panel-body > div.media > div.media-left > img.img-circle").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[@data-power='404']")))
-		sleep(0.5)
-		self.assertIn("hide",self.driver.find_element_by_xpath("//*[@data-power='404']").get_attribute("class"))
-
-		#修改权限
-		daoru(self.driver).clicksp()
-		gjqx(self.driver).clickyg()
-		gjqx(self.driver).clickqx()
-		gjqx(self.driver).clickgjqx()
-		gjqx(self.driver).yg_tingyong()
-		gjqx(self.driver).yg_shanchu()
-		gjqx(self.driver).clickbc()
-
-		#验证2
-		self.driver.refresh()
-		sleep(0.5)
-		self.driver.find_element_by_css_selector(".panel-body > div.media > div.media-left > img.img-circle").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@data-tips-title="删除"]')))
-		sleep(0.5)
 		self.driver.find_element_by_xpath('//*[@data-tips-title="删除"]').click()
 		self.driver.find_element_by_link_text("确定").click()
 		gjqx(self.driver).qxbz()

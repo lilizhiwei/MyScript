@@ -17,7 +17,7 @@ class qxTest(unittest.TestCase):
 	def test_cw(self):
 		pass
 
-		#验证错误项
+		#验证错误拦截项
 
 
 
