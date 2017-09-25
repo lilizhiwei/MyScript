@@ -9,7 +9,7 @@ sys.path.append("../page_obj")
 from page_obj.pc_daoru import daoru
 from page_obj.page_sc import sc
 
-class qxTest(unittest.TestCase):
+class scXD(unittest.TestCase):
 	'''商城-下单测试'''
 
 	def setUp(self):

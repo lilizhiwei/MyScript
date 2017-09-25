@@ -14,6 +14,12 @@ class sc(page):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".tab-label"),"商城"))
 		sleep(0.5)
 
+	def loginsc1(self):
+		self.opensc()
+		self.driver.get('http://lilizhiwei.yyddd.com/login.html')
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,".uName")))
+		sleep(0.5)
+
 	def loginsc(self,name):
 		self.opensc()
 		self.driver.get('http://lilizhiwei.yyddd.com/login.html')

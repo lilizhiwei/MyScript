@@ -8,7 +8,7 @@ import unittest,sys,os,random
 sys.path.append("../page_obj")
 from page_obj.page_sc import sc
 
-class qxTest(unittest.TestCase):
+class scSX(unittest.TestCase):
 	'''商城-搜索筛选测试'''
 
 	def setUp(self):

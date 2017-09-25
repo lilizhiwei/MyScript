@@ -8,8 +8,8 @@ import unittest,sys,os,random
 sys.path.append("../page_obj")
 from page_obj.page_sc import sc
 
-class qxTest(unittest.TestCase):
-	'''权限-充值测试'''
+class scGN(unittest.TestCase):
+	'''商城-功能测试'''
 
 	def setUp(self):
 		self.driver = webdriver.Chrome()
