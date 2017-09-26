@@ -132,7 +132,8 @@ class scGN(unittest.TestCase):
 		sc(self.driver).clickgwc()
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,'.goodsNumber')))
 		sleep(0.5)
-		sc(self.driver).clicktj()
+		#加营业时间提醒休息前
+		#sc(self.driver).clicktj()
 		# WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,'.uName')))
 		# sleep(0.5)
 		# self.driver.find_element_by_css_selector('.uName').click()
@@ -157,7 +158,8 @@ class scGN(unittest.TestCase):
 		sc(self.driver).clickgwc()
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,'.goodsNumber')))
 		sleep(0.5)
-		sc(self.driver).clicktj()
+		#加营业时间提醒休息前
+		#sc(self.driver).clicktj()
 		# WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,'.uName')))
 		# sleep(0.5)
 		# self.driver.find_element_by_css_selector('.uName').click()
