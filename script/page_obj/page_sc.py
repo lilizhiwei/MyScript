@@ -298,7 +298,7 @@ class sc(page):
 		self.driver.find_element_by_xpath('//*[@data-action="saveinfo"]').click()
 
 	def xd_sb(self):
-		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"非营业时间，无法下单！"))
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"休息中"))
 		sleep(0.5)
 
 	def sc_szcg(self):
