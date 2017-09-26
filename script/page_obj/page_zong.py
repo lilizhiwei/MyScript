@@ -12,7 +12,7 @@ class page(object):
 
 	username = '13140023070'
 	password = '123456'
-	qx_username = '123'
+	qx_username = '13014625694'
 	qx_password = '123456'
 
 	def __init__(self, driver,user=username,pwd=password,qx_user=qx_username,qx_pwd=qx_password):
