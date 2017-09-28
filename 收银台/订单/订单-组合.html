@@ -370,6 +370,26 @@
 	<td>${kh}</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=div.lcs_cursor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//*[@data-option=&quot;begin&quot;]//input</td>
+	<td>-50</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.col-xs-6.col-sm-7 &gt; input.form-control</td>
+	<td>123456</td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>500</td>
 	<td></td>
@@ -440,7 +460,703 @@
 	<td>${yg}</td>
 </tr>
 <!--新增订单-->
-
+<tr>
+	<td>click</td>
+	<td>link=新增订单</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.yahei</td>
+	<td>销售订单</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td>*${name1}*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//div[@data-ac-menu-index=&quot;0&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${name1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//input[@placeholder=&quot;名称/编号/卡号/手机号&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td>${kh}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@data-ac-menu-index=&quot;1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@placeholder=&quot;导购员/业务员/负责人&quot;])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td>${yg}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=span&gt;div&gt;div&gt;div:contains(&quot;${yg}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@aria-pressed=&quot;false&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//label[@for=&quot;fahuo&quot;]</td>
+	<td>发货</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[@for=&quot;fahuo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;姓名&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;姓名&quot;]</td>
+	<td>李志伟</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;联系方式&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;联系方式&quot;]</td>
+	<td>13140023070</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=input.form-control.p_city</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>安徽省</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[title=&quot;安徽省&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;地址&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;地址&quot;]</td>
+	<td>家</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;发货日期&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;发货日期&quot;]</td>
+	<td>2018/08/08</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;发货物流&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;发货物流&quot;]</td>
+	<td>通天虫洞</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;发货单号&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;发货单号&quot;]</td>
+	<td>10086</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-primary.width-100.success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[@id='2']/td[3]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VE${name4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[8]/div/div/span[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确定</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[3]/td[3]</td>
+	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//tr[@id='3']/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//tr[@id='3']/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='3']/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//tr[3]/td[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>css=div.ac_menu_container.tt-dataset.tt-dataset-states&gt;div:contains(&quot;箱&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>css=div.ac_menu_container.tt-dataset.tt-dataset-states&gt;div:contains(&quot;箱&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[5]/input</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[6]//input</td>
+	<td>180</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[2]/td[7]/input</td>
+	<td>80</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[3]/td[10]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[3]/td[10]/input</td>
+	<td>missyou</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[4]/td[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.lcs_label.lcs_label_on</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@value=&quot;100&quot;]</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@value=&quot;100&quot;]</td>
+	<td>44</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.fa.fa-caret-down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=现金</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.form-control.pay</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=.form-control.pay</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>定金：100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>定金：100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.bg-blue-600.white.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>保存成功</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.avatar.avatar-online &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=安全退出</td>
+	<td>安全退出</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=安全退出</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>统金 - 后台登录</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>统金 - 后台登录</td>
+	<td></td>
+</tr>
+<!--打开页面-->
+<tr>
+	<td>open</td>
+	<td>javascript{login.url2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.text-center</td>
+	<td>登　录</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-role=&quot;uname&quot;]</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@data-role=&quot;pwd&quot;]</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-plugin=&quot;save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[@data-hotkey=&quot;inquirysale&quot;]/div[2]</td>
+	<td>销售查询</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-hotkey=&quot;inquirysale&quot;]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@data-action=&quot;toSellOrder&quot;]</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@data-action=&quot;toSellOrder&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计金额*244*数　量*3*折后金额*200*定金*100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>业务员：${yg}*营业员：老板*折扣：44元 (81.97%)*现金：100*发货地址： 安徽省家*13140023070 于 2018-08-08 发 通天虫洞(10086)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>业务员：${yg}*营业员：老板*折扣：44元 (81.97%)*现金：100*发货地址： 安徽省家*13140023070 于 2018-08-08 发 通天虫洞(10086)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.fa.fa-shopping-basket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计(元):244</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>数量:3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>本次积分: 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>合计(元):244</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-hotkey=&quot;balance&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-pay=&quot;储值卡&quot;]</td>
+	<td>储值卡</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-pay=&quot;储值卡&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.margin-top-30.margin-bottom-20</td>
+	<td>当前会员余额不足!</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;unionPay&quot;]</td>
+	<td>组合支付（F2）</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;unionPay&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.col-xs-6.paySub &gt; input.form-control.input-lg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.col-xs-6.paySub &gt; input.form-control.input-lg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=div.col-xs-6.paySub &gt; input.form-control.input-lg</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-hotkey=&quot;balance&quot;]</td>
+	<td>结算<br /> (空格)</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-hotkey=&quot;balance&quot;]</td>
+	<td></td>
+</tr>
+<!--缺少密码提示-->
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[@data-hotkey=&quot;inquirysale&quot;]/div[2]</td>
+	<td>销售查询</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-hotkey=&quot;inquirysale&quot;]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@data-action=&quot;toSell&quot;]</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@data-action=&quot;toSell&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>合计金额*244*数　量*3*折后金额*200*实收金额*200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//a[@data-hotkey=&quot;turnover&quot;]/div[2]</td>
+	<td>交班</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@data-hotkey=&quot;turnover&quot;]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.inmoney</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div/p</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div[2]/p</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>销售笔数1*销售优惠44*欠账赊销0*销售退货0*充值赠送0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td>交班并退出（Enter）</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-raised.btn-primary.margin-left-15.exit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
