@@ -10,6 +10,8 @@
 <tr><td><b>Test Suite</b></td></tr>
 <tr><td><a href="新增订单.html">新增订单</a></td></tr>
 <tr><td><a href="错误-订单.html">错误-订单</a></td></tr>
+<tr><td><a href="修改删除.html">修改删除</a></td></tr>
+<tr><td><a href="修改转销售.html">修改转销售</a></td></tr>
 <tr><td><a href="批发-销售订单.html">批发-销售订单</a></td></tr>
 </tbody></table>
 </body>
