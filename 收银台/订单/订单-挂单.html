@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="%20" />
-<title>订单流程</title>
+<title>订单-挂单</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">订单流程</td></tr>
+<tr><td rowspan="1" colspan="3">订单-挂单</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -59,7 +59,7 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.zijin)+200}</td>
+	<td>javascript{lz(storedVars.zijin)+300}</td>
 	<td>zijin1</td>
 </tr>
 <!--新增二个商品一套餐-->
@@ -916,6 +916,63 @@
 	<td>合计(元):244</td>
 	<td></td>
 </tr>
+<!--挂单-->
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-sign-in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-handler=&quot;cancel&quot;]</td>
+	<td>确认挂单（Enter）</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-handler=&quot;cancel&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--中间销售-->
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-calculator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=input.search.form-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.search.form-control</td>
+	<td>${name1}</td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[@value=&quot;=&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//button[@value=&quot;=&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td.goodsname &gt; div</td>
+	<td>${name1}</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>//div[@data-hotkey=&quot;balance&quot;]</td>
@@ -936,6 +993,123 @@
 	<td>//button[@data-hotkey=&quot;balance&quot;]</td>
 	<td></td>
 </tr>
+<!--取单-->
+<tr>
+	<td>waitForText</td>
+	<td>css=i.fa.fa-sign-out</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-sign-out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody/tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=input.form-control.num</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.form-control.num</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.form-control.num</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//button[@value=&quot;=&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>//button[@value=&quot;=&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//input[@placeholder=&quot;折扣额&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@placeholder=&quot;折扣额&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@placeholder=&quot;折扣额&quot;]</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.cash_all_pay_price</td>
+	<td>260</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.cash_all_pay_price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//button[@data-hotkey=&quot;balance&quot;]</td>
+	<td>结算<br /> (空格)</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@data-hotkey=&quot;balance&quot;]</td>
+	<td></td>
+</tr>
+<!--交班-->
 <tr>
 	<td>waitForText</td>
 	<td>//a[@data-hotkey=&quot;inquirysale&quot;]/div[2]</td>
@@ -973,7 +1147,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>合计金额*244*数　量*3*折后金额*200*实收金额*200</td>
+	<td>合计金额*276*数　量*4*折后金额*260*实收金额*260</td>
 	<td></td>
 </tr>
 <tr>
@@ -999,12 +1173,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=span.inmoney</td>
-	<td>100</td>
+	<td>200</td>
 </tr>
 <tr>
 	<td>waitForText</td>
 	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div/p</td>
-	<td>100</td>
+	<td>200</td>
 </tr>
 <tr>
 	<td>waitForText</td>
@@ -1013,7 +1187,7 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>销售笔数1*销售优惠44*欠账赊销0*销售退货0*充值赠送0</td>
+	<td>销售笔数2*销售优惠16*欠账赊销0*销售退货0*充值赠送0</td>
 	<td></td>
 </tr>
 <tr>
@@ -1217,7 +1391,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>//span[@class=&quot;pull-right&quot;]</td>
-	<td>100</td>
+	<td>160</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -1232,7 +1406,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h3.yahei</td>
-	<td>金额 100</td>
+	<td>金额 160</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -1242,7 +1416,7 @@
 <tr>
 	<td>verifyText</td>
 	<td>css=h3.yahei</td>
-	<td>金额 100</td>
+	<td>金额 160</td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
@@ -1638,285 +1812,6 @@
 <tr>
 	<td>verifyTextPresent</td>
 	<td>${name2}*40*13.77*2*13.11*26.23*${name4}*40*13.77*2*13.11*26.23*${name4}*180*32.46*10*14.75*147.54</td>
-	<td></td>
-</tr>
-<!--删除销售历史-->
-<tr>
-	<td>click</td>
-	<td>link=销售历史</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=div.title</td>
-	<td>${kh}</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.title</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>${name4}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-tips-title=&quot;删除&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=确定</td>
-	<td>确定</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=确定</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextNotPresent</td>
-	<td>${kh}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>${kh}</td>
-	<td></td>
-</tr>
-<!--财务验证-->
-<tr>
-	<td>click</td>
-	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=td</td>
-	<td>现金</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=totalmoney</td>
-	<td>zijin4</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.zijin4)+100}</td>
-	<td>zijin5</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//tr[@data-sort=&quot;1&quot;]/td[3]</td>
-	<td>ziji</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${zijin1}==${zijin5}</td>
-	<td>E</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>E</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//button[@data-power=&quot;250&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//span[@class=&quot;pull-right&quot;]</td>
-	<td>100</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[@class=&quot;pull-right&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h3.yahei</td>
-	<td>金额 100</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=h3.yahei</td>
-	<td>金额 100</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>类型 收入 项目 销售</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>余额 ${ziji}</td>
-	<td></td>
-</tr>
-<!--订单历史-->
-<tr>
-	<td>click</td>
-	<td>link=订单历史</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=div.title</td>
-	<td>${kh}</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.title</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>VE${name4}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>安徽省家 李志伟　13140023070</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>1*VE${name4}*箱*1*180*0*180*180*missyou</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>销售订单 [未完成]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>4*${name1}*2*40*8*32*64*套餐</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>小计: 244*折扣: 44*总计： 200</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td> 尾　款：100 </td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@data-tips-title=&quot;删除&quot;])</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>link=确定</td>
-	<td>确定</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=确定</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextNotPresent</td>
-	<td>${kh}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextNotPresent</td>
-	<td>${kh}</td>
-	<td></td>
-</tr>
-<!--财务验证-->
-<tr>
-	<td>click</td>
-	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=td</td>
-	<td>现金</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=totalmoney</td>
-	<td>zijin4</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>javascript{lz(storedVars.zijin4)+200}</td>
-	<td>zijin5</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>${zijin1}==${zijin5}</td>
-	<td>D</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>这是一个错误的</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>D</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td>*</td>
 	<td></td>
 </tr>
 
