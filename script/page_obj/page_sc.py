@@ -65,16 +65,17 @@ class sc(page):
 		self.driver.find_element_by_xpath('//ul/li[3]//i[@class="icon icon-remove"]').click()
 		self.driver.find_element_by_css_selector('.modal-button.modal-button-bold').click()
 
-	def shdz1(self):
-		self.driver.find_element_by_xpath("//*[text()='我']").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//ul/li[2]//i")))
-		sleep(0.5)
-		self.driver.find_element_by_xpath("//ul/li[2]//i").click()
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@placeholder="联系人手机/固话"]')))
-		sleep(0.5)
-		self.driver.find_element_by_xpath('//*[@placeholder="联系人手机/固话"]').send_keys(13140023070)
-		self.driver.find_element_by_xpath('//*[@placeholder="详细地址"]').send_keys('河南郑州')
-		self.driver.find_element_by_css_selector('.content-block>a').click()
+	#商城-我的-设置地址,现在取消了
+	# def shdz1(self):
+	# 	self.driver.find_element_by_xpath("//*[text()='我']").click()
+	# 	WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//ul/li[2]//i")))
+	# 	sleep(0.5)
+	# 	self.driver.find_element_by_xpath("//ul/li[2]//i").click()
+	# 	WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@placeholder="联系人手机/固话"]')))
+	# 	sleep(0.5)
+	# 	self.driver.find_element_by_xpath('//*[@placeholder="联系人手机/固话"]').send_keys(13140023070)
+	# 	self.driver.find_element_by_xpath('//*[@placeholder="详细地址"]').send_keys('河南郑州')
+	# 	self.driver.find_element_by_css_selector('.content-block>a').click()
 
 	def shdz2(self):
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@placeholder="联系人手机/固话"]')))

@@ -47,10 +47,11 @@ class scLJ(unittest.TestCase):
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,"/html"),"密码错误"))
 		sleep(0.5)
 		self.assertRegexpMatches(self.driver.find_element_by_xpath("/html").text, r"[\s\S]*密码错误[\s\S]*")
-		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@class="button button-big button-round unLogin"]')))
-		sleep(2)
-		self.driver.find_element_by_xpath('//*[@class="button button-big button-round unLogin"]').click()
+		sc(self.driver).opensc()
+		sleep(0.5)
 
+		#注册项
+		
 		#下单项
 		sc(self.driver).tj_sp1()
 		sc(self.driver).jr_gwc()
