@@ -59,7 +59,7 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{lz(storedVars.zijin)+200}</td>
+	<td>javascript{lz(storedVars.zijin)+150}</td>
 	<td>zijin1</td>
 </tr>
 <!--新增二个商品一套餐-->
@@ -983,8 +983,8 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//button[@data-pay=&quot;储值卡&quot;]</td>
-	<td>储值卡</td>
+	<td>css=div.margin-top-30.margin-bottom-20</td>
+	<td>当前会员余额不足!</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -992,19 +992,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//button[@data-pay=&quot;储值卡&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=div.margin-top-30.margin-bottom-20</td>
-	<td>当前会员余额不足!</td>
-</tr>
-<tr>
 	<td>waitForText</td>
 	<td>//button[@data-handler=&quot;unionPay&quot;]</td>
 	<td>组合支付（F2）</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1051,10 +1046,24 @@
 	<td>//button[@data-hotkey=&quot;balance&quot;]</td>
 	<td></td>
 </tr>
-<!--缺少密码提示-->
 <tr>
+	<td>waitForText</td>
+	<td>css=div.layui-layer-title</td>
+	<td>请输入储值卡密码</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
-	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//*[@type=&quot;password&quot;]</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=确认</td>
 	<td></td>
 </tr>
 <tr>
@@ -1120,12 +1129,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=span.inmoney</td>
-	<td>100</td>
+	<td>50</td>
 </tr>
 <tr>
 	<td>waitForText</td>
 	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div/p</td>
-	<td>100</td>
+	<td>50</td>
 </tr>
 <tr>
 	<td>waitForText</td>
@@ -1155,6 +1164,78 @@
 <tr>
 	<td>pause</td>
 	<td>500</td>
+	<td></td>
+</tr>
+<!--pc端验证-->
+<tr>
+	<td>open</td>
+	<td>javascript{login.url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.text-center.padding-bottom-50 &gt; span</td>
+	<td>第三方平台登录</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginAccount</td>
+	<td>javascript{login.userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=loginPassword</td>
+	<td>javascript{login.passWord}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--财务验证-->
+<tr>
+	<td>click</td>
+	<td>//a[@data-url=&quot;page/inout&quot;]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=td</td>
+	<td>现金</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=totalmoney</td>
+	<td>zijin2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.zijin2)}</td>
+	<td>zijin3</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${zijin1}==${zijin3}</td>
+	<td>K</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>K</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
 	<td></td>
 </tr>
 </tbody></table>

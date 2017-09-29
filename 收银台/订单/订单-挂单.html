@@ -532,12 +532,12 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>//label[@for=&quot;fahuo&quot;]</td>
-	<td>发货</td>
+	<td>//label[@for=&quot;songhuo&quot;]</td>
+	<td>送货</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//label[@for=&quot;fahuo&quot;]</td>
+	<td>//label[@for=&quot;songhuo&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -592,12 +592,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>//input[@placeholder=&quot;发货日期&quot;]</td>
+	<td>//input[@placeholder=&quot;送货日期&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>//input[@placeholder=&quot;发货日期&quot;]</td>
+	<td>//input[@placeholder=&quot;送货日期&quot;]</td>
 	<td>2018/08/08</td>
 </tr>
 <tr>
@@ -607,22 +607,22 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>//input[@placeholder=&quot;发货物流&quot;]</td>
+	<td>//input[@placeholder=&quot;送货人&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>//input[@placeholder=&quot;发货物流&quot;]</td>
-	<td>通天虫洞</td>
+	<td>//input[@placeholder=&quot;送货人&quot;]</td>
+	<td>李刚</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>//input[@placeholder=&quot;发货单号&quot;]</td>
+	<td>//input[@placeholder=&quot;送货人电话&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>//input[@placeholder=&quot;发货单号&quot;]</td>
+	<td>//input[@placeholder=&quot;送货人电话&quot;]</td>
 	<td>10086</td>
 </tr>
 <tr>
@@ -868,12 +868,12 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>业务员：${yg}*营业员：老板*折扣：44元 (81.97%)*现金：100*发货地址： 安徽省家*13140023070 于 2018-08-08 发 通天虫洞(10086)</td>
+	<td>业务员：${yg}*营业员：老板*折扣：44元 (81.97%)*现金：100*送货地址： 安徽省家 李志伟 13140023070 李刚(10086) 于 2018-08-08 送货</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>业务员：${yg}*营业员：老板*折扣：44元 (81.97%)*现金：100*发货地址： 安徽省家*13140023070 于 2018-08-08 发 通天虫洞(10086)</td>
+	<td>业务员：${yg}*营业员：老板*折扣：44元 (81.97%)*现金：100*送货地址： 安徽省家 李志伟 13140023070 李刚(10086) 于 2018-08-08 送货</td>
 	<td></td>
 </tr>
 <tr>
@@ -1143,6 +1143,11 @@
 <tr>
 	<td>waitForTextPresent</td>
 	<td>合计金额*276*数　量*4*折后金额*260*实收金额*260</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>业务员：${yg}*营业员：老板*折扣：16元 (94.2%)*现金：160*送货地址： *家 李志伟 13140023070 李刚(10086) 于 2018-08-08 送货</td>
 	<td></td>
 </tr>
 <tr>
