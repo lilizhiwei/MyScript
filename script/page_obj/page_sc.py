@@ -77,6 +77,44 @@ class sc(page):
 	# 	self.driver.find_element_by_xpath('//*[@placeholder="详细地址"]').send_keys('河南郑州')
 	# 	self.driver.find_element_by_css_selector('.content-block>a').click()
 
+	def clickzc(self):
+		self.driver.find_element_by_xpath("//*[text()='我']").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,"//*[text()='点击登录']")))
+		sleep(0.5)
+		self.driver.find_element_by_xpath("//*[text()='点击登录']").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@class="button button-big button-fill"]')))
+		sleep(0.5)
+		self.driver.find_element_by_xpath('//*[@class="button button-big button-fill"]').click()
+		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".title"),"微商城注册"))
+		sleep(0.5)
+
+	def tczh(self):
+		self.driver.find_element_by_xpath("//*[text()='我']").click()
+		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@class="item-link list-button color-danger signout"]')))
+		sleep(0.5)
+		self.driver.find_element_by_xpath('//*[@class="item-link list-button color-danger signout"]').click()
+
+	def qk_xm(self):
+		self.driver.find_element_by_xpath('//*[@placeholder="公司名/姓名"]').clear()
+
+	def qk_zh(self):
+		self.driver.find_element_by_xpath('//*[@placeholder="账号"]').clear()
+
+	def qk_mm(self):
+		self.driver.find_element_by_xpath('//*[@placeholder="密码"]').clear()
+
+	def ty_xm(self,name):
+		self.driver.find_element_by_xpath('//*[@placeholder="公司名/姓名"]').send_keys(name)
+
+	def ty_zh(self,name):
+		self.driver.find_element_by_xpath('//*[@placeholder="账号"]').send_keys(name)
+
+	def ty_mm(self,name):
+		self.driver.find_element_by_xpath('//*[@placeholder="密码"]').send_keys(name)
+
+	def wsczc(self):
+		self.driver.find_element_by_xpath('//*[@class="button button-big button-fill sign"]').click()
+
 	def shdz2(self):
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@placeholder="联系人手机/固话"]')))
 		sleep(0.5)

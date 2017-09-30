@@ -196,6 +196,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>//tr[2]/td[3]</td>
 	<td></td>
@@ -241,13 +246,28 @@
 	<td>VE${name2}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.form-control.pay</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=.form-control.pay</td>
+	<td>10</td>
+</tr>
+<tr>
 	<td>waitForTextPresent</td>
-	<td>定金：20</td>
+	<td>定金：10</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>定金：20</td>
+	<td>定金：10</td>
 	<td></td>
 </tr>
 <tr>
@@ -328,17 +348,17 @@
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>合计金额*20*数　量*1*折后金额*20*定金*20</td>
+	<td>合计金额*20*数　量*1*折后金额*20*定金*10</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForTextPresent</td>
-	<td>业务员：老板*营业员：老板*折扣：0元 (100%)*现金：20</td>
+	<td>业务员：老板*营业员：老板*折扣：0元 (100%)*现金：10</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
-	<td>业务员：老板*营业员：老板*折扣：0元 (100%)*现金：20</td>
+	<td>业务员：老板*营业员：老板*折扣：0元 (100%)*现金：10</td>
 	<td></td>
 </tr>
 <tr>
@@ -454,12 +474,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=span.inmoney</td>
-	<td>0</td>
+	<td>10</td>
 </tr>
 <tr>
 	<td>waitForText</td>
 	<td>//div[@class=&quot;row margin-0 text-center padding-top-15&quot;]/div/p</td>
-	<td>0</td>
+	<td>10</td>
 </tr>
 <tr>
 	<td>waitForText</td>
@@ -546,11 +566,6 @@
 	<td>store</td>
 	<td>javascript{lz(storedVars.zijin4)}</td>
 	<td>zijin5</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//tr[@data-sort=&quot;1&quot;]/td[3]</td>
-	<td>ziji</td>
 </tr>
 <tr>
 	<td>gotoIf</td>
