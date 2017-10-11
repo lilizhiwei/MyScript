@@ -31,7 +31,7 @@ class scGN(unittest.TestCase):
 
 
 		#商城验证
-		self.driver.get('http://lilizhiwei.yyddd.com/')
+		sc(self.driver).opsc()
 		self.driver.set_window_size(375,667)
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"您要访问网站被关闭！"))
 		sleep(0.5)
@@ -47,7 +47,7 @@ class scGN(unittest.TestCase):
 	def test_2nmfw(self):
 
 		#商城验证
-		self.driver.get('http://lilizhiwei.yyddd.com/')
+		sc(self.driver).opsc()
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.XPATH,'/html'),"登录到微商城"))
 		sleep(0.5)
 

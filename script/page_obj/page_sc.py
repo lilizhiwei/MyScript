@@ -9,8 +9,12 @@ from .page_zong import page
 import unittest,random
 
 class sc(page):
-	def opensc(self):
+
+	def opsc(self):
 		self.driver.get('http://lilizhiwei.yyddd.com')
+
+	def opensc(self):
+		self.opsc()
 		WebDriverWait(self.driver,30,0.5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,".tab-label"),"商城"))
 		sleep(0.5)
 
