@@ -24,6 +24,7 @@ class daoru(page):
 
 	def clickX(self):
 		self.driver.find_element_by_xpath("//*[@class='icon fa fa-file-excel-o']").click()
+		sleep(0.5)
 
 	def clickdaoru(self):
 		self.driver.find_element_by_xpath("//*[@data-power='167']//i").click()
