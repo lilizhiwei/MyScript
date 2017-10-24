@@ -7,6 +7,7 @@ from selenium import webdriver
 from time import sleep
 import unittest
 
+
 class page(object):
 	'''用户登录页面'''
 
