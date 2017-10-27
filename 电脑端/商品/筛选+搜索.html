@@ -42,9 +42,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=h5.page-aside-title.margin-top-0</td>
-	<td>筛选</td>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
 </tr>
 <!--创建三商品-->
 <tr>
@@ -727,7 +727,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//small[@style=&quot;left: 0px; transition: background-color 0.4s ease 0s, left 0.2s ease 0s;&quot;]</td>
+	<td>link=筛选</td>
 	<td></td>
 </tr>
 <tr>
@@ -736,8 +736,18 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=good_hide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.title</td>
+	<td>${namea}</td>
+</tr>
+<tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -829,7 +839,17 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//a[3]/span/span</td>
+	<td>link=筛选</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tm_goods</td>
 	<td></td>
 </tr>
 <tr>
@@ -880,7 +900,17 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//a[4]/span/span</td>
+	<td>link=筛选</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=onsell_goods</td>
 	<td></td>
 </tr>
 <tr>
