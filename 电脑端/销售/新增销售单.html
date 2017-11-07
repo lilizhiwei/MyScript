@@ -271,8 +271,53 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1500</td>
+	<td>500</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>商品总值</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@data-role=&quot;goodsTotalType&quot;]</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@data-role=&quot;goodsTotalType&quot;]</td>
+	<td>m</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@data-role=&quot;goodsTotalNum&quot;]</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@data-role=&quot;goodsTotalPrice&quot;]</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.m)+2}</td>
+	<td>m1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.n)+86}</td>
+	<td>n1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.b)+860}</td>
+	<td>b1</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -1269,6 +1314,116 @@
 	<td>waitForText</td>
 	<td>css=div.title</td>
 	<td>VE${name4}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>商品总值</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@data-role=&quot;goodsTotalType&quot;]</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@data-role=&quot;goodsTotalType&quot;]</td>
+	<td>m</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@data-role=&quot;goodsTotalNum&quot;]</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@data-role=&quot;goodsTotalPrice&quot;]</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.m)}</td>
+	<td>m2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.n)}</td>
+	<td>n2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{lz(storedVars.b)}</td>
+	<td>b2</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${m1}==${m2}</td>
+	<td>m</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>m</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${n1}==${n2}</td>
+	<td>n</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>n</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${b1}==${b2}</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>这是一个错误的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
