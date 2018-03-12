@@ -11,7 +11,7 @@ import unittest,random
 class sc(page):
 
 	def opsc(self):
-		self.driver.get('http://lizhiwei.yyddd.com')
+		self.driver.get('http://13140023070.yyddd.com')
 
 	def opensc(self):
 		self.opsc()
@@ -20,13 +20,13 @@ class sc(page):
 
 	def loginsc1(self):
 		self.opensc()
-		self.driver.get('http://lizhiwei.yyddd.com/login.html')
+		self.driver.get('http://13140023070.yyddd.com/login.html')
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,".uName")))
 		sleep(0.5)
 
 	def loginsc(self,name):
 		self.opensc()
-		self.driver.get('http://lizhiwei.yyddd.com/login.html')
+		self.driver.get('http://13140023070.yyddd.com/login.html')
 		WebDriverWait(self.driver,30,0.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,".uName")))
 		sleep(0.5)
 		self.driver.find_element_by_css_selector(".uName").send_keys(name)
