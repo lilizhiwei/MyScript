@@ -15,14 +15,14 @@ class scXD(unittest.TestCase):
 	def setUp(self):
 		self.driver = webdriver.Chrome()
 
-	def test_1xd(self):
-
-		#新建密码编号客户及两商品一套餐
 		sc(self.driver).user_login()
 		a = random.randint(0,1000)
 		b = random.randint(0,1000)
 		name1 = str(a) + '李志伟' + str(b)
 		bh1 = str(a) + str(b)
+	def test_1xd(self):
+
+		#新建密码编号客户及两商品一套餐
 		name2 = str(a) + '商品1' + str(b)
 		name3 = str(a) + '商品2' + str(b)
 		name4 = str(a) + '套餐' + str(b)
